@@ -4,7 +4,7 @@
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 20px 0;
+    padding: 26px 0;
     transition: all 0.3s ease;
     background-color: transparent;
     color: white;
@@ -12,10 +12,13 @@
 }
 
 .standard-header.scrolled {
-    background-color: var(--bg-secondary);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     color: var(--text-primary);
-    padding: 15px 0;
-    box-shadow: var(--shadow-sm);
+    padding: 18px 0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
 .header-content {
@@ -26,7 +29,7 @@
 
 .logo {
     font-family: 'Playfair Display', serif;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 700;
     letter-spacing: 0.05em;
 }
@@ -67,6 +70,7 @@
         background-color: var(--text-primary);
         /* Navy blue background for visibility */
         position: relative;
+        padding: 15px 0;
         /* Unfix on mobile if needed, or keep fixed */
     }
 
@@ -83,5 +87,9 @@
 
     .desktop-nav a {
         font-size: 12px;
+    }
+
+    .logo {
+        font-size: 32px;
     }
 }

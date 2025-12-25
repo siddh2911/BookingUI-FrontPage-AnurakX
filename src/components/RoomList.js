@@ -29,8 +29,10 @@ const rooms = [
     }
 ];
 
-const RoomList = ({ rooms = [] }) => {
-    if (!rooms || rooms.length === 0) return null;
+const RoomList = ({ rooms: propRooms = [] }) => {
+    const displayRooms = propRooms.length > 0 ? propRooms : rooms;
+
+    if (!displayRooms || displayRooms.length === 0) return null;
 
     // Helper to get image based on room type or index
     const getImage = (room, index) => {
@@ -39,7 +41,7 @@ const RoomList = ({ rooms = [] }) => {
         const placeholders = [
             "/images/villa-1.png",
             "/images/villa-2.png",
-            "/images/villa-3.png" // Assuming this exists or reusing others
+            "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=800&q=80" // Random room image
         ];
         return placeholders[index % placeholders.length];
     };
@@ -54,7 +56,7 @@ const RoomList = ({ rooms = [] }) => {
                 </div>
 
                 <div className="rooms-grid">
-                    {rooms.map((room, index) => (
+                    {displayRooms.map((room, index) => (
                         <div key={room.id || index} className="room-card">
                             <div className="room-image">
                                 <img src={getImage(room, index)} alt={room.type} />

@@ -1,10 +1,32 @@
+.booking-search-container {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem 2rem;
+    border-radius: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: flex-end;
+    justify-content: center;
+    max-width: 1000px;
+    margin: -4rem auto 3rem;
+    position: relative;
+    z-index: 20;
+}
+
 .booking-search-bar {
     display: flex;
     align-items: center;
-    background: white;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
     padding: 20px;
-    border-radius: 4px;
-    box-shadow: var(--shadow-lg);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
     gap: 20px;
     width: 100%;
     max-width: 1000px;
@@ -46,10 +68,22 @@
     background: transparent;
 }
 
+/* Placeholder color for dark text */
+.input-with-icon input::placeholder {
+    color: rgba(30, 58, 138, 0.5);
+}
+
+.input-with-icon select option {
+    background-color: white;
+    /* Dark background for dropdown options */
+    color: var(--text-primary);
+}
+
 .divider-vertical {
     width: 1px;
     height: 40px;
-    background-color: #E2E8F0;
+    background-color: rgba(30, 58, 138, 0.1);
+    /* Darker divider for contrast */
 }
 
 .search-btn {
@@ -71,10 +105,10 @@
 
 @media (max-width: 768px) {
     .booking-search-bar {
-        flex-direction: column;
-        align-items: stretch;
-        padding: 20px;
-        gap: 15px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        padding: 12px;
         width: 100%;
         max-width: 100%;
         box-sizing: border-box;
@@ -82,9 +116,25 @@
 
     .search-field {
         width: 100%;
-        border-bottom: 1px solid #f1f5f9;
-        padding-bottom: 15px;
+        border-bottom: none;
+        padding-bottom: 0;
         align-items: flex-start;
+        background: rgba(255, 255, 255, 0.4);
+        padding: 8px;
+        border-radius: 8px;
+    }
+
+    /* Make Guests span full width */
+    .search-field:nth-child(5) {
+        grid-column: 1 / -1;
+    }
+
+    /* Make Button span full width */
+    .search-btn {
+        grid-column: 1 / -1;
+        width: 100%;
+        margin-top: 5px;
+        padding: 12px;
     }
 
     .search-field label {

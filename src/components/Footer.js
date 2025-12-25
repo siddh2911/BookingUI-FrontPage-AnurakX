@@ -32,7 +32,7 @@ const Footer = () => {
                         <li><a href="#careers">Careers</a></li>
                         <li><a href="#privacy">Privacy Policy</a></li>
                         <li><a href="#terms">Terms of Service</a></li>
-                        <li><a href="https://booking-ui-anurak-x.vercel.app" target="_blank" rel="noopener noreferrer">Admin Login</a></li>
+                        <li><a href="https://booking-ui-anurak-x.vercel.app" target="_blank" rel="noopener noreferrer" className="admin-link">Admin Login</a></li>
                     </ul>
                 </div>
 

@@ -98,3 +98,41 @@
     height: 50px;
     background-color: var(--accent);
 }
+
+@media (max-width: 768px) {
+    .text-left {
+        margin-left: 0;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .text-left h2 {
+        font-size: 32px;
+        /* Fixed legible size */
+    }
+
+    .text-left p {
+        margin: 0 auto;
+    }
+
+    .image-right {
+        margin-right: 0;
+        align-items: center;
+    }
+
+    .image-right img {
+        width: 100%;
+        /* Full width on mobile */
+    }
+
+    .text-center-large h3 {
+        font-size: 24px;
+        /* Fixed legible size */
+        padding: 0 20px;
+    }
+
+    .amenities-art {
+        flex-direction: column;
+        gap: 40px;
+    }
+}

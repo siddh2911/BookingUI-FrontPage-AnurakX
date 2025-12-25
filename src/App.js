@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import RoomList from './components/RoomList';
@@ -12,6 +12,21 @@ function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedDates, setSelectedDates] = useState({ checkIn: null, checkOut: null });
   const [searchResults, setSearchResults] = useState([]);
+
+  useEffect(() => {
+    // Fetch all rooms on load
+    const fetchAllRooms = async () => {
+      try {
+        const response = await fetch('https://booking-anurakx.onrender.com/allRooms');
+        const data = await response.json();
+        setSearchResults(data);
+      } catch (error) {
+        console.error("Failed to fetch all rooms:", error);
+      }
+    };
+
+    fetchAllRooms();
+  }, []);
 
   const toggleModal = () => setIsModalOpen(!isModalOpen);
 
