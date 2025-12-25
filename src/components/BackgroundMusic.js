@@ -1,14 +1,12 @@
-import React, { useState, useEffect } from 'react';
-
+import React, { useState, useEffect, useRef } from 'react';
 import { Volume2, VolumeX } from 'lucide-react';
 import './BackgroundMusic.css';
 
 const BackgroundMusic = () => {
     const [isPlaying, setIsPlaying] = useState(false);
-    const audioRef = React.useRef(null);
+    const audioRef = useRef(null);
 
     useEffect(() => {
-        // Set initial volume
         if (audioRef.current) {
             audioRef.current.volume = 0.5;
         }
@@ -27,7 +25,6 @@ const BackgroundMusic = () => {
 
     return (
         <div className="background-music-container">
-            {/* Native Audio Element */}
             <audio
                 ref={audioRef}
                 src="/background.mp3"
@@ -38,8 +35,8 @@ const BackgroundMusic = () => {
             <button
                 className={`music-toggle-btn ${isPlaying ? 'active' : ''}`}
                 onClick={togglePlay}
-                aria-label={isPlaying ? "Pause Background Music" : "Play Background Music"}
-                title={isPlaying ? "Pause Music" : "Play Music"}
+                aria-label={isPlaying ? "Pause Music" : "Play Music"}
+                type="button"
             >
                 {isPlaying ? <Volume2 size={20} /> : <VolumeX size={20} />}
                 <span className="music-label">{isPlaying ? "Pause Music" : "Play Music"}</span>

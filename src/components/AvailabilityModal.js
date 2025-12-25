@@ -26,7 +26,7 @@ const AvailabilityModal = ({ isOpen, onClose, onDateSelect, onSearch }) => {
             const dateStr = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 
             requests.push(
-                fetch(`/available-rooms?startDate=${dateStr}&endDate=${dateStr}`)
+                fetch(`https://booking-anurakx.onrender.com/available-rooms?startDate=${dateStr}&endDate=${dateStr}`)
                     .then(res => res.json())
                     .then(rooms => {
                         const available = rooms.filter(r => r.status === 'AVAILABLE');
