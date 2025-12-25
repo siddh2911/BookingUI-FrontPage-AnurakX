@@ -1,0 +1,180 @@
+.booking-widget-container {
+    position: sticky;
+    top: 140px;
+    /* More offset */
+    margin-left: 0;
+    z-index: 10;
+}
+
+.booking-card {
+    border: none;
+    border-radius: var(--radius-xl);
+    /* Larger radius 24px */
+    padding: 32px;
+    box-shadow: var(--shadow-xl);
+    /* Soft heavy shadow */
+    background-color: white;
+    border: 1px solid var(--border-light);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+}
+
+.price {
+    font-size: 28px;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    color: var(--primary);
+}
+
+.night-label {
+    font-size: 16px;
+    color: var(--text-secondary);
+}
+
+.reviews-summary {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    background-color: var(--bg-secondary);
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.rating {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.review-count {
+    color: var(--text-secondary);
+}
+
+.booking-inputs {
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.date-inputs {
+    display: flex;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.date-input {
+    flex: 1;
+    padding: 12px 16px;
+    cursor: pointer;
+    background-color: white;
+    transition: background-color 0.1s;
+}
+
+.date-input:hover {
+    background-color: var(--bg-secondary);
+}
+
+.date-input.check-in {
+    border-right: 1px solid var(--border-light);
+}
+
+.date-input label {
+    font-size: 11px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 4px;
+    letter-spacing: 0.05em;
+    color: var(--text-primary);
+}
+
+.date-value {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.guest-input {
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background-color: white;
+}
+
+.guest-input:hover {
+    background-color: var(--bg-secondary);
+}
+
+.guest-input label {
+    font-size: 11px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 4px;
+    letter-spacing: 0.05em;
+    color: var(--text-primary);
+}
+
+.reserve-btn {
+    width: 100%;
+    background-color: var(--primary);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 16px 24px;
+    border-radius: var(--radius-md);
+    margin-bottom: 16px;
+    transition: all 0.2s;
+    letter-spacing: 0.02em;
+    box-shadow: var(--shadow-lg);
+}
+
+.reserve-btn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+.reserve-btn:active {
+    transform: scale(0.98);
+}
+
+.no-charge-msg {
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+}
+
+.price-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    color: var(--text-secondary);
+}
+
+.item-label {
+    text-decoration: underline;
+    color: var(--text-secondary);
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 24px;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--primary);
+    font-family: 'Playfair Display', serif;
+}

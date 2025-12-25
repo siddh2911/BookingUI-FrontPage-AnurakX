@@ -1,38 +1,32 @@
-.App {
-  text-align: center;
+/* Global Layout Styles */
+
+.main-content-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 32px var(--spacing-xl);
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  /* approx 60/40 split or 66/33 */
+  gap: 80px;
+  /* Large gap between content and sidebar */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 1128px) {
+  .main-content-container {
+    gap: 40px;
+    grid-template-columns: 1.5fr 1fr;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 950px) {
+  .main-content-container {
+    display: block;
+    padding: 24px var(--spacing-md);
   }
-  to {
-    transform: rotate(360deg);
+
+  /* On mobile/tablet, the booking widget might need to be hidden or position:static or bottom sheet */
+  /* For now, let's keep it simple, it will stack below */
+  .content-right {
+    margin-top: 40px;
   }
 }

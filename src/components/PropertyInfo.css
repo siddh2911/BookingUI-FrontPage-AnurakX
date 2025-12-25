@@ -1,0 +1,87 @@
+.host-info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-xl) 0;
+}
+
+.host-text h2 {
+    font-size: 32px;
+    /* Larger Serif Header */
+    margin-bottom: 12px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.listing-specs {
+    font-size: 16px;
+    color: var(--text-secondary);
+    font-weight: 400;
+    letter-spacing: 0.02em;
+}
+
+.host-avatar img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+    box-shadow: var(--shadow-md);
+}
+
+.divider {
+    height: 1px;
+    background-color: var(--border-light);
+    margin: var(--spacing-xxl) 0;
+    /* More spacing */
+    opacity: 0.6;
+}
+
+.feature-item {
+    display: flex;
+    margin-bottom: var(--spacing-lg);
+}
+
+.feature-icon {
+    width: 24px;
+    margin-right: 24px;
+    color: var(--primary);
+    /* Slate 900 */
+}
+
+.feature-text h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    font-family: 'Inter', sans-serif;
+    /* Keep headers sans-serif for features for readability, or switch to serif if desired. Sticking to sans for UI elements. */
+}
+
+.feature-text p {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.description p {
+    font-size: 17px;
+    line-height: 1.8;
+    /* More breathing room */
+    color: var(--text-primary);
+    margin-bottom: 24px;
+    font-weight: 300;
+}
+
+.show-more-btn {
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 0;
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    color: var(--primary);
+    border-bottom: 1px solid var(--primary);
+    padding-bottom: 2px;
+    width: max-content;
+}

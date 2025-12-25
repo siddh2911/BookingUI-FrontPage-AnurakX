@@ -1,0 +1,40 @@
+.amenities-section {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--bg-accent);
+}
+
+.amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.amenity-card {
+    background: transparent;
+    padding: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.amenity-card:hover {
+    background: white;
+    box-shadow: var(--shadow-md);
+    transform: translateY(-5px);
+}
+
+.amenity-icon {
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+.amenity-card h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.amenity-card p {
+    color: var(--text-secondary);
+    font-size: 14px;
+}

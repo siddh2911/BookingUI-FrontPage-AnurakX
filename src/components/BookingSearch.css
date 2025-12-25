@@ -1,0 +1,107 @@
+.booking-search-bar {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: var(--shadow-lg);
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.search-field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.search-field label {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--text-secondary);
+    letter-spacing: 0.1em;
+}
+
+.input-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.field-icon {
+    color: var(--accent);
+}
+
+.input-with-icon input,
+.input-with-icon select {
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: var(--text-primary);
+    width: 100%;
+    outline: none;
+    background: transparent;
+}
+
+.divider-vertical {
+    width: 1px;
+    height: 40px;
+    background-color: #E2E8F0;
+}
+
+.search-btn {
+    background-color: var(--text-primary);
+    color: white;
+    padding: 15px 30px;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    border-radius: 4px;
+    white-space: nowrap;
+    transition: background-color 0.3s;
+}
+
+.search-btn:hover {
+    background-color: var(--accent);
+}
+
+@media (max-width: 768px) {
+    .booking-search-bar {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 20px;
+        gap: 15px;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .search-field {
+        width: 100%;
+        border-bottom: 1px solid #f1f5f9;
+        padding-bottom: 15px;
+        align-items: flex-start;
+    }
+
+    .search-field label {
+        text-align: left;
+        width: 100%;
+    }
+
+    .search-field:nth-last-child(2) {
+        border-bottom: none;
+    }
+
+    .divider-vertical {
+        display: none;
+    }
+
+    .search-btn {
+        width: 100%;
+        margin-top: 5px;
+    }
+}

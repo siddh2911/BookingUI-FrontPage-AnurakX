@@ -1,0 +1,113 @@
+.booking-trigger-container {
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    background-color: var(--bg-primary);
+}
+
+.booking-trigger-btn {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    padding: 20px 60px;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.booking-trigger-btn:hover {
+    background-color: var(--accent);
+    color: var(--bg-primary);
+}
+
+.booking-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(5, 5, 5, 0.95);
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s;
+}
+
+.booking-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.close-btn {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    font-size: 40px;
+    color: var(--text-primary);
+    cursor: none;
+}
+
+.overlay-content {
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+.overlay-content h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: var(--accent);
+}
+
+.overlay-content p {
+    margin-bottom: 40px;
+    color: var(--text-secondary);
+}
+
+.minimal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.input-group {
+    display: flex;
+    gap: 20px;
+}
+
+.minimal-form input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--text-secondary);
+    padding: 15px 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    color: var(--text-primary);
+    outline: none;
+    cursor: none;
+}
+
+.minimal-form input:focus {
+    border-bottom-color: var(--accent);
+}
+
+.submit-request-btn {
+    margin-top: 40px;
+    font-size: 18px;
+    padding: 20px;
+    background-color: var(--text-primary);
+    color: var(--bg-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 600;
+    cursor: none;
+}
+
+.submit-request-btn:hover {
+    background-color: white;
+}

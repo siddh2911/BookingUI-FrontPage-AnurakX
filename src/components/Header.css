@@ -1,0 +1,87 @@
+.standard-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 0;
+    transition: all 0.3s ease;
+    background-color: transparent;
+    color: white;
+    /* Default white on transparent hero */
+}
+
+.standard-header.scrolled {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    padding: 15px 0;
+    box-shadow: var(--shadow-sm);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.desktop-nav {
+    display: flex;
+    gap: 30px;
+}
+
+.desktop-nav a {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.desktop-nav a:hover {
+    color: var(--accent);
+}
+
+@media (min-width: 769px) {
+    .header-content {
+        transform: translateX(-40px);
+        /* Shift centric slightly left */
+    }
+}
+
+.header-actions .btn-primary {
+    /* Override primary button for header context if needed */
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .standard-header {
+        background-color: var(--text-primary);
+        /* Navy blue background for visibility */
+        position: relative;
+        /* Unfix on mobile if needed, or keep fixed */
+    }
+
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .desktop-nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .desktop-nav a {
+        font-size: 12px;
+    }
+}
