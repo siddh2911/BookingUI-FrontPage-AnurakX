@@ -17,7 +17,7 @@ const BackgroundMusic = () => {
             if (isPlaying) {
                 audioRef.current.pause();
             } else {
-                audioRef.current.play().catch(e => console.error("Playback failed:", e));
+                audioRef.current.play().catch(() => { });
             }
             setIsPlaying(!isPlaying);
         }

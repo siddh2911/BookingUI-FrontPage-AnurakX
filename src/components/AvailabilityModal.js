@@ -26,7 +26,7 @@ const AvailabilityModal = ({ isOpen, onClose, onDateSelect, onSearch }) => {
             const dateStr = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 
             requests.push(
-                fetch(`https://booking-anurakx.onrender.com/available-rooms?startDate=${dateStr}&endDate=${dateStr}`)
+                fetch(`https://api.karunavillas.com/available-rooms?startDate=${dateStr}&endDate=${dateStr}`)
                     .then(res => res.json())
                     .then(rooms => {
                         const available = rooms.filter(r => r.status === 'AVAILABLE');
@@ -42,7 +42,6 @@ const AvailabilityModal = ({ isOpen, onClose, onDateSelect, onSearch }) => {
                         return { day: i, price: minPrice, status };
                     })
                     .catch(err => {
-                        console.error("Failed to fetch for", dateStr, err);
                         return { day: i, price: 0, status: 'error' };
                     })
             );
@@ -56,7 +55,7 @@ const AvailabilityModal = ({ isOpen, onClose, onDateSelect, onSearch }) => {
             });
             setAvailabilityData(dataMap);
         } catch (error) {
-            console.error("Error fetching month data:", error);
+            // Silent failure
         } finally {
             setLoading(false);
         }

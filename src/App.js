@@ -21,7 +21,7 @@ function App() {
         const data = await response.json();
         setSearchResults(data);
       } catch (error) {
-        console.error("Failed to fetch all rooms:", error);
+        // Silent failure for all rooms fetch
       }
     };
 
@@ -59,7 +59,6 @@ function App() {
         }
       }, 100);
     } catch (error) {
-      console.error("Failed to fetch available rooms:", error);
       setSearchResults([]);
     }
   };
