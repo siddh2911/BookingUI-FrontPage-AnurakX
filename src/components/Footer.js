@@ -8,9 +8,9 @@ const Footer = () => {
                 {/* Brand */}
                 <div className="footer-col">
                     <h3 className="footer-logo">KARUNA VILLA</h3>
-                    <p>Jalan Pantai Batu Mejan,<br />Canggu, Bali 80361</p>
-                    <p>+62 361 123 4567</p>
-                    <p>stay@karunavilla.com</p>
+                    <p>VDA Colony, Phase-1,<br />Badalalpur, Varanasi, Uttar Pradesh 221002</p>
+                    <p>+91 8953320940</p>
+                    <p>karunavillastay@gmail.com</p>
                 </div>
 
                 {/* Links */}
