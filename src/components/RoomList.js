@@ -178,85 +178,103 @@ const RoomList = ({ rooms: propRooms = [], isLoading = false, hasSearched = fals
                                 }
                             `}</style>
                         </div>
-                    ) : displayRooms && displayRooms.length > 0 ? (
-                        displayRooms.map((room, index) => (
-                            <div key={room.id || index} className="room-card">
-                                <div className="room-image">
-                                    <img src={getImage(room, index)} alt={room.roomName || room.type} />
-                                </div>
-                                <div className="room-details">
-                                    <h3>{room.roomName || room.type}</h3>
-                                    <div className="room-meta">
-                                        <span><Maximize size={14} /> {room.size || "45 sqm"}</span>
-                                        <span><Users size={14} /> {room.capacity || room.guests || "2 Adults"}</span>
-                                    </div>
-                                    <div className="room-footer">
-                                        <div className="room-footer-content">
-                                            <div className="room-price">
-                                                <span className="amount">₹{room.pricePerNight}</span>
-                                                <span className="period"> / night</span>
+                    ) : (
+                        displayRooms && displayRooms.map((room, index) => {
+                            const isAvailable = room.isAvailable !== false; // Default to true if undefined (initial load)
+
+                            return (
+                                <div key={room.id || index} className={`room-card ${!isAvailable && hasSearched ? 'unavailable' : ''}`}>
+                                    <div className="room-image">
+                                        <img src={getImage(room, index)} alt={room.roomName || room.type} style={!isAvailable && hasSearched ? { filter: 'grayscale(100%)' } : {}} />
+                                        {!isAvailable && hasSearched && (
+                                            <div className="availability-overlay">
+                                                <span>Sold Out</span>
                                             </div>
-                                            {isKarunaSpecial(room) ? (
-                                                <div className="booking-actions-wrapper">
-                                                    {activeRoomIndex !== index ? (
-                                                        <button
-                                                            className="btn-details"
-                                                            onClick={(e) => {
-                                                                e.stopPropagation();
-                                                                setActiveRoomIndex(index);
-                                                            }}
-                                                        >
-                                                            Book Now <ArrowRight size={14} />
-                                                        </button>
-                                                    ) : (
-                                                        <div className="zenith-options-container" onClick={(e) => e.stopPropagation()}>
+                                        )}
+                                    </div>
+                                    <div className="room-details">
+                                        <h3>{room.roomName || room.type}</h3>
+                                        <div className="room-meta">
+                                            <span><Maximize size={14} /> {room.size || "45 sqm"}</span>
+                                            <span><Users size={14} /> {room.capacity || room.guests || "2 Adults"}</span>
+                                        </div>
+                                        <div className="room-footer">
+                                            <div className="room-footer-content">
+                                                <div className="room-price">
+                                                    <span className="amount">₹{room.pricePerNight}</span>
+                                                    <span className="period"> / night</span>
+                                                </div>
+                                                {isKarunaSpecial(room) ? (
+                                                    <div className="booking-actions-wrapper">
+                                                        {activeRoomIndex !== index ? (
                                                             <button
-                                                                className="close-options"
-                                                                onClick={() => setActiveRoomIndex(null)}
-                                                                title="Close"
-                                                            >
-                                                                <X size={14} />
-                                                            </button>
-                                                            <a
-                                                                href={getAirbnbLink(room)}
-                                                                target="_blank"
-                                                                rel="noopener noreferrer"
-                                                                className={`option-btn airbnb ${isAirbnbDisabled(room) ? 'disabled' : ''}`}
+                                                                className={`btn-details ${!isAvailable && hasSearched ? 'disabled' : ''}`}
+                                                                disabled={!isAvailable && hasSearched}
                                                                 onClick={(e) => {
-                                                                    if (isAirbnbDisabled(room)) e.preventDefault();
+                                                                    e.stopPropagation();
+                                                                    if (!isAvailable && hasSearched) return;
+
+                                                                    if (!hasSearched) {
+                                                                        onSearch();
+                                                                    } else {
+                                                                        setActiveRoomIndex(index);
+                                                                    }
                                                                 }}
                                                             >
-                                                                <Home size={14} className="opt-icon" /> {isAirbnbDisabled(room) ? "Recently Sold Out" : "Book on Airbnb"}
-                                                            </a>
-                                                            <a
-                                                                href="https://www.instagram.com/villakaruna/"
-                                                                target="_blank"
-                                                                rel="noopener noreferrer"
-                                                                className="option-btn instagram"
-                                                            >
-                                                                <Instagram size={14} className="opt-icon" /> Offline Booking
-                                                            </a>
-                                                        </div>
-                                                    )}
-                                                </div>
-                                            ) : (
-                                                <button className="btn-details" onClick={onSearch}>
-                                                    Book Now <ArrowRight size={14} />
-                                                </button>
-                                            )}
+                                                                {hasSearched ? (isAvailable ? "Book Now" : "Sold Out") : "Check Availability"} <ArrowRight size={14} />
+                                                            </button>
+                                                        ) : (
+                                                            <div className="zenith-options-container" onClick={(e) => e.stopPropagation()}>
+                                                                <button
+                                                                    className="close-options"
+                                                                    onClick={() => setActiveRoomIndex(null)}
+                                                                    title="Close"
+                                                                >
+                                                                    <X size={14} />
+                                                                </button>
+                                                                <a
+                                                                    href={getAirbnbLink(room)}
+                                                                    target="_blank"
+                                                                    rel="noopener noreferrer"
+                                                                    className={`option-btn airbnb ${isAirbnbDisabled(room) ? 'disabled' : ''}`}
+                                                                    onClick={(e) => {
+                                                                        if (isAirbnbDisabled(room)) e.preventDefault();
+                                                                    }}
+                                                                >
+                                                                    <Home size={14} className="opt-icon" /> {isAirbnbDisabled(room) ? "Recently Sold Out" : "Book on Airbnb"}
+                                                                </a>
+                                                                <a
+                                                                    href="https://www.instagram.com/villakaruna/"
+                                                                    target="_blank"
+                                                                    rel="noopener noreferrer"
+                                                                    className="option-btn instagram"
+                                                                >
+                                                                    <Instagram size={14} className="opt-icon" /> Offline Booking
+                                                                </a>
+                                                            </div>
+                                                        )}
+                                                    </div>
+                                                ) : (
+                                                    <button
+                                                        className={`btn-details ${!isAvailable && hasSearched ? 'disabled' : ''}`}
+                                                        disabled={!isAvailable && hasSearched}
+                                                        onClick={(e) => {
+                                                            if (!isAvailable && hasSearched) {
+                                                                e.preventDefault();
+                                                                return;
+                                                            }
+                                                            onSearch();
+                                                        }}
+                                                    >
+                                                        {hasSearched ? (isAvailable ? "Book Now" : "Sold Out") : "Check Availability"} <ArrowRight size={14} />
+                                                    </button>
+                                                )}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        ))
-                    ) : (
-                        <div className="no-rooms-message">
-                            <div className="no-rooms-icon">
-                                <Maximize size={48} strokeWidth={1} />
-                            </div>
-                            <h3>All Villas Booked</h3>
-                            <p>We apologize, but all our villas are fully booked for these specific dates. Please try selecting different dates or contact our concierge.</p>
-                        </div>
+                            )
+                        })
                     )}
                 </div>
             </div>

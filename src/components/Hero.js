@@ -41,7 +41,7 @@ const Hero = ({ onSearch, onOpenCalendar, checkIn, checkOut }) => {
                 <p className="hero-subtitle">Experience the pinnacle of luxury in Varanasi in our luxury rooms and suites.</p>
             </div>
 
-            <div className="hero-search-wrapper container">
+            <div className="hero-search-wrapper container" id="booking-search">
                 <BookingSearch
                     onSearch={onSearch}
                     onOpenCalendar={onOpenCalendar}

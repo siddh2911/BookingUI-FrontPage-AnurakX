@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Header.css';
 
-const Header = () => {
+const Header = ({ onBookNow }) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ const Header = () => {
         </nav>
 
         <div className="header-actions">
-          <button className="btn-primary">Book Now</button>
+          <button className="btn-primary" onClick={onBookNow}>Book Now</button>
         </div>
       </div>
     </header>

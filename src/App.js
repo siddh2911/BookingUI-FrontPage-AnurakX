@@ -14,6 +14,7 @@ function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedDates, setSelectedDates] = useState({ checkIn: null, checkOut: null });
   const [searchResults, setSearchResults] = useState([]);
+  const [allRooms, setAllRooms] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [hasSearched, setHasSearched] = useState(false);
 
@@ -24,6 +25,7 @@ function App() {
       try {
         const response = await fetch('https://api.karunavillas.com/allRooms');
         const data = await response.json();
+        setAllRooms(data);
         setSearchResults(data);
       } catch (error) {
         // Silent failure for all rooms fetch
@@ -43,6 +45,11 @@ function App() {
 
   const handleBookStay = async () => {
     if (!selectedDates.checkIn || !selectedDates.checkOut) {
+      // Scroll to booking search section
+      const searchSection = document.getElementById('booking-search');
+      if (searchSection) {
+        searchSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
       setIsModalOpen(true);
       return;
     }
@@ -55,10 +62,15 @@ function App() {
 
     try {
       const response = await fetch(`https://api.karunavillas.com/available-rooms?startDate=${startStr}&endDate=${endStr}`);
-      const data = await response.json();
+      const availableData = await response.json();
 
-      // USER REQUEST: Strictly use API data, ignoring status.
-      setSearchResults(data);
+      // Merge availability status into all rooms
+      const updatedResults = allRooms.map(room => ({
+        ...room,
+        isAvailable: availableData.some(availableRoom => availableRoom.id === room.id)
+      }));
+
+      setSearchResults(updatedResults);
 
       // Scroll to rooms section
       setTimeout(() => {
@@ -68,7 +80,9 @@ function App() {
         }
       }, 100);
     } catch (error) {
-      setSearchResults([]);
+      // If API fails, better to show all as unavailable or retain previous state than empty
+      const updatedResults = allRooms.map(room => ({ ...room, isAvailable: false }));
+      setSearchResults(updatedResults);
     } finally {
       setIsLoading(false);
     }
@@ -76,7 +90,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Header onBookNow={handleBookStay} />
 
       <Hero
         onSearch={handleBookStay}
@@ -87,7 +101,12 @@ function App() {
 
 
 
-      <RoomList rooms={searchResults} isLoading={isLoading} hasSearched={hasSearched} />
+      <RoomList
+        rooms={searchResults}
+        isLoading={isLoading}
+        hasSearched={hasSearched}
+        onSearch={handleBookStay}
+      />
 
       <StorySection />
 

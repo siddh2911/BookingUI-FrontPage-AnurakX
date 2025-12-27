@@ -464,3 +464,41 @@
         opacity: 0.8;
     }
 }
+
+/* Unavailable Room Styling */
+.room-card.unavailable {
+    opacity: 0.8;
+}
+
+.room-card.unavailable .room-image img {
+    filter: grayscale(100%);
+}
+
+.availability-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.btn-details.disabled {
+    background-color: #cbd5e1;
+    cursor: not-allowed;
+    box-shadow: none;
+    pointer-events: none;
+}
+
+.btn-details.disabled:hover {
+    background-color: #cbd5e1;
+    transform: none;
+    box-shadow: none;
+}
