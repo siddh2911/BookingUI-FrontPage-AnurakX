@@ -98,14 +98,6 @@ const RoomList = ({ rooms: propRooms = [], isLoading = false, hasSearched = fals
         }
     }, [isLoading, displayRooms]);
 
-    // Fallback to static list if not searched and no API data
-    if (!hasSearched && (!displayRooms || displayRooms.length === 0)) {
-        displayRooms = rooms.map(room => {
-            if (room.id === 1) return { ...room, roomName: "Tranquil Retreat" };
-            return room;
-        });
-    }
-
     // Helper to get image based on room type or index
     const getImage = (room, index) => {
         const name = room.roomName || room.name || room.type;
@@ -142,6 +134,9 @@ const RoomList = ({ rooms: propRooms = [], isLoading = false, hasSearched = fals
         const name = room.roomName || room.name || room.type;
         return name === "Tranquil Retreat";
     };
+
+    // Hide rooms until searched
+    if (!hasSearched) return null;
 
     return (
         <section className="room-list-section" id="rooms" ref={sectionRef}>

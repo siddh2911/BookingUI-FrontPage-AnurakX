@@ -39,24 +39,9 @@ function App() {
 
   const toggleModal = () => setIsModalOpen(!isModalOpen);
 
-  const handleDateSelect = (checkIn, checkOut) => {
-    setSelectedDates({ checkIn, checkOut });
-  };
-
-  const handleBookStay = async () => {
-    if (!selectedDates.checkIn || !selectedDates.checkOut) {
-      // Scroll to booking search section
-      const searchSection = document.getElementById('booking-search');
-      if (searchSection) {
-        searchSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
-      setIsModalOpen(true);
-      return;
-    }
-
-    setHasSearched(true); // Mark that a search has been performed
+  const performSearch = async (checkIn, checkOut) => {
+    setHasSearched(true);
     setIsLoading(true);
-    const { checkIn, checkOut } = selectedDates;
     const startStr = `${checkIn.getFullYear()}-${String(checkIn.getMonth() + 1).padStart(2, '0')}-${String(checkIn.getDate()).padStart(2, '0')}`;
     const endStr = `${checkOut.getFullYear()}-${String(checkOut.getMonth() + 1).padStart(2, '0')}-${String(checkOut.getDate()).padStart(2, '0')}`;
 
@@ -88,9 +73,28 @@ function App() {
     }
   };
 
+  const handleDateSelect = (checkIn, checkOut) => {
+    setSelectedDates({ checkIn, checkOut });
+    performSearch(checkIn, checkOut);
+  };
+
+  const handleBookStay = async () => {
+    if (!selectedDates.checkIn || !selectedDates.checkOut) {
+      // Scroll to booking search section
+      const searchSection = document.getElementById('booking-search');
+      if (searchSection) {
+        searchSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      setIsModalOpen(true);
+      return;
+    }
+
+    performSearch(selectedDates.checkIn, selectedDates.checkOut);
+  };
+
   return (
     <div className="App">
-      <Header onBookNow={handleBookStay} />
+      <Header onBookNow={toggleModal} />
 
       <Hero
         onSearch={handleBookStay}

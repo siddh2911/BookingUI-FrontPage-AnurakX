@@ -120,29 +120,13 @@ const AvailabilityModal = ({ isOpen, onClose, onDateSelect, onSearch }) => {
             // Notify parent of selection regardless of validity (User Request: "user can select the dates")
             if (onDateSelect) onDateSelect(checkInDate, date);
 
-            // VALIDATION: Check if any day in the range [checkInDate, date) is sold-out.
-            let isRangeValid = true;
+            // Notify parent of selection regardless of validity (User Request: "user can select the dates")
+            if (onDateSelect) onDateSelect(checkInDate, date);
 
-            const start = new Date(checkInDate);
-            const end = new Date(date);
-
-            for (let d = new Date(start); d < end; d.setDate(d.getDate() + 1)) {
-                if (d.getMonth() === currentMonth.getMonth() && d.getFullYear() === currentMonth.getFullYear()) {
-                    const dayNum = d.getDate();
-                    const dayInfo = availabilityData[dayNum];
-                    if (dayInfo && (dayInfo.status === 'sold-out' || dayInfo.status === 'error')) {
-                        isRangeValid = false;
-                        break;
-                    }
-                }
-            }
-
-            if (isRangeValid) {
-                if (onClose) onClose();
-            } else {
-                setErrorMessage("Sorry, these dates are not available.");
-                // We keep the modal open to show the error message
-            }
+            // REMOVED VALIDATION as per request: "Sorry, these dates are not available. should not come"
+            // We allow closing even if dates are technically "sold out" in the calendar view, 
+            // relying on the main room list to show "Sold Out" status.
+            if (onClose) onClose();
         } else {
             // Reset to check-in if clicked earlier date
             setCheckInDate(date);
