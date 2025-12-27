@@ -54,7 +54,7 @@ function App() {
     const endStr = `${checkOut.getFullYear()}-${String(checkOut.getMonth() + 1).padStart(2, '0')}-${String(checkOut.getDate()).padStart(2, '0')}`;
 
     try {
-      const response = await fetch(`/available-rooms?startDate=${startStr}&endDate=${endStr}`);
+      const response = await fetch(`https://api.karunavillas.com/available-rooms?startDate=${startStr}&endDate=${endStr}`);
       const data = await response.json();
 
       // USER REQUEST: Strictly use API data, ignoring status.
