@@ -143,14 +143,34 @@
 }
 
 .calendar-day.sold-out {
-    opacity: 0.5;
-    cursor: not-allowed;
-    background: #1a1a1a;
+    opacity: 1;
+    /* Keep container full opacity for the line */
+    position: relative;
+    color: #e5e7eb;
+    /* Very faint text for the day number */
+    pointer-events: auto;
+}
+
+/* The "Cut" visual */
+.calendar-day.sold-out::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    /* Slightly more contained */
+    height: 1.5px;
+    /* Thicker, cleaner line */
+    background-color: #ef4444;
+    /* Red cut */
+    transform: translate(-50%, -50%) rotate(-45deg);
+    pointer-events: none;
+    border-radius: 2px;
 }
 
 .calendar-day.sold-out .day-price {
-    text-decoration: line-through;
-    color: #666;
+    display: none;
+    /* Hide price completely for clean look */
 }
 
 .calendar-loading {

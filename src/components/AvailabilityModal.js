@@ -14,6 +14,7 @@ const AvailabilityModal = ({ isOpen, onClose, onDateSelect, onSearch }) => {
     // State for available rooms removed as it is handled in App.js now
 
     const fetchMonthData = useCallback(async (date) => {
+        setAvailabilityData({}); // Clear old data to prevent flash of wrong status
         setLoading(true);
         const year = date.getFullYear();
         const month = date.getMonth();
@@ -184,10 +185,11 @@ const AvailabilityModal = ({ isOpen, onClose, onDateSelect, onSearch }) => {
             // effectively 'sold-out' logic for VALIDATION remains, but VISUALS are standard.
             const effectiveStatus = (status === 'error' || status === 'sold-out') ? 'sold-out' : status;
 
-            // REMOVED 'sold-out' class from visual logic to avoid grey boxes
-            // usage: only 'high' gets special treatment? Or maybe just keep everything clean.
-            // User said "no grey boxes".
-            const demandClass = effectiveStatus === 'high' ? 'high-demand' : 'low-demand';
+            // Usage: only 'high' gets special treatment? Or maybe just keep everything clean.
+            // User said "no grey boxes", but for "sold-out" we need a specific class to apply the visual "cut".
+            let demandClass = 'low-demand';
+            if (effectiveStatus === 'high') demandClass = 'high-demand';
+            else if (effectiveStatus === 'sold-out') demandClass = 'sold-out';
 
             days.push(
                 <div
