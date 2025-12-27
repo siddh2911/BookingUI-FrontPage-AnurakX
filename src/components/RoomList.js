@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Users, Maximize, ArrowRight, X } from 'lucide-react';
+import { Users, Maximize, ArrowRight, X, Home, Instagram } from 'lucide-react';
 import './RoomList.css';
 
 const rooms = [
@@ -140,7 +140,7 @@ const RoomList = ({ rooms: propRooms = [], isLoading = false, hasSearched = fals
                                                                 rel="noopener noreferrer"
                                                                 className="option-btn airbnb"
                                                             >
-                                                                Book on Airbnb
+                                                                <Home size={14} className="opt-icon" /> Book on Airbnb
                                                             </a>
                                                             <a
                                                                 href="https://www.instagram.com/villakaruna/"
@@ -148,7 +148,7 @@ const RoomList = ({ rooms: propRooms = [], isLoading = false, hasSearched = fals
                                                                 rel="noopener noreferrer"
                                                                 className="option-btn instagram"
                                                             >
-                                                                Offline Booking
+                                                                <Instagram size={14} className="opt-icon" /> Offline Booking
                                                             </a>
                                                         </div>
                                                     )}
