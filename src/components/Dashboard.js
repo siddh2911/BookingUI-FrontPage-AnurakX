@@ -10,7 +10,10 @@ const CountUp = ({ end, duration = 2000, decimals = 0, prefix = '', suffix = '',
     const [count, setCount] = useState(0);
 
     useEffect(() => {
-        if (!start) return;
+        if (!start) {
+            setCount(0);
+            return;
+        }
 
         let startTime = null;
         let animationFrame;
@@ -48,7 +51,7 @@ const CountUp = ({ end, duration = 2000, decimals = 0, prefix = '', suffix = '',
 };
 
 const Dashboard = () => {
-    // Mock data state
+    // ... stats mock data ...
     const [stats] = useState({
         rating: 4.92,
         reviews: 44,
@@ -73,7 +76,8 @@ const Dashboard = () => {
                 trigger: sectionRef.current,
                 start: "top 85%",
                 onEnter: () => setIsVisible(true),
-                once: true
+                onLeaveBack: () => setIsVisible(false), // Reset when scrolling back up
+                // Removed 'once: true' to allow replay
             });
 
             gsap.fromTo(".stat-card",
