@@ -86,8 +86,8 @@ const RoomList = ({ rooms: propRooms = [], isLoading = false, hasSearched = fals
                             opacity: 1,
                             scale: 1,
                             duration: 0.8,
-                            // On desktop, stagger by index. On mobile, add a noticeable delay (0.3s) per request.
-                            delay: isDesktop ? i * 0.1 : 0.3,
+                            // On desktop, stagger by index. On mobile, constant short delay since they appear one by one.
+                            delay: isDesktop ? i * 0.1 : 0.1,
                             ease: "power3.out"
                         }
                     );
