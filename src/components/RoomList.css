@@ -59,8 +59,8 @@
 }
 
 .room-image {
-    height: 320px;
-    /* Increased height for portrait look */
+    height: 280px;
+    /* Increased slightly to 280px per "bit more length" request */
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -78,15 +78,17 @@
 }
 
 .room-details {
-    padding: 30px;
+    padding: 24px;
+    /* Reduced from 30px */
     flex-grow: 1;
     display: flex;
     flex-direction: column;
 }
 
 .room-details h3 {
-    font-size: 26px;
-    margin-bottom: 15px;
+    font-size: 24px;
+    /* Slightly reduced from 26px */
+    margin-bottom: 12px;
     color: var(--text-primary);
     font-weight: 600;
 }
@@ -190,6 +192,16 @@
     letter-spacing: 0.05em;
     position: relative;
     overflow: hidden;
+}
+
+.option-btn.disabled {
+    background-color: #cbd5e1 !important;
+    border-color: #cbd5e1 !important;
+    color: #94a3b8 !important;
+    cursor: not-allowed;
+    pointer-events: none;
+    box-shadow: none !important;
+    transform: none !important;
 }
 
 .option-btn.airbnb {

@@ -1,9 +1,44 @@
-import React from 'react';
+import React, { useRef, useLayoutEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './StorySection.css';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const StorySection = () => {
+    const sectionRef = useRef(null);
+
+    useLayoutEffect(() => {
+        const ctx = gsap.context(() => {
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: sectionRef.current,
+                    start: "top 80%",
+                    end: "bottom 60%", // Define an end point for scrub
+                    scrub: 1, // Smooth scrubbing effect
+                    toggleActions: "play none none reverse"
+                }
+            });
+
+            tl.from(".chapter-marker", { y: 20, opacity: 0, duration: 0.8 })
+                .from("h2", { y: 30, opacity: 0, duration: 0.8 }, "-=0.6")
+                .from(".header-line", { width: 0, duration: 1, ease: "power2.out" }, "-=0.4")
+                .from(".story-img-card", {
+                    y: 50,
+                    opacity: 0,
+                    duration: 1,
+                    stagger: 0.2,
+                    ease: "power3.out"
+                }, "-=0.5")
+                .from(".story-editorial-text", { x: 30, opacity: 0, duration: 1 }, "-=0.8");
+
+        }, sectionRef);
+
+        return () => ctx.revert();
+    }, []);
+
     return (
-        <section className="story-section" id="story">
+        <section className="story-section" id="story" ref={sectionRef}>
             <div className="story-container">
                 <div className="story-header">
                     <span className="chapter-marker">The Experience</span>
