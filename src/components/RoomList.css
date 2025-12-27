@@ -126,6 +126,16 @@
     white-space: nowrap;
 }
 
+.offline-booking a {
+    color: var(--accent);
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.offline-booking a:hover {
+    color: var(--text-primary);
+}
+
 .btn-details {
     font-size: 14px;
     color: white;

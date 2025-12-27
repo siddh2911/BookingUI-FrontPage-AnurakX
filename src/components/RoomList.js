@@ -128,7 +128,9 @@ const RoomList = ({ rooms: propRooms = [], isLoading = false, hasSearched = fals
                                                     >
                                                         Book Now <ArrowRight size={14} />
                                                     </a>
-                                                    <span className="offline-booking">or dm us on instagram for offline booking</span>
+                                                    <span className="offline-booking">
+                                                        or <a href="https://www.instagram.com/villakaruna/" target="_blank" rel="noopener noreferrer">dm us on instagram</a> for offline booking
+                                                    </span>
                                                 </div>
                                             ) : (
                                                 <button className="btn-details">
