@@ -166,14 +166,20 @@
 @media (max-width: 768px) {
     .dashboard-container {
         padding: 1rem;
-        padding-top: 40px;
+        padding-top: 2rem;
     }
 
     .stats-grid {
         grid-template-columns: 1fr;
+        gap: 12px;
     }
 
-    .dashboard-header h2 {
-        font-size: 1.5rem;
+    .stat-card {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .stat-value {
+        font-size: 1.75rem;
     }
 }

@@ -37,8 +37,13 @@ const rooms = [
     }
 ];
 
-const RoomList = ({ rooms: propRooms = [] }) => {
-    const displayRooms = propRooms;
+const RoomList = ({ rooms: propRooms = [], isLoading = false, hasSearched = false }) => {
+    let displayRooms = propRooms;
+
+    // Fallback to static list if not searched and no API data
+    if (!hasSearched && (!displayRooms || displayRooms.length === 0)) {
+        displayRooms = rooms;
+    }
 
     // if (!displayRooms || displayRooms.length === 0) return null; // Removed to show 'No Rooms' message
 
@@ -70,7 +75,32 @@ const RoomList = ({ rooms: propRooms = [] }) => {
                 </div>
 
                 <div className="rooms-grid">
-                    {displayRooms && displayRooms.length > 0 ? (
+                    {isLoading ? (
+                        <div className="loading-state" style={{
+                            gridColumn: '1 / -1',
+                            padding: '4rem',
+                            textAlign: 'center',
+                            color: '#666',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            minHeight: '300px'
+                        }}>
+                            <div className="spinner" style={{
+                                width: '40px',
+                                height: '40px',
+                                border: '3px solid rgba(0,0,0,0.1)',
+                                borderRadius: '50%',
+                                borderTopColor: '#333',
+                                animation: 'spin 1s ease-in-out infinite'
+                            }}></div>
+                            <style>{`
+                                @keyframes spin {
+                                    to { transform: rotate(360deg); }
+                                }
+                            `}</style>
+                        </div>
+                    ) : displayRooms && displayRooms.length > 0 ? (
                         displayRooms.map((room, index) => (
                             <div key={room.id || index} className="room-card">
                                 <div className="room-image">

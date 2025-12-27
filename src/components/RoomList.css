@@ -150,19 +150,36 @@
 @media (max-width: 768px) {
     .rooms-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 24px;
+        padding: 0 1rem;
+    }
+
+    .room-card {
+        max-width: 100%;
+        /* Full width on mobile */
     }
 
     .section-title {
         font-size: 32px;
+        margin-bottom: 10px;
     }
 
     .room-image {
-        height: 250px;
+        height: 200px;
+        /* More compact images */
     }
 
     .room-details {
-        padding: 20px;
+        padding: 1.5rem;
+    }
+
+    .room-details h3 {
+        font-size: 22px;
+    }
+
+    .room-meta {
+        font-size: 14px;
+        margin-bottom: 20px;
     }
 }
 

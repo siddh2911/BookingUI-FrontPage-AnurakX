@@ -160,8 +160,14 @@
 }
 
 @media (max-width: 900px) {
+    .story-section {
+        padding: 4rem 1.5rem;
+        /* Reduced padding */
+    }
+
     .story-header h2 {
-        font-size: 3rem;
+        font-size: 2.5rem;
+        /* Smaller headline */
     }
 
     .story-content-wrapper {
@@ -170,22 +176,34 @@
     }
 
     .story-visuals {
-        height: 400px;
+        height: 350px;
+        /* Compact visuals */
         order: -1;
-        /* Show images first on mobile */
+        margin-bottom: 2rem;
     }
 
     .main-img {
         width: 70%;
-        height: 300px;
+        height: 280px;
     }
 
     .secondary-img {
         width: 60%;
-        height: 250px;
+        height: 200px;
+        bottom: -20px;
+        right: 0;
+    }
+
+    .story-editorial-text p {
+        font-size: 1rem;
+    }
+
+    .story-features {
+        flex-direction: column;
+        gap: 1.5rem;
     }
 
     .story-footer p {
-        font-size: 1.25rem;
+        font-size: 1.1rem;
     }
 }

@@ -104,46 +104,128 @@
 }
 
 @media (max-width: 768px) {
+    .booking-search-container {
+        padding: 0 1rem;
+        margin-top: -3rem;
+        position: relative;
+        z-index: 20;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+    }
+
     .booking-search-bar {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 10px;
-        padding: 12px;
+        gap: 6px;
+        padding: 8px;
         width: 100%;
         max-width: 100%;
         box-sizing: border-box;
+
+        /* FROSTED GLASS EFFECT */
+        background: rgba(255, 255, 255, 0.65);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     }
 
-    .search-field {
+    /* Check-in */
+    .search-field:nth-of-type(1) {
+        grid-column: span 1;
         width: 100%;
         border-bottom: none;
-        padding-bottom: 0;
-        align-items: flex-start;
-        background: rgba(255, 255, 255, 0.4);
-        padding: 8px;
-        border-radius: 8px;
     }
 
-    /* Make Guests span full width */
-    .search-field:nth-child(5) {
-        grid-column: 1 / -1;
-    }
-
-    /* Make Button span full width */
-    .search-btn {
-        grid-column: 1 / -1;
+    /* Check-out */
+    .search-field:nth-of-type(2) {
+        grid-column: span 1;
         width: 100%;
-        margin-top: 5px;
-        padding: 12px;
+        border-bottom: none;
+    }
+
+    /* Common field styles */
+    .search-field {
+        background: rgba(255, 255, 255, 0.4);
+        border-radius: 8px;
+        padding: 4px 6px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* Guests */
+    .search-field:nth-of-type(3) {
+        grid-column: span 2;
+        border-bottom: none;
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 8px;
+        padding: 5px 8px;
+        margin-top: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        height: auto;
     }
 
     .search-field label {
-        text-align: left;
+        margin-bottom: 2px;
+        font-size: 9px;
+        color: #555;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+
+    .input-with-icon {
+        background: transparent;
+        padding: 0;
+        border: none;
+        gap: 6px;
         width: 100%;
     }
 
-    .search-field:nth-last-child(2) {
-        border-bottom: none;
+    .field-icon {
+        width: 12px;
+        height: 12px;
+        color: var(--accent);
+        opacity: 0.9;
+        margin-top: 0;
+    }
+
+    .input-with-icon input {
+        font-size: 13px;
+        font-weight: 600;
+        color: #1a1a1a;
+        padding: 0;
+        height: auto;
+    }
+
+    .search-field:nth-child(5) .input-with-icon {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    /* CUSTOM DROPDOWN STYLE */
+    .input-with-icon select {
+        font-size: 13px;
+        font-weight: 600;
+        color: #1a1a1a;
+        padding: 2px 20px 2px 0;
+        height: auto;
+        width: 100%;
+        appearance: none;
+        -webkit-appearance: none;
+        background-color: transparent;
+        background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+        background-repeat: no-repeat;
+        background-position: right 0 center;
+        background-size: 9px;
+        text-align: left;
     }
 
     .divider-vertical {
@@ -151,7 +233,17 @@
     }
 
     .search-btn {
+        grid-column: span 2;
         width: 100%;
-        margin-top: 5px;
+        margin-top: 2px;
+        padding: 10px;
+        font-size: 13px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        background-color: #1a1a1a;
+        border-radius: 8px;
+        margin-left: 0;
+        display: block;
+        font-weight: 700;
+        letter-spacing: 0.05em;
     }
 }

@@ -14,16 +14,21 @@ function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedDates, setSelectedDates] = useState({ checkIn: null, checkOut: null });
   const [searchResults, setSearchResults] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [hasSearched, setHasSearched] = useState(false);
 
   useEffect(() => {
     // Fetch all rooms on load
     const fetchAllRooms = async () => {
+      setIsLoading(true);
       try {
         const response = await fetch('https://api.karunavillas.com/allRooms');
         const data = await response.json();
         setSearchResults(data);
       } catch (error) {
         // Silent failure for all rooms fetch
+      } finally {
+        setIsLoading(false);
       }
     };
 
@@ -42,12 +47,14 @@ function App() {
       return;
     }
 
+    setHasSearched(true); // Mark that a search has been performed
+    setIsLoading(true);
     const { checkIn, checkOut } = selectedDates;
     const startStr = `${checkIn.getFullYear()}-${String(checkIn.getMonth() + 1).padStart(2, '0')}-${String(checkIn.getDate()).padStart(2, '0')}`;
     const endStr = `${checkOut.getFullYear()}-${String(checkOut.getMonth() + 1).padStart(2, '0')}-${String(checkOut.getDate()).padStart(2, '0')}`;
 
     try {
-      const response = await fetch(`https://api.karunavillas.com/available-rooms?startDate=${startStr}&endDate=${endStr}`);
+      const response = await fetch(`/available-rooms?startDate=${startStr}&endDate=${endStr}`);
       const data = await response.json();
 
       // USER REQUEST: Strictly use API data, ignoring status.
@@ -62,6 +69,8 @@ function App() {
       }, 100);
     } catch (error) {
       setSearchResults([]);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -78,7 +87,7 @@ function App() {
 
 
 
-      <RoomList rooms={searchResults} />
+      <RoomList rooms={searchResults} isLoading={isLoading} hasSearched={hasSearched} />
 
       <StorySection />
 
