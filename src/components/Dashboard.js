@@ -47,10 +47,10 @@ const Dashboard = () => {
     // Mock data state
     const [stats] = useState({
         rating: 4.92,
-        reviews: 128,
+        reviews: 44,
         bookings: 154,
         happyGuests: 385,
-        awards: 12
+        awards: 2
     });
 
     const [isVisible, setIsVisible] = useState(false);
