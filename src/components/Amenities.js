@@ -1,14 +1,14 @@
 import React from 'react';
-import { Wifi, MapPin, Coffee, Activity, Utensils, LifeBuoy } from 'lucide-react';
+import { MapPin, Coffee, Home, Users, Shield, Bell } from 'lucide-react';
 import './Amenities.css';
 
 const amenities = [
-    { icon: <LifeBuoy size={24} />, title: "Infinity Pool", desc: "Overlooking the ocean" },
-    { icon: <Utensils size={24} />, title: "Fine Dining", desc: "Local & International cuisine" },
-    { icon: <Activity size={24} />, title: "Wellness Spa", desc: "Rejuvenate your senses" },
-    { icon: <Wifi size={24} />, title: "High-Speed Wifi", desc: "Stay connected everywhere" },
-    { icon: <Coffee size={24} />, title: "In-Room Breakfast", desc: "Served daily at your leisure" },
-    { icon: <MapPin size={24} />, title: "Prime Location", desc: "Minutes from the beach" },
+    { icon: <Home size={24} />, title: "Your Private Space", desc: "The privacy and comfort of a full apartment." },
+    { icon: <Coffee size={24} />, title: "Home Comforts", desc: "Fully furnished suites with modern essentials." },
+    { icon: <MapPin size={24} />, title: "Peaceful Location", desc: "Quiet setting minutes from Ghats & temples." },
+    { icon: <Users size={24} />, title: "For Every Traveler", desc: "Ideal for families, workations, and spiritual retreats." },
+    { icon: <Shield size={24} />, title: "Safe & Welcoming", desc: "A secure, hygienic, and friendly environment." },
+    { icon: <Bell size={24} />, title: "Assisted Service", desc: "Personalized host assistance for all your needs." }
 ];
 
 const Amenities = () => {

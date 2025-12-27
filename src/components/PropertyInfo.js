@@ -59,6 +59,16 @@ const PropertyInfo = () => {
                     that blend traditional Balinese architecture with modern comfort. Perfect for families, friends, or
                     couples seeking a romantic getaway.
                 </p>
+                <div className="property-gallery-grid mt-6">
+                    <div className="gallery-item">
+                        <img src="/images/varanasi-exterior.jpg" alt="Villa Exterior at Night" className="gallery-img" />
+                        <span className="img-caption">Elegant Facade</span>
+                    </div>
+                    <div className="gallery-item">
+                        <img src="/images/varanasi-interior.jpg" alt="Living Area with TV" className="gallery-img" />
+                        <span className="img-caption">Modern Interiors</span>
+                    </div>
+                </div>
                 <button className="show-more-btn">
                     Show more {'>'}
                 </button>

@@ -1,0 +1,179 @@
+.dashboard-container {
+    padding: 2rem 1.5rem;
+    /* Standardized sizing */
+    max-width: 1200px;
+    /* Better alignment with main content */
+    margin: 0 auto;
+    animation: fadeIn 0.5s ease-out;
+}
+
+
+
+
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* Force 4 columns on desktop */
+    gap: 1rem;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.8);
+    /* Slightly more opaque */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+    padding: 1.5rem;
+    /* Increased breathing room */
+    display: flex;
+    align-items: center;
+    /* PERFECT VERTICAL ALIGNMENT */
+    gap: 1.25rem;
+    /* Better spacing */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    /* Softer, professional shadow */
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+.stat-icon-wrapper {
+    width: 54px;
+    /* Fixed square for perfect alignment */
+    height: 54px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.stat-icon-wrapper.blue {
+    background: rgba(33, 150, 243, 0.1);
+    color: #2196F3;
+}
+
+.stat-icon-wrapper.yellow {
+    background: rgba(255, 193, 7, 0.1);
+    color: #FFC107;
+}
+
+.stat-icon-wrapper.purple {
+    background: rgba(156, 39, 176, 0.1);
+    color: #9C27B0;
+}
+
+.stat-icon-wrapper.green {
+    background: rgba(76, 175, 80, 0.1);
+    color: #4CAF50;
+}
+
+/* Removed orange, added red */
+.stat-icon-wrapper.red {
+    background: rgba(244, 67, 54, 0.1);
+    color: #F44336;
+}
+
+.stat-icon-wrapper.gold {
+    background: rgba(255, 215, 0, 0.1);
+    color: #FFD700;
+}
+
+.stat-content {
+    flex: 1;
+}
+
+.stat-content h3 {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0 0 4px 0;
+    /* Tighter spacing for centered look */
+    /* increased spacing */
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.stat-value {
+    font-size: 2rem;
+    /* Reduced size */
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 6px;
+    background: linear-gradient(45deg, #333, #666);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.stat-trend {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.8rem;
+}
+
+.stat-trend.positive {
+    color: #4CAF50;
+}
+
+.stat-subtext {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.progress-bar-bg {
+    width: 100%;
+    height: 6px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 3px;
+    margin-top: 8px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: #FF5722;
+    border-radius: 3px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1024px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .dashboard-container {
+        padding: 1rem;
+        padding-top: 40px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-header h2 {
+        font-size: 1.5rem;
+    }
+}

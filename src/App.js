@@ -6,6 +6,8 @@ import Amenities from './components/Amenities';
 import Footer from './components/Footer';
 import AvailabilityModal from './components/AvailabilityModal';
 import BackgroundMusic from './components/BackgroundMusic';
+import Dashboard from './components/Dashboard';
+import StorySection from './components/StorySection'; // Import StorySection
 import './App.css';
 
 function App() {
@@ -66,6 +68,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+
       <Hero
         onSearch={handleBookStay}
         onOpenCalendar={toggleModal}
@@ -73,9 +76,16 @@ function App() {
         checkOut={selectedDates.checkOut}
       />
 
+
+
       <RoomList rooms={searchResults} />
 
+      <StorySection />
+
+      <Dashboard />
+
       <Amenities />
+
       <Footer />
       <AvailabilityModal
         isOpen={isModalOpen}

@@ -16,13 +16,31 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 0;
 }
 
-.hero-bg img {
+.hero-bg img,
+.hero-video {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    /* Enhance perceived quality */
+    image-rendering: -webkit-optimize-contrast;
+    filter: contrast(1.1) saturate(1.1);
+}
+
+.hero-bg img {
+    animation: slowZoom 20s infinite alternate;
+}
+
+@keyframes slowZoom {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
 }
 
 .hero-overlay {

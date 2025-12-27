@@ -1,0 +1,89 @@
+.gallery-section {
+    padding: 4rem 1.5rem;
+    background: #f9f9f9;
+}
+
+.gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.gallery-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 0.5rem;
+}
+
+.gallery-header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.gallery-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.gallery-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 400px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.gallery-card:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.gallery-card:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-card:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-overlay span {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+    .gallery-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-card {
+        height: 300px;
+    }
+}

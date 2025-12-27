@@ -65,6 +65,37 @@
     font-size: 14px;
 }
 
+.header-actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.dashboard-btn {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.standard-header.scrolled .dashboard-btn {
+    border-color: var(--text-primary);
+    color: var(--text-primary);
+}
+
+.dashboard-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.standard-header.scrolled .dashboard-btn:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
 @media (max-width: 768px) {
     .standard-header {
         background-color: var(--text-primary);
