@@ -26,6 +26,14 @@ const rooms = [
         image: "/images/elite/elite-card.jpg",
         size: "3500 sqft",
         guests: "8 Adults"
+    },
+    {
+        id: 4,
+        roomName: "Karuna Zenith",
+        pricePerNight: "18,000",
+        image: "/images/zenith-card.jpg",
+        size: "4000 sqft",
+        guests: "10 Adults"
     }
 ];
 
@@ -38,6 +46,9 @@ const RoomList = ({ rooms: propRooms = [] }) => {
     const getImage = (room, index) => {
         if (room.roomName === "Karuna Villa Elite" || room.name === "Karuna Villa Elite" || room.type === "Karuna Villa Elite") {
             return "/images/elite/elite-card.jpg";
+        }
+        if (room.roomName === "Karuna Zenith" || room.name === "Karuna Zenith") {
+            return "/images/zenith-card.jpg";
         }
         if (room.image) return room.image;
         // Fallback/Placeholder logic
