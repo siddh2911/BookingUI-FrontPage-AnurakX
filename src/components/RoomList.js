@@ -135,8 +135,13 @@ const RoomList = ({ rooms: propRooms = [], isLoading = false, hasSearched = fals
         return name === "Tranquil Retreat";
     };
 
-    // Hide rooms until searched
-    if (!hasSearched) return null;
+    // Fallback to static list if not searched and no API data
+    if (!hasSearched && (!displayRooms || displayRooms.length === 0)) {
+        displayRooms = rooms.map(room => {
+            if (room.id === 1) return { ...room, roomName: "Tranquil Retreat" };
+            return room;
+        });
+    }
 
     return (
         <section className="room-list-section" id="rooms" ref={sectionRef}>
