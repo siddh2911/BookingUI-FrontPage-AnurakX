@@ -93,8 +93,8 @@
 
 @media (max-width: 768px) {
     .hero-container {
-        height: 65vh;
-        min-height: 500px;
+        height: 55vh;
+        min-height: 450px;
         /* Prevent it from being too short on small screens */
     }
 
