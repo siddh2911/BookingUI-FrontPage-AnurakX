@@ -210,21 +210,65 @@
 @media (max-width: 768px) {
     .availability-modal {
         width: 95%;
-        padding: 1rem;
-        max-height: 90vh;
+        padding: 1.5rem 1rem;
+        max-height: 85vh;
         overflow-y: auto;
+        border-radius: 12px;
+    }
+
+    .modal-header {
+        margin-bottom: 1rem;
+    }
+
+    .modal-header h2 {
+        font-size: 1.25rem;
+    }
+
+    .calendar-controls {
+        margin-bottom: 1rem;
+    }
+
+    .calendar-controls h3 {
+        font-size: 1rem;
     }
 
     .calendar-grid {
-        gap: 4px;
+        gap: 6px;
+        margin-bottom: 1.5rem;
+    }
+
+    .day-header {
+        font-size: 0.75rem;
+        padding-bottom: 0.25rem;
     }
 
     .calendar-day {
-        min-height: 40px;
-        height: auto;
+        min-height: 42px;
+        /* Ensure tough target */
+        height: 42px;
+        /* Force square-ish look */
+        padding: 0;
+        /* Remove padding to center content */
+        border-radius: 6px;
     }
 
-    .calendar-day .day-price {
-        font-size: 0.6rem;
+    .day-number {
+        font-size: 0.85rem;
+    }
+
+    .day-price {
+        display: none;
+        /* Hide price on very small screens if it clutters, or keep small */
+    }
+
+    .forecast-legend {
+        gap: 1rem;
+        flex-wrap: wrap;
+        font-size: 0.75rem;
+    }
+
+    .close-btn {
+        top: 0.75rem;
+        right: 0.75rem;
     }
 }

@@ -98,10 +98,17 @@
         /* Prevent it from being too short on small screens */
     }
 
+    /* Darker overlay for mobile to improve text readability */
+    .hero-overlay {
+        background: rgba(0, 0, 0, 0.6);
+    }
+
     .hero-title {
         font-size: 28px;
         /* More compact title */
         margin-bottom: 12px;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        /* Strong shadow for legibility */
     }
 
     .hero-subtitle {
@@ -109,6 +116,7 @@
         padding: 0 1rem;
         line-height: 1.4;
         max-width: 90%;
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
     }
 
     .hero-content {
