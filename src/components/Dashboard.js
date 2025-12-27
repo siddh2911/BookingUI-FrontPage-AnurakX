@@ -1,6 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useLayoutEffect } from 'react';
 import { Star, Calendar, Heart, Award, TrendingUp } from 'lucide-react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './Dashboard.css';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const CountUp = ({ end, duration = 2000, decimals = 0, prefix = '', suffix = '', start = false }) => {
     const [count, setCount] = useState(0);
@@ -56,22 +60,48 @@ const Dashboard = () => {
     const [isVisible, setIsVisible] = useState(false);
     const sectionRef = useRef(null);
 
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                    observer.disconnect(); // Only trigger once
+    useLayoutEffect(() => {
+        const mm = gsap.matchMedia();
+
+        mm.add({
+            isDesktop: "(min-width: 769px)",
+            isMobile: "(max-width: 768px)",
+        }, (context) => {
+            const { isDesktop } = context.conditions;
+
+            ScrollTrigger.create({
+                trigger: sectionRef.current,
+                start: "top 85%",
+                onEnter: () => setIsVisible(true),
+                once: true
+            });
+
+            gsap.fromTo(".stat-card",
+                {
+                    y: 60,
+                    autoAlpha: 0, // autoAlpha handles opacity + visibility
+                    scale: 0.95
+                },
+                {
+                    scrollTrigger: {
+                        trigger: sectionRef.current,
+                        start: "top 85%", // Trigger on section for the group
+                        toggleActions: "play none none reverse"
+                    },
+                    y: 0,
+                    autoAlpha: 1,
+                    scale: 1,
+                    duration: 0.8,
+                    // If grid triggers as one unit, stagger is fine. 
+                    // But on mobile, if they stack, we might want faster stagger.
+                    stagger: 0.15,
+                    ease: "back.out(1.2)",
+                    clearProps: "transform"
                 }
-            },
-            { threshold: 0.2 } // Trigger when 20% visible
-        );
+            );
+        }, sectionRef);
 
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current);
-        }
-
-        return () => observer.disconnect();
+        return () => mm.revert();
     }, []);
 
 

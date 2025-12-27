@@ -1,6 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef, useLayoutEffect } from 'react'; // Fix imports
 import { Users, Maximize, ArrowRight, X, Home, Instagram } from 'lucide-react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './RoomList.css';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const rooms = [
     {
@@ -38,20 +42,77 @@ const rooms = [
 ];
 
 const RoomList = ({ rooms: propRooms = [], isLoading = false, hasSearched = false, onSearch }) => {
-    const [showZenithOptions, setShowZenithOptions] = useState(false);
+    const [activeRoomIndex, setActiveRoomIndex] = useState(null);
     let displayRooms = propRooms;
+    const sectionRef = useRef(null);
+
+    // Close on click outside
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (activeRoomIndex !== null && !event.target.closest('.booking-actions-wrapper')) {
+                setActiveRoomIndex(null);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, [activeRoomIndex]);
+
+    useLayoutEffect(() => {
+        if (!isLoading && displayRooms && displayRooms.length > 0) {
+            const mm = gsap.matchMedia();
+
+            mm.add({
+                isDesktop: "(min-width: 769px)",
+                isMobile: "(max-width: 768px)",
+            }, (context) => {
+                const { isDesktop } = context.conditions;
+                const cards = gsap.utils.toArray(".room-card");
+
+                cards.forEach((card, i) => {
+                    gsap.fromTo(card,
+                        {
+                            y: 100,
+                            opacity: 0,
+                            scale: 0.9
+                        },
+                        {
+                            scrollTrigger: {
+                                trigger: card,
+                                start: "top 90%", // Slightly earlier on all screens
+                                toggleActions: "play none none reverse"
+                            },
+                            y: 0,
+                            opacity: 1,
+                            scale: 1,
+                            duration: 0.8,
+                            // On desktop, stagger by index. On mobile, constant short delay since they appear one by one.
+                            delay: isDesktop ? i * 0.1 : 0.1,
+                            ease: "power3.out"
+                        }
+                    );
+                });
+            }, sectionRef);
+
+            return () => mm.revert();
+        }
+    }, [isLoading, displayRooms]);
 
     // Fallback to static list if not searched and no API data
     if (!hasSearched && (!displayRooms || displayRooms.length === 0)) {
-        displayRooms = rooms;
+        displayRooms = rooms.map(room => {
+            if (room.id === 1) return { ...room, roomName: "Tranquil Retreat" };
+            return room;
+        });
     }
 
     // Helper to get image based on room type or index
     const getImage = (room, index) => {
-        if (room.roomName === "Karuna Villa Elite" || room.name === "Karuna Villa Elite" || room.type === "Karuna Villa Elite") {
+        const name = room.roomName || room.name || room.type;
+        if (name === "Karuna Villa Elite") {
             return "/images/elite/elite-card.jpg";
         }
-        if (room.roomName === "Karuna Zenith" || room.name === "Karuna Zenith") {
+        if (name === "Karuna Zenith") {
             return "/images/zenith-card.jpg";
         }
         if (room.image) return room.image;
@@ -63,8 +124,27 @@ const RoomList = ({ rooms: propRooms = [], isLoading = false, hasSearched = fals
         return placeholders[index % placeholders.length];
     };
 
+    const isKarunaSpecial = (room) => {
+        const name = room.roomName || room.name || room.type;
+        return name === "Karuna Zenith" || name === "Karuna Villa Elite" || name === "Tranquil Retreat";
+    };
+
+    const getAirbnbLink = (room) => {
+        const name = room.roomName || room.name || room.type;
+        if (name === "Karuna Villa Elite") {
+            return "https://www.airbnb.co.in/rooms/1110080531767633017?source_impression_id=p3_1766831350_P3ejFo3RH-IYNKTf";
+        }
+        if (name === "Tranquil Retreat") return "#"; // Disabled
+        return "https://www.airbnb.co.in/rooms/1356963405791829086?photo_id=2418950488&source_impression_id=p3_1766802418_P3VeQ7SZhMqSQqO2&previous_page_section_name=1000"; // Zenith
+    };
+
+    const isAirbnbDisabled = (room) => {
+        const name = room.roomName || room.name || room.type;
+        return name === "Tranquil Retreat";
+    };
+
     return (
-        <section className="room-list-section" id="rooms">
+        <section className="room-list-section" id="rooms" ref={sectionRef}>
             <div className="container">
                 <div className="section-header">
                     <span className="section-subtitle">Accommodations</span>
@@ -116,31 +196,37 @@ const RoomList = ({ rooms: propRooms = [], isLoading = false, hasSearched = fals
                                                 <span className="amount">₹{room.pricePerNight}</span>
                                                 <span className="period"> / night</span>
                                             </div>
-                                            {(room.roomName === "Karuna Zenith" || room.name === "Karuna Zenith") ? (
+                                            {isKarunaSpecial(room) ? (
                                                 <div className="booking-actions-wrapper">
-                                                    {!showZenithOptions ? (
+                                                    {activeRoomIndex !== index ? (
                                                         <button
                                                             className="btn-details"
-                                                            onClick={() => setShowZenithOptions(true)}
+                                                            onClick={(e) => {
+                                                                e.stopPropagation();
+                                                                setActiveRoomIndex(index);
+                                                            }}
                                                         >
                                                             Book Now <ArrowRight size={14} />
                                                         </button>
                                                     ) : (
-                                                        <div className="zenith-options-container">
+                                                        <div className="zenith-options-container" onClick={(e) => e.stopPropagation()}>
                                                             <button
                                                                 className="close-options"
-                                                                onClick={() => setShowZenithOptions(false)}
+                                                                onClick={() => setActiveRoomIndex(null)}
                                                                 title="Close"
                                                             >
                                                                 <X size={14} />
                                                             </button>
                                                             <a
-                                                                href="https://www.airbnb.co.in/rooms/1356963405791829086?photo_id=2418950488&source_impression_id=p3_1766802418_P3VeQ7SZhMqSQqO2&previous_page_section_name=1000"
+                                                                href={getAirbnbLink(room)}
                                                                 target="_blank"
                                                                 rel="noopener noreferrer"
-                                                                className="option-btn airbnb"
+                                                                className={`option-btn airbnb ${isAirbnbDisabled(room) ? 'disabled' : ''}`}
+                                                                onClick={(e) => {
+                                                                    if (isAirbnbDisabled(room)) e.preventDefault();
+                                                                }}
                                                             >
-                                                                <Home size={14} className="opt-icon" /> Book on Airbnb
+                                                                <Home size={14} className="opt-icon" /> {isAirbnbDisabled(room) ? "Recently Sold Out" : "Book on Airbnb"}
                                                             </a>
                                                             <a
                                                                 href="https://www.instagram.com/villakaruna/"

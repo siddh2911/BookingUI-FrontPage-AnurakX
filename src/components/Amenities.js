@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useRef, useLayoutEffect } from 'react';
 import { MapPin, Coffee, Home, Users, Shield, Bell } from 'lucide-react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './Amenities.css';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const amenities = [
     { icon: <Home size={24} />, title: "Your Private Space", desc: "The privacy and comfort of a full apartment." },
