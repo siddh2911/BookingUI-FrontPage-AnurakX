@@ -105,26 +105,25 @@
     gap: 8px;
 }
 
-.room-footer {
+.room-footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: auto;
-    border-top: 1px solid #f1f5f9;
-    padding-top: 25px;
+    width: 100%;
 }
 
-.room-price .amount {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--text-primary);
+.booking-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
 }
 
-.room-price .period {
-    font-size: 15px;
+.offline-booking {
+    font-size: 11px;
     color: var(--text-secondary);
-    margin-left: 4px;
+    font-style: italic;
+    white-space: nowrap;
 }
 
 .btn-details {
@@ -140,11 +139,38 @@
     text-transform: uppercase;
     letter-spacing: 0.1em;
     transition: background-color 0.3s;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
 }
 
 .btn-details:hover {
     background-color: var(--accent);
     color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .room-footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .booking-actions {
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .btn-details {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .offline-booking {
+        align-self: center;
+        margin-top: 4px;
+    }
 }
 
 @media (max-width: 768px) {

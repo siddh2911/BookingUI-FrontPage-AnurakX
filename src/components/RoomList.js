@@ -113,13 +113,29 @@ const RoomList = ({ rooms: propRooms = [], isLoading = false, hasSearched = fals
                                         <span><Users size={14} /> {room.capacity || "2 Adults"}</span>
                                     </div>
                                     <div className="room-footer">
-                                        <div className="room-price">
-                                            <span className="amount">₹{room.pricePerNight}</span>
-                                            <span className="period"> / night</span>
+                                        <div className="room-footer-content">
+                                            <div className="room-price">
+                                                <span className="amount">₹{room.pricePerNight}</span>
+                                                <span className="period"> / night</span>
+                                            </div>
+                                            {(room.roomName === "Karuna Zenith" || room.name === "Karuna Zenith") ? (
+                                                <div className="booking-actions">
+                                                    <a
+                                                        href="https://www.airbnb.co.in/rooms/1356963405791829086?photo_id=2418950488&source_impression_id=p3_1766802418_P3VeQ7SZhMqSQqO2&previous_page_section_name=1000"
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="btn-details"
+                                                    >
+                                                        Book Now <ArrowRight size={14} />
+                                                    </a>
+                                                    <span className="offline-booking">or dm us on instagram for offline booking</span>
+                                                </div>
+                                            ) : (
+                                                <button className="btn-details">
+                                                    Book Now <ArrowRight size={14} />
+                                                </button>
+                                            )}
                                         </div>
-                                        <button className="btn-details">
-                                            Book Now <ArrowRight size={14} />
-                                        </button>
                                     </div>
                                 </div>
                             </div>
