@@ -112,28 +112,106 @@
     width: 100%;
 }
 
-.booking-actions {
+.booking-actions-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.zenith-options-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    gap: 6px;
+    gap: 8px;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border: 1px solid #eee;
+    animation: slideInRight 0.3s ease-out;
 }
 
-.offline-booking {
-    font-size: 11px;
-    color: var(--text-secondary);
-    font-style: italic;
-    white-space: nowrap;
+.close-options {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #666;
+    transition: all 0.2s;
 }
 
-.offline-booking a {
-    color: var(--accent);
-    text-decoration: underline;
-    font-weight: 500;
-}
-
-.offline-booking a:hover {
+.close-options:hover {
+    background: #f8fafc;
     color: var(--text-primary);
+}
+
+.option-btn {
+    font-size: 13px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.option-btn.airbnb {
+    background-color: #FF5A5F;
+    /* Airbnb Red */
+    color: white;
+}
+
+.option-btn.airbnb:hover {
+    background-color: #E04E53;
+}
+
+.option-btn.instagram {
+    background-color: #f8fafc;
+    color: var(--text-primary);
+    border: 1px solid #ddd;
+}
+
+.option-btn.instagram:hover {
+    background-color: #edf2f7;
+    border-color: #ccc;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .booking-actions-wrapper {
+        width: 100%;
+    }
+
+    .zenith-options-container {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .option-btn {
+        width: 100%;
+    }
 }
 
 .btn-details {

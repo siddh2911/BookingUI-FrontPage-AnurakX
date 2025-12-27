@@ -1,5 +1,5 @@
-import React from 'react';
-import { Users, Maximize, ArrowRight } from 'lucide-react';
+import React, { useState } from 'react';
+import { Users, Maximize, ArrowRight, X } from 'lucide-react';
 import './RoomList.css';
 
 const rooms = [
@@ -37,15 +37,14 @@ const rooms = [
     }
 ];
 
-const RoomList = ({ rooms: propRooms = [], isLoading = false, hasSearched = false }) => {
+const RoomList = ({ rooms: propRooms = [], isLoading = false, hasSearched = false, onSearch }) => {
+    const [showZenithOptions, setShowZenithOptions] = useState(false);
     let displayRooms = propRooms;
 
     // Fallback to static list if not searched and no API data
     if (!hasSearched && (!displayRooms || displayRooms.length === 0)) {
         displayRooms = rooms;
     }
-
-    // if (!displayRooms || displayRooms.length === 0) return null; // Removed to show 'No Rooms' message
 
     // Helper to get image based on room type or index
     const getImage = (room, index) => {
@@ -56,11 +55,10 @@ const RoomList = ({ rooms: propRooms = [], isLoading = false, hasSearched = fals
             return "/images/zenith-card.jpg";
         }
         if (room.image) return room.image;
-        // Fallback/Placeholder logic
         const placeholders = [
             "/images/villa-1.png",
             "/images/villa-2.png",
-            "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=800&q=80" // Random room image
+            "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=800&q=80"
         ];
         return placeholders[index % placeholders.length];
     };
@@ -104,13 +102,13 @@ const RoomList = ({ rooms: propRooms = [], isLoading = false, hasSearched = fals
                         displayRooms.map((room, index) => (
                             <div key={room.id || index} className="room-card">
                                 <div className="room-image">
-                                    <img src={getImage(room, index)} alt={room.type} />
+                                    <img src={getImage(room, index)} alt={room.roomName || room.type} />
                                 </div>
                                 <div className="room-details">
                                     <h3>{room.roomName || room.type}</h3>
                                     <div className="room-meta">
                                         <span><Maximize size={14} /> {room.size || "45 sqm"}</span>
-                                        <span><Users size={14} /> {room.capacity || "2 Adults"}</span>
+                                        <span><Users size={14} /> {room.capacity || room.guests || "2 Adults"}</span>
                                     </div>
                                     <div className="room-footer">
                                         <div className="room-footer-content">
@@ -119,21 +117,44 @@ const RoomList = ({ rooms: propRooms = [], isLoading = false, hasSearched = fals
                                                 <span className="period"> / night</span>
                                             </div>
                                             {(room.roomName === "Karuna Zenith" || room.name === "Karuna Zenith") ? (
-                                                <div className="booking-actions">
-                                                    <a
-                                                        href="https://www.airbnb.co.in/rooms/1356963405791829086?photo_id=2418950488&source_impression_id=p3_1766802418_P3VeQ7SZhMqSQqO2&previous_page_section_name=1000"
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                        className="btn-details"
-                                                    >
-                                                        Book Now <ArrowRight size={14} />
-                                                    </a>
-                                                    <span className="offline-booking">
-                                                        or <a href="https://www.instagram.com/villakaruna/" target="_blank" rel="noopener noreferrer">dm us on instagram</a> for offline booking
-                                                    </span>
+                                                <div className="booking-actions-wrapper">
+                                                    {!showZenithOptions ? (
+                                                        <button
+                                                            className="btn-details"
+                                                            onClick={() => setShowZenithOptions(true)}
+                                                        >
+                                                            Book Now <ArrowRight size={14} />
+                                                        </button>
+                                                    ) : (
+                                                        <div className="zenith-options-container">
+                                                            <button
+                                                                className="close-options"
+                                                                onClick={() => setShowZenithOptions(false)}
+                                                                title="Close"
+                                                            >
+                                                                <X size={14} />
+                                                            </button>
+                                                            <a
+                                                                href="https://www.airbnb.co.in/rooms/1356963405791829086?photo_id=2418950488&source_impression_id=p3_1766802418_P3VeQ7SZhMqSQqO2&previous_page_section_name=1000"
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                                className="option-btn airbnb"
+                                                            >
+                                                                Book on Airbnb
+                                                            </a>
+                                                            <a
+                                                                href="https://www.instagram.com/villakaruna/"
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                                className="option-btn instagram"
+                                                            >
+                                                                Offline Booking
+                                                            </a>
+                                                        </div>
+                                                    )}
                                                 </div>
                                             ) : (
-                                                <button className="btn-details">
+                                                <button className="btn-details" onClick={onSearch}>
                                                     Book Now <ArrowRight size={14} />
                                                 </button>
                                             )}
