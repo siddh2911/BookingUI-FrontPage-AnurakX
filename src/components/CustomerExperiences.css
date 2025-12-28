@@ -128,6 +128,18 @@
     .nav-btn {
         display: none;
     }
+
+    .experiences-slider {
+        gap: 1rem;
+        padding-left: 1rem;
+        /* Slight inset for the first card */
+    }
+
+    .experience-card {
+        flex: 0 0 80vw;
+        /* Increased peek: 80% width means 20% of next card is visible */
+        max-width: none;
+    }
 }
 
 /* Premium Experience Card */

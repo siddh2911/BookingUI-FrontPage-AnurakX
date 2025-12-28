@@ -28,15 +28,39 @@ const Header = ({ onBookNow }) => {
     }
   };
 
+  const handleLogoClick = (e) => {
+    if (location.pathname === '/') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  const handleDiningClick = (e) => {
+    e.preventDefault();
+    navigate('/food');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <header className={`standard-header ${scrolled || location.pathname !== '/' ? 'scrolled' : ''}`}>
       <div className="container header-content">
-        <Link to="/" className="logo" style={{ textDecoration: 'none', color: 'inherit' }}>
+        <Link
+          to="/"
+          className="logo"
+          style={{ textDecoration: 'none', color: 'inherit' }}
+          onClick={handleLogoClick}
+        >
           KARUNA VILLA
         </Link>
 
         <nav className="desktop-nav">
-          <Link to="/food" className={location.pathname === '/food' ? 'active' : ''}>Dining</Link>
+          <Link
+            to="/food"
+            className={location.pathname === '/food' ? 'active' : ''}
+            onClick={handleDiningClick}
+          >
+            Dining
+          </Link>
           <a href="#experiences" onClick={(e) => handleHashLink(e, 'experiences')}>Experiences</a>
           <a href="#contact" onClick={(e) => handleHashLink(e, 'contact')}>Contact</a>
         </nav>
