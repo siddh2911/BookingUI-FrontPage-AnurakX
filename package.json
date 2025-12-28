@@ -11,6 +11,7 @@
     "gsap": "^3.14.2",
     "http-proxy-middleware": "^3.0.5",
     "lucide-react": "^0.562.0",
+    "puppeteer": "^24.34.0",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "react-player": "^3.4.0",

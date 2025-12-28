@@ -35,27 +35,32 @@
     gap: 40px;
     justify-content: center;
     justify-items: center;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
 .room-card {
-    background: white;
-    border-radius: 8px;
+    background: #ffffff;
+    border-radius: 16px;
+    /* Matched to review card */
     overflow: hidden;
-    box-shadow: var(--shadow-md);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
+    /* Matched premium shadow */
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    /* Smoother transition */
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    /* Subtle border */
     display: flex;
     flex-direction: column;
     width: 100%;
     max-width: 380px;
-    /* Restored constraint */
 }
 
 .room-card:hover {
     transform: translateY(-8px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    /* Deep hover shadow */
 }
 
 .room-image {

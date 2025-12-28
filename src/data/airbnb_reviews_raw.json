@@ -1,0 +1,1840 @@
+{
+  "all_responses": [
+    {
+      "errors": [
+        {
+          "message": "Permission denied for id Q29udGV4dHVhbFVzZXI6MTQ4Njg4NzAxODc1NTAwNjkwMg==, with metadata: [HimejiMetadata(entityType=CONTEXTUAL_USER, entityPart=HOST_PROFILE, accessLevel=READ, entityId=null, shadowModeEntityPart=null)], path: /contextualUser/reviewHighlightsFromGuests[0]/contextualReviewer/isSuperHost, type: ContextualUser.Boolean",
+          "locations": [
+            {
+              "line": 108,
+              "column": 3
+            }
+          ],
+          "path": [
+            "contextualUser",
+            "reviewHighlightsFromGuests",
+            0,
+            "contextualReviewer",
+            "isSuperHost"
+          ],
+          "extensions": {
+            "errorType": "PERMISSION_DENIED",
+            "fatal": false,
+            "localizedMessage": "Permission denied for id Q29udGV4dHVhbFVzZXI6MTQ4Njg4NzAxODc1NTAwNjkwMg==, with metadata: [HimejiMetadata(entityType=CONTEXTUAL_USER, entityPart=HOST_PROFILE, accessLevel=READ, entityId=null, shadowModeEntityPart=null)], path: /contextualUser/reviewHighlightsFromGuests[0]/contextualReviewer/isSuperHost, type: ContextualUser.Boolean",
+            "failedAtParentObject": false,
+            "fieldName": "isSuperHost",
+            "parentType": "ContextualUser",
+            "operationName": "ContextualPublicProfileQuery",
+            "classification": "DataFetchingException"
+          }
+        },
+        {
+          "message": "Permission denied for id Q29udGV4dHVhbFVzZXI6MTUzNTYxMjM2ODU2OTIzNzAyNQ==, with metadata: [HimejiMetadata(entityType=CONTEXTUAL_USER, entityPart=HOST_PROFILE, accessLevel=READ, entityId=null, shadowModeEntityPart=null)], path: /contextualUser/reviewHighlightsFromGuests[1]/contextualReviewer/isSuperHost, type: ContextualUser.Boolean",
+          "locations": [
+            {
+              "line": 108,
+              "column": 3
+            }
+          ],
+          "path": [
+            "contextualUser",
+            "reviewHighlightsFromGuests",
+            1,
+            "contextualReviewer",
+            "isSuperHost"
+          ],
+          "extensions": {
+            "errorType": "PERMISSION_DENIED",
+            "fatal": false,
+            "localizedMessage": "Permission denied for id Q29udGV4dHVhbFVzZXI6MTUzNTYxMjM2ODU2OTIzNzAyNQ==, with metadata: [HimejiMetadata(entityType=CONTEXTUAL_USER, entityPart=HOST_PROFILE, accessLevel=READ, entityId=null, shadowModeEntityPart=null)], path: /contextualUser/reviewHighlightsFromGuests[1]/contextualReviewer/isSuperHost, type: ContextualUser.Boolean",
+            "failedAtParentObject": false,
+            "fieldName": "isSuperHost",
+            "parentType": "ContextualUser",
+            "operationName": "ContextualPublicProfileQuery",
+            "classification": "DataFetchingException"
+          }
+        },
+        {
+          "message": "Permission denied for id Q29udGV4dHVhbFVzZXI6MTU2MDU4NzIxNTg4NTc5NDk4NQ==, with metadata: [HimejiMetadata(entityType=CONTEXTUAL_USER, entityPart=HOST_PROFILE, accessLevel=READ, entityId=null, shadowModeEntityPart=null)], path: /contextualUser/reviewHighlightsFromGuests[2]/contextualReviewer/isSuperHost, type: ContextualUser.Boolean",
+          "locations": [
+            {
+              "line": 108,
+              "column": 3
+            }
+          ],
+          "path": [
+            "contextualUser",
+            "reviewHighlightsFromGuests",
+            2,
+            "contextualReviewer",
+            "isSuperHost"
+          ],
+          "extensions": {
+            "errorType": "PERMISSION_DENIED",
+            "fatal": false,
+            "localizedMessage": "Permission denied for id Q29udGV4dHVhbFVzZXI6MTU2MDU4NzIxNTg4NTc5NDk4NQ==, with metadata: [HimejiMetadata(entityType=CONTEXTUAL_USER, entityPart=HOST_PROFILE, accessLevel=READ, entityId=null, shadowModeEntityPart=null)], path: /contextualUser/reviewHighlightsFromGuests[2]/contextualReviewer/isSuperHost, type: ContextualUser.Boolean",
+            "failedAtParentObject": false,
+            "fieldName": "isSuperHost",
+            "parentType": "ContextualUser",
+            "operationName": "ContextualPublicProfileQuery",
+            "classification": "DataFetchingException"
+          }
+        },
+        {
+          "message": "Permission denied for id Q29udGV4dHVhbFVzZXI6MTQ5Mzk4NTM5MTA2NTM3OTE3OA==, with metadata: [HimejiMetadata(entityType=CONTEXTUAL_USER, entityPart=HOST_PROFILE, accessLevel=READ, entityId=null, shadowModeEntityPart=null)], path: /contextualUser/reviewHighlightsFromGuests[3]/contextualReviewer/isSuperHost, type: ContextualUser.Boolean",
+          "locations": [
+            {
+              "line": 108,
+              "column": 3
+            }
+          ],
+          "path": [
+            "contextualUser",
+            "reviewHighlightsFromGuests",
+            3,
+            "contextualReviewer",
+            "isSuperHost"
+          ],
+          "extensions": {
+            "errorType": "PERMISSION_DENIED",
+            "fatal": false,
+            "localizedMessage": "Permission denied for id Q29udGV4dHVhbFVzZXI6MTQ5Mzk4NTM5MTA2NTM3OTE3OA==, with metadata: [HimejiMetadata(entityType=CONTEXTUAL_USER, entityPart=HOST_PROFILE, accessLevel=READ, entityId=null, shadowModeEntityPart=null)], path: /contextualUser/reviewHighlightsFromGuests[3]/contextualReviewer/isSuperHost, type: ContextualUser.Boolean",
+            "failedAtParentObject": false,
+            "fieldName": "isSuperHost",
+            "parentType": "ContextualUser",
+            "operationName": "ContextualPublicProfileQuery",
+            "classification": "DataFetchingException"
+          }
+        },
+        {
+          "message": "Permission denied for id Q29udGV4dHVhbFVzZXI6MTQ4NDAyMzA5NDg0NDc4NDQ3Mg==, with metadata: [HimejiMetadata(entityType=CONTEXTUAL_USER, entityPart=HOST_PROFILE, accessLevel=READ, entityId=null, shadowModeEntityPart=null)], path: /contextualUser/reviewHighlightsFromGuests[4]/contextualReviewer/isSuperHost, type: ContextualUser.Boolean",
+          "locations": [
+            {
+              "line": 108,
+              "column": 3
+            }
+          ],
+          "path": [
+            "contextualUser",
+            "reviewHighlightsFromGuests",
+            4,
+            "contextualReviewer",
+            "isSuperHost"
+          ],
+          "extensions": {
+            "errorType": "PERMISSION_DENIED",
+            "fatal": false,
+            "localizedMessage": "Permission denied for id Q29udGV4dHVhbFVzZXI6MTQ4NDAyMzA5NDg0NDc4NDQ3Mg==, with metadata: [HimejiMetadata(entityType=CONTEXTUAL_USER, entityPart=HOST_PROFILE, accessLevel=READ, entityId=null, shadowModeEntityPart=null)], path: /contextualUser/reviewHighlightsFromGuests[4]/contextualReviewer/isSuperHost, type: ContextualUser.Boolean",
+            "failedAtParentObject": false,
+            "fieldName": "isSuperHost",
+            "parentType": "ContextualUser",
+            "operationName": "ContextualPublicProfileQuery",
+            "classification": "DataFetchingException"
+          }
+        },
+        {
+          "message": "Permission denied for id Q29udGV4dHVhbFVzZXI6MTQ4Njg4NzAxODc1NTAwNjkwMg==, with metadata: [HimejiMetadata(entityType=CONTEXTUAL_USER, entityPart=HOST_PROFILE, accessLevel=READ, entityId=null, shadowModeEntityPart=null)], path: /contextualUser/reviewsReceivedFromGuests/edges[0]/node/review/contextualReviewer/isSuperHost, type: ContextualUser.Boolean",
+          "locations": [
+            {
+              "line": 108,
+              "column": 3
+            }
+          ],
+          "path": [
+            "contextualUser",
+            "reviewsReceivedFromGuests",
+            "edges",
+            0,
+            "node",
+            "review",
+            "contextualReviewer",
+            "isSuperHost"
+          ],
+          "extensions": {
+            "errorType": "PERMISSION_DENIED",
+            "fatal": false,
+            "localizedMessage": "Permission denied for id Q29udGV4dHVhbFVzZXI6MTQ4Njg4NzAxODc1NTAwNjkwMg==, with metadata: [HimejiMetadata(entityType=CONTEXTUAL_USER, entityPart=HOST_PROFILE, accessLevel=READ, entityId=null, shadowModeEntityPart=null)], path: /contextualUser/reviewsReceivedFromGuests/edges[0]/node/review/contextualReviewer/isSuperHost, type: ContextualUser.Boolean",
+            "failedAtParentObject": false,
+            "fieldName": "isSuperHost",
+            "parentType": "ContextualUser",
+            "operationName": "ContextualPublicProfileQuery",
+            "classification": "DataFetchingException"
+          }
+        },
+        {
+          "message": "Permission denied for id Q29udGV4dHVhbFVzZXI6MTUzNTYxMjM2ODU2OTIzNzAyNQ==, with metadata: [HimejiMetadata(entityType=CONTEXTUAL_USER, entityPart=HOST_PROFILE, accessLevel=READ, entityId=null, shadowModeEntityPart=null)], path: /contextualUser/reviewsReceivedFromGuests/edges[1]/node/review/contextualReviewer/isSuperHost, type: ContextualUser.Boolean",
+          "locations": [
+            {
+              "line": 108,
+              "column": 3
+            }
+          ],
+          "path": [
+            "contextualUser",
+            "reviewsReceivedFromGuests",
+            "edges",
+            1,
+            "node",
+            "review",
+            "contextualReviewer",
+            "isSuperHost"
+          ],
+          "extensions": {
+            "errorType": "PERMISSION_DENIED",
+            "fatal": false,
+            "localizedMessage": "Permission denied for id Q29udGV4dHVhbFVzZXI6MTUzNTYxMjM2ODU2OTIzNzAyNQ==, with metadata: [HimejiMetadata(entityType=CONTEXTUAL_USER, entityPart=HOST_PROFILE, accessLevel=READ, entityId=null, shadowModeEntityPart=null)], path: /contextualUser/reviewsReceivedFromGuests/edges[1]/node/review/contextualReviewer/isSuperHost, type: ContextualUser.Boolean",
+            "failedAtParentObject": false,
+            "fieldName": "isSuperHost",
+            "parentType": "ContextualUser",
+            "operationName": "ContextualPublicProfileQuery",
+            "classification": "DataFetchingException"
+          }
+        },
+        {
+          "message": "Permission denied for id Q29udGV4dHVhbFVzZXI6MTU2MDU4NzIxNTg4NTc5NDk4NQ==, with metadata: [HimejiMetadata(entityType=CONTEXTUAL_USER, entityPart=HOST_PROFILE, accessLevel=READ, entityId=null, shadowModeEntityPart=null)], path: /contextualUser/reviewsReceivedFromGuests/edges[2]/node/review/contextualReviewer/isSuperHost, type: ContextualUser.Boolean",
+          "locations": [
+            {
+              "line": 108,
+              "column": 3
+            }
+          ],
+          "path": [
+            "contextualUser",
+            "reviewsReceivedFromGuests",
+            "edges",
+            2,
+            "node",
+            "review",
+            "contextualReviewer",
+            "isSuperHost"
+          ],
+          "extensions": {
+            "errorType": "PERMISSION_DENIED",
+            "fatal": false,
+            "localizedMessage": "Permission denied for id Q29udGV4dHVhbFVzZXI6MTU2MDU4NzIxNTg4NTc5NDk4NQ==, with metadata: [HimejiMetadata(entityType=CONTEXTUAL_USER, entityPart=HOST_PROFILE, accessLevel=READ, entityId=null, shadowModeEntityPart=null)], path: /contextualUser/reviewsReceivedFromGuests/edges[2]/node/review/contextualReviewer/isSuperHost, type: ContextualUser.Boolean",
+            "failedAtParentObject": false,
+            "fieldName": "isSuperHost",
+            "parentType": "ContextualUser",
+            "operationName": "ContextualPublicProfileQuery",
+            "classification": "DataFetchingException"
+          }
+        },
+        {
+          "message": "Permission denied for id Q29udGV4dHVhbFVzZXI6MTQ5Mzk4NTM5MTA2NTM3OTE3OA==, with metadata: [HimejiMetadata(entityType=CONTEXTUAL_USER, entityPart=HOST_PROFILE, accessLevel=READ, entityId=null, shadowModeEntityPart=null)], path: /contextualUser/reviewsReceivedFromGuests/edges[3]/node/review/contextualReviewer/isSuperHost, type: ContextualUser.Boolean",
+          "locations": [
+            {
+              "line": 108,
+              "column": 3
+            }
+          ],
+          "path": [
+            "contextualUser",
+            "reviewsReceivedFromGuests",
+            "edges",
+            3,
+            "node",
+            "review",
+            "contextualReviewer",
+            "isSuperHost"
+          ],
+          "extensions": {
+            "errorType": "PERMISSION_DENIED",
+            "fatal": false,
+            "localizedMessage": "Permission denied for id Q29udGV4dHVhbFVzZXI6MTQ5Mzk4NTM5MTA2NTM3OTE3OA==, with metadata: [HimejiMetadata(entityType=CONTEXTUAL_USER, entityPart=HOST_PROFILE, accessLevel=READ, entityId=null, shadowModeEntityPart=null)], path: /contextualUser/reviewsReceivedFromGuests/edges[3]/node/review/contextualReviewer/isSuperHost, type: ContextualUser.Boolean",
+            "failedAtParentObject": false,
+            "fieldName": "isSuperHost",
+            "parentType": "ContextualUser",
+            "operationName": "ContextualPublicProfileQuery",
+            "classification": "DataFetchingException"
+          }
+        },
+        {
+          "message": "Permission denied for id Q29udGV4dHVhbFVzZXI6MTQ4NDAyMzA5NDg0NDc4NDQ3Mg==, with metadata: [HimejiMetadata(entityType=CONTEXTUAL_USER, entityPart=HOST_PROFILE, accessLevel=READ, entityId=null, shadowModeEntityPart=null)], path: /contextualUser/reviewsReceivedFromGuests/edges[4]/node/review/contextualReviewer/isSuperHost, type: ContextualUser.Boolean",
+          "locations": [
+            {
+              "line": 108,
+              "column": 3
+            }
+          ],
+          "path": [
+            "contextualUser",
+            "reviewsReceivedFromGuests",
+            "edges",
+            4,
+            "node",
+            "review",
+            "contextualReviewer",
+            "isSuperHost"
+          ],
+          "extensions": {
+            "errorType": "PERMISSION_DENIED",
+            "fatal": false,
+            "localizedMessage": "Permission denied for id Q29udGV4dHVhbFVzZXI6MTQ4NDAyMzA5NDg0NDc4NDQ3Mg==, with metadata: [HimejiMetadata(entityType=CONTEXTUAL_USER, entityPart=HOST_PROFILE, accessLevel=READ, entityId=null, shadowModeEntityPart=null)], path: /contextualUser/reviewsReceivedFromGuests/edges[4]/node/review/contextualReviewer/isSuperHost, type: ContextualUser.Boolean",
+            "failedAtParentObject": false,
+            "fieldName": "isSuperHost",
+            "parentType": "ContextualUser",
+            "operationName": "ContextualPublicProfileQuery",
+            "classification": "DataFetchingException"
+          }
+        }
+      ],
+      "data": {
+        "contextualUser": {
+          "__typename": "ContextualUser",
+          "aggregatedPastLocations": {
+            "__typename": "AggregatedPastLocationsConnection",
+            "edges": []
+          },
+          "experienceListings": {
+            "__typename": "UserToActivityListingConnection",
+            "edges": []
+          },
+          "interests": null,
+          "allInterestsList": [
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Adrenaline sports",
+              "typeV2": "ADRENALINE_SPORTS"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "American football",
+              "typeV2": "AMERICAN_FOOTBALL"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Animals",
+              "typeV2": "ANIMALS"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Anime",
+              "typeV2": "ANIME"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Archery",
+              "typeV2": "ARCHERY"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Architecture",
+              "typeV2": "ARCHITECTURE"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Art",
+              "typeV2": "ART"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Artisanal crafts",
+              "typeV2": "ARTISANAL_CRAFTS"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Aviation",
+              "typeV2": "AVIATION"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Badminton",
+              "typeV2": "BADMINTON"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Baseball",
+              "typeV2": "BASEBALL"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Basketball",
+              "typeV2": "BASKETBALL"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Basque pelota",
+              "typeV2": "BASQUE_PELOTA"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Billiards",
+              "typeV2": "BILLARDS"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Board games",
+              "typeV2": "BOARD_GAMES"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Bobsleighing",
+              "typeV2": "BODSLEDDING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Bocce ball",
+              "typeV2": "BOCCE_BALL"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Bowling",
+              "typeV2": "BOWLING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Boxing",
+              "typeV2": "BOXING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Bridge",
+              "typeV2": "BRIDGE"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Building things",
+              "typeV2": "BUILDING_THINGS"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Camping",
+              "typeV2": "CAMPING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Canoeing",
+              "typeV2": "CANOEING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Card games",
+              "typeV2": "CARD_GAMES"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Cars",
+              "typeV2": "CARS"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Charreria",
+              "typeV2": "CHARRERIA"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Cheerleading",
+              "typeV2": "CHEERLEADING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Chess",
+              "typeV2": "CHESS"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Climbing",
+              "typeV2": "CLIMBING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Cocktails",
+              "typeV2": "COCKTAILS"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Coffee",
+              "typeV2": "COFFEE"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Comedy",
+              "typeV2": "COMEDY"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Content creation",
+              "typeV2": "CONTENT_CREATION"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Cooking",
+              "typeV2": "COOKING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Crafting",
+              "typeV2": "CRAFTING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Cricket",
+              "typeV2": "CRICKET"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Cultural heritage",
+              "typeV2": "CULTURAL_HERITAGE"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Curling",
+              "typeV2": "CURLING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Cycling",
+              "typeV2": "CYCLING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Dance",
+              "typeV2": "DANCE"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Darts",
+              "typeV2": "DARTS"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Design",
+              "typeV2": "DESIGN"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Diving",
+              "typeV2": "DIVING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Dodgeball",
+              "typeV2": "DODGEBALL"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Equestrian sports",
+              "typeV2": "EQUESTRIAN_SPORTS"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Fantasy sports",
+              "typeV2": "FANTASY_SPORTS"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Fashion",
+              "typeV2": "FASHION"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Fencing",
+              "typeV2": "FENCING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Figure skating",
+              "typeV2": "FIGURE_SKATING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Films",
+              "typeV2": "MOVIES"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Fishing",
+              "typeV2": "FISHING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Fitness",
+              "typeV2": "FITNESS"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Food scenes",
+              "typeV2": "FOODIE"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Football",
+              "typeV2": "SOCCER"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Gardening",
+              "typeV2": "GARDENING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Golf",
+              "typeV2": "GOLF"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Gymnastics",
+              "typeV2": "GYMNASTICS"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Hair",
+              "typeV2": "HAIR"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Handball",
+              "typeV2": "HANDBALL"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Hiking",
+              "typeV2": "HIKING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "History",
+              "typeV2": "HISTORY"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Hockey",
+              "typeV2": "FIELD_HOCKEY"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Home improvement",
+              "typeV2": "HOME_IMPROVEMENTS"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Horse racing",
+              "typeV2": "HORSE_RACING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Ice hockey",
+              "typeV2": "HOCKEY"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Judo",
+              "typeV2": "JUDO"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Karate",
+              "typeV2": "KARATE"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Kayaking",
+              "typeV2": "KAYAKING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Kickboxing",
+              "typeV2": "KICKBOXING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Kung fu",
+              "typeV2": "KUNG_FU"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Lacrosse",
+              "typeV2": "LACROSSE"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Live music",
+              "typeV2": "LIVE_MUSIC"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Live sports",
+              "typeV2": "LIVE_SPORTS"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Local culture",
+              "typeV2": "LOCAL_CULTURE"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Luge",
+              "typeV2": "LUGE"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Make-up",
+              "typeV2": "MAKEUP"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Meditation",
+              "typeV2": "MEDITATION"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Motor sports",
+              "typeV2": "MOTOR_SPORTS"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Museums",
+              "typeV2": "MUSEUMS"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Netball",
+              "typeV2": "NETBALL"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Nightlife",
+              "typeV2": "NIGHTLIFE"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Padel",
+              "typeV2": "PADEL"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Pentathlon",
+              "typeV2": "PENTATHLON"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Photography",
+              "typeV2": "PHOTOGRAPHY"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Pickleball",
+              "typeV2": "PICKLEBALL"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Plants",
+              "typeV2": "PLANTS"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Playing music",
+              "typeV2": "PLAYING_MUSIC"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Podcasts",
+              "typeV2": "PODCASTS"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Poker",
+              "typeV2": "POKER"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Polo",
+              "typeV2": "POLO"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Puzzles",
+              "typeV2": "PUZZLES"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Racquetball",
+              "typeV2": "RACQUETBALL"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Reading",
+              "typeV2": "READING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Rodeo",
+              "typeV2": "RODEO"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Roller derby",
+              "typeV2": "ROLLER_DERBY"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Rollerskating",
+              "typeV2": "ROLLER_SKATING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Rowing",
+              "typeV2": "ROWING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Rugby",
+              "typeV2": "RUGBY"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Running",
+              "typeV2": "RUNNING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Sailing",
+              "typeV2": "SAILING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Self-care",
+              "typeV2": "SELF_CARE"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Shooting sports",
+              "typeV2": "SHOOTING_SPORTS"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Shopping",
+              "typeV2": "SHOPPING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Singing",
+              "typeV2": "SINGING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Skateboarding",
+              "typeV2": "SKATEBOARDING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Skiing",
+              "typeV2": "SKIING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Snorkelling",
+              "typeV2": "SNORKELING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Snowboarding",
+              "typeV2": "SNOWBOARDING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Social activism",
+              "typeV2": "SOCIAL_ACTIVISM"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Spa",
+              "typeV2": "SPA"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Squash",
+              "typeV2": "SQUASH"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Sumo wrestling",
+              "typeV2": "SUMO_WRESTLING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Surfing",
+              "typeV2": "SURFING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Sustainability",
+              "typeV2": "SUSTAINABILITY"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Swimming",
+              "typeV2": "SWIMMING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "TV",
+              "typeV2": "WATCHING_TV"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Table tennis",
+              "typeV2": "TABLE_TENNIS"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Taekwondo",
+              "typeV2": "TAEKWONDO"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Tai chi",
+              "typeV2": "TAI_CHI"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Technology",
+              "typeV2": "TECHNOLOGY"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Tennis",
+              "typeV2": "TENNIS"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Theatre",
+              "typeV2": "THEATER"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Track & field",
+              "typeV2": "TRACK_AND_FIELD"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Travel",
+              "typeV2": "TRAVEL"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Ultimate frisbee",
+              "typeV2": "ULTIMATE_FRISBEE"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Video games",
+              "typeV2": "VIDEO_GAMES"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Volleyball",
+              "typeV2": "VOLLEYBALL"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Volunteering",
+              "typeV2": "VOLUNTEERING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Walking",
+              "typeV2": "WALKING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Water polo",
+              "typeV2": "WATER_POLO"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Water sports",
+              "typeV2": "WATER_SPORTS"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Weightlifting",
+              "typeV2": "WEIGHT_LIFTING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Wine",
+              "typeV2": "WINE_TASTING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Wrestling",
+              "typeV2": "WRESTLING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Writing",
+              "typeV2": "WRITING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Yoga",
+              "typeV2": "YOGA"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "outdoors",
+              "typeV2": "OUTDOORS"
+            }
+          ],
+          "rankedInterests": [
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Architecture",
+              "typeV2": "ARCHITECTURE"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Food scenes",
+              "typeV2": "FOODIE"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "History",
+              "typeV2": "HISTORY"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Live music",
+              "typeV2": "LIVE_MUSIC"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Live sports",
+              "typeV2": "LIVE_SPORTS"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Museums",
+              "typeV2": "MUSEUMS"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "outdoors",
+              "typeV2": "OUTDOORS"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Photography",
+              "typeV2": "PHOTOGRAPHY"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Reading",
+              "typeV2": "READING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Shopping",
+              "typeV2": "SHOPPING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Theatre",
+              "typeV2": "THEATER"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Water sports",
+              "typeV2": "WATER_SPORTS"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Wine",
+              "typeV2": "WINE_TASTING"
+            },
+            {
+              "__typename": "UserProfileInterest",
+              "isFeatured": true,
+              "title": "Yoga",
+              "typeV2": "YOGA"
+            }
+          ],
+          "managedListings": [
+            {
+              "__typename": "UserProfileListing",
+              "bathrooms": 2,
+              "bedrooms": 2,
+              "beds": 2,
+              "id": "1250459831878517530",
+              "instantBookEnabled": true,
+              "isLuxury": false,
+              "isNewListing": false,
+              "isSelect": false,
+              "isSuperhost": false,
+              "localizedNameOrPlaceholderName": null,
+              "localizedRoomType": "Villa",
+              "name": null,
+              "nameOrPlaceholderName": "Karuna Villa Versailles",
+              "pictureUrl": "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTI1MDQ1OTgzMTg3ODUxNzUzMA%3D%3D/original/1b5013f1-eddb-4a35-a76e-b56414c26687.jpeg?aki_policy=large",
+              "propertyTypeId": "11",
+              "propertyTypeName": "Villa",
+              "ratingAverage": 4.11,
+              "reviewCount": "9",
+              "roomTypeCategory": "entire_home",
+              "thumbnailUrl": "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTI1MDQ1OTgzMTg3ODUxNzUzMA%3D%3D/original/1b5013f1-eddb-4a35-a76e-b56414c26687.jpeg?aki_policy=small"
+            },
+            {
+              "__typename": "UserProfileListing",
+              "bathrooms": 1,
+              "bedrooms": 2,
+              "beds": 2,
+              "id": "1110080531767633017",
+              "instantBookEnabled": true,
+              "isLuxury": false,
+              "isNewListing": false,
+              "isSelect": false,
+              "isSuperhost": false,
+              "localizedNameOrPlaceholderName": null,
+              "localizedRoomType": "Villa",
+              "name": null,
+              "nameOrPlaceholderName": "Karuna Villa Elite",
+              "pictureUrl": "https://a0.muscache.com/im/pictures/miso/Hosting-1110080531767633017/original/b14c74ab-9dcd-467f-80db-185737a2049b.jpeg?aki_policy=large",
+              "propertyTypeId": "11",
+              "propertyTypeName": "Villa",
+              "ratingAverage": 4.83,
+              "reviewCount": "30",
+              "roomTypeCategory": "entire_home",
+              "thumbnailUrl": "https://a0.muscache.com/im/pictures/miso/Hosting-1110080531767633017/original/b14c74ab-9dcd-467f-80db-185737a2049b.jpeg?aki_policy=small"
+            },
+            {
+              "__typename": "UserProfileListing",
+              "bathrooms": 2,
+              "bedrooms": 2,
+              "beds": 2,
+              "id": "1356963405791829086",
+              "instantBookEnabled": true,
+              "isLuxury": false,
+              "isNewListing": false,
+              "isSelect": false,
+              "isSuperhost": false,
+              "localizedNameOrPlaceholderName": null,
+              "localizedRoomType": "Home",
+              "name": null,
+              "nameOrPlaceholderName": "Karuna Zenith(A Bliss by Ganges)",
+              "pictureUrl": "https://a0.muscache.com/im/pictures/hosting/Hosting-1356963405791829086/original/ac58be17-9512-4682-a43f-53cc41df0ccb.jpeg?aki_policy=large",
+              "propertyTypeId": "2",
+              "propertyTypeName": "House",
+              "ratingAverage": 5,
+              "reviewCount": "2",
+              "roomTypeCategory": "entire_home",
+              "thumbnailUrl": "https://a0.muscache.com/im/pictures/hosting/Hosting-1356963405791829086/original/ac58be17-9512-4682-a43f-53cc41df0ccb.jpeg?aki_policy=small"
+            }
+          ],
+          "managedListingsTotalCount": 3,
+          "profileVisibility": {
+            "__typename": "UserProfileVisibility",
+            "profileViewMode": "PUBLIC",
+            "profileDisclaimerHtml": null,
+            "profileDisclaimerIcon": null
+          },
+          "prompts": {
+            "__typename": "UserPrompts",
+            "displayProfilePrompts": [
+              {
+                "__typename": "DisplayProfilePrompt",
+                "fieldId": "PETS",
+                "icon": "SYSTEM_PETS",
+                "title": "Pets",
+                "subtitle": "I have a dog named Jimmy .",
+                "localizedSubtitle": {
+                  "__typename": "UGCText",
+                  "localizedString": "I have a dog named Jimmy .",
+                  "source": "I have a dog named Jimmy ."
+                },
+                "useConcatenationColon": true
+              },
+              {
+                "__typename": "DisplayProfilePrompt",
+                "fieldId": "LANGUAGES",
+                "icon": "SYSTEM_LANGUAGE",
+                "title": "Speaks",
+                "subtitle": "English and Hindi",
+                "localizedSubtitle": null,
+                "useConcatenationColon": false
+              },
+              {
+                "__typename": "DisplayProfilePrompt",
+                "fieldId": "IDENTITY_VERIFIED",
+                "icon": "SYSTEM_VERIFIED",
+                "title": "Identity verified",
+                "subtitle": null,
+                "localizedSubtitle": null,
+                "useConcatenationColon": false
+              }
+            ],
+            "editProfilePrompts": {
+              "__typename": "EditProfilePrompts",
+              "prompts": [],
+              "flexForm": {
+                "__typename": "FlexForm",
+                "values": []
+              }
+            }
+          },
+          "recognitions": null,
+          "reputationStats": [
+            {
+              "__typename": "UserProfileReputation",
+              "description": "Get to know Preeti better through reviews. Reviews can only be left by past guests or hosts.",
+              "highlightedDescription": null,
+              "key": "reviews",
+              "labelTitle": "41 reviews",
+              "labelValue": "41",
+              "linkCtaText": "Check out reviews",
+              "linkUrl": null
+            },
+            {
+              "__typename": "UserProfileReputation",
+              "description": "Preeti has successfully provided the required info to confirm their identity.",
+              "highlightedDescription": null,
+              "key": "id_checked",
+              "labelTitle": "Identity verified",
+              "labelValue": null,
+              "linkCtaText": null,
+              "linkUrl": null
+            }
+          ],
+          "serviceListings": {
+            "__typename": "UserToActivityListingConnection",
+            "edges": []
+          },
+          "canViewProfilePicture": true,
+          "displayFirstName": "Preeti",
+          "hasIdentityBadge": true,
+          "isSuperHost": false,
+          "location": null,
+          "pastTripsCount": 0,
+          "userRepresentationUrl": {
+            "__typename": "UserRepresentationUrl",
+            "profilePictureUrl": "https://a0.muscache.com/im/pictures/user/User-566520545/original/213ce55b-7930-48b3-a875-2ccd37c45cb8.jpeg?aki_policy=profile_x_medium",
+            "hasProfilePicture": true
+          },
+          "hostRatingStats": {
+            "__typename": "UserRatingStats",
+            "ratingStats": {
+              "__typename": "ReviewRatingStats",
+              "ratingAverage": 4.68,
+              "ratingCount": "41"
+            }
+          },
+          "guestRatingStats": null,
+          "showBusinessVerificationBadge": false,
+          "timeAsHost": {
+            "__typename": "TimeAsUser",
+            "years": 1,
+            "months": 9
+          },
+          "timeAsUser": {
+            "__typename": "TimeAsUser",
+            "years": 1,
+            "months": 9
+          },
+          "verificationInfo": {
+            "__typename": "ProfileVerificationInfo",
+            "verifiedSinceText": "Verified since March 2024",
+            "hasVerificationBadge": true,
+            "verificationExplanationHtml": "Our identity verification process checks a person’s information against trusted third-party sources or a government ID. The process has safeguards but doesn’t guarantee that someone is who they say they are. <a href='https://www.airbnb.co.in/help/article/1237' target='_blank'>Learn more</a>"
+          },
+          "about": null,
+          "fieldRankings": null,
+          "flaggedByViewer": null,
+          "id": "Q29udGV4dHVhbFVzZXI6MTQ2Mzg4Mjg4Mzk3NTIwMjM5Mg==",
+          "identityVerificationTypes": [
+            "Identity",
+            "Email address",
+            "Phone number"
+          ],
+          "isViewerProfileOwner": false,
+          "contextType": "HOST",
+          "localizedAbout": null,
+          "preference": {
+            "__typename": "UserProfilePreference",
+            "showBirthDecade": false,
+            "showPastTrips": true
+          },
+          "showBusinessLabel": null,
+          "travelGuides": {
+            "__typename": "UserToTravelGuidesConnection",
+            "edges": []
+          },
+          "reviewHighlightsFromGuests": [
+            {
+              "__typename": "UserProfileReview",
+              "id": "VXNlclByb2ZpbGVSZXZpZXc6MTU3MDgzMDg1NjU4NzI0NjcyMQ==",
+              "createdAt": "2025-12-07T08:00:30.418Z",
+              "commentV2": "Great",
+              "isHostHighlight": false,
+              "photos": [],
+              "localizedPaidPromotionDisclaimer": null,
+              "displayRating": 5,
+              "response": null,
+              "contextualReviewee": null,
+              "contextualReviewer": {
+                "__typename": "ContextualUser",
+                "id": "Q29udGV4dHVhbFVzZXI6MTQ4Njg4NzAxODc1NTAwNjkwMg==",
+                "isSuperHost": null,
+                "location": null,
+                "userRepresentationUrl": {
+                  "__typename": "UserRepresentationUrl",
+                  "profilePictureUrl": "https://a0.muscache.com/im/pictures/user/User/original/6e3319ce-72f3-4aac-bbd4-652e48d59de7.jpeg?aki_policy=profile_x_medium"
+                },
+                "displayFirstName": "Debopratim"
+              },
+              "translation": {
+                "__typename": "UserProfileReviewTranslation",
+                "comments": "Great",
+                "commentsLanguage": "en",
+                "disclaimer": "Translated from English",
+                "response": null,
+                "responseDisclaimer": null,
+                "responseLanguage": null
+              },
+              "respondedAt": null
+            },
+            {
+              "__typename": "UserProfileReview",
+              "id": "VXNlclByb2ZpbGVSZXZpZXc6MTU2Mjg1NzYwNTc1MDgwMjc3Nw==",
+              "createdAt": "2025-11-26T07:59:04.850Z",
+              "commentV2": "Good",
+              "isHostHighlight": false,
+              "photos": [],
+              "localizedPaidPromotionDisclaimer": null,
+              "displayRating": 3,
+              "response": null,
+              "contextualReviewee": null,
+              "contextualReviewer": {
+                "__typename": "ContextualUser",
+                "id": "Q29udGV4dHVhbFVzZXI6MTUzNTYxMjM2ODU2OTIzNzAyNQ==",
+                "isSuperHost": null,
+                "location": null,
+                "userRepresentationUrl": {
+                  "__typename": "UserRepresentationUrl",
+                  "profilePictureUrl": "https://a0.muscache.com/im/pictures/user/User/original/b6822635-0531-4a9c-aa74-a8abe60ba7a8.jpeg?aki_policy=profile_x_medium"
+                },
+                "displayFirstName": "Vishnu"
+              },
+              "translation": {
+                "__typename": "UserProfileReviewTranslation",
+                "comments": "Good",
+                "commentsLanguage": "en",
+                "disclaimer": "Translated from English",
+                "response": null,
+                "responseDisclaimer": null,
+                "responseLanguage": null
+              },
+              "respondedAt": null
+            },
+            {
+              "__typename": "UserProfileReview",
+              "id": "VXNlclByb2ZpbGVSZXZpZXc6MTU2MTQyMTIwNjI2NTE5ODk4MQ==",
+              "createdAt": "2025-11-24T08:25:12.688Z",
+              "commentV2": "My stay at Karuna Villa was absolutely wonderful , one of the best parts was that all the major visiting sites were nearby, making it super easy to explore . I highly recommend staying here , you’ll feel welcomed, relaxed, and well taken care of. Thank you Preeti, for being such an amazing host. Looking forward to coming back soon!",
+              "isHostHighlight": false,
+              "photos": [],
+              "localizedPaidPromotionDisclaimer": null,
+              "displayRating": 5,
+              "response": null,
+              "contextualReviewee": null,
+              "contextualReviewer": {
+                "__typename": "ContextualUser",
+                "id": "Q29udGV4dHVhbFVzZXI6MTU2MDU4NzIxNTg4NTc5NDk4NQ==",
+                "isSuperHost": null,
+                "location": null,
+                "userRepresentationUrl": {
+                  "__typename": "UserRepresentationUrl",
+                  "profilePictureUrl": "https://a0.muscache.com/im/pictures/user/User/original/8538429f-e3d4-4cde-a440-16685b7bb752.jpeg?aki_policy=profile_x_medium"
+                },
+                "displayFirstName": "Siddhant"
+              },
+              "translation": {
+                "__typename": "UserProfileReviewTranslation",
+                "comments": "My stay at Karuna Villa was absolutely wonderful , one of the best parts was that all the major visiting sites were nearby, making it super easy to explore . I highly recommend staying here , you’ll feel welcomed, relaxed, and well taken care of. Thank you Preeti, for being such an amazing host. Looking forward to coming back soon!",
+                "commentsLanguage": "en",
+                "disclaimer": "Translated from English",
+                "response": null,
+                "responseDisclaimer": null,
+                "responseLanguage": null
+              },
+              "respondedAt": null
+            },
+            {
+              "__typename": "UserProfileReview",
+              "id": "VXNlclByb2ZpbGVSZXZpZXc6MTU1NTY1NTY4MzUwNDM1ODI3OA==",
+              "createdAt": "2025-11-16T09:30:08.816Z",
+              "commentV2": "Preeti's place was v nice, meticulous , clean, peaceful, surrounded by greenery. Caretaker Mangal was v helpful even at odd hrs like 3am. Owner Ms Preeti was just a call away. It was v near to d conference venue Deendayal hastkala sankul and so was v convenient though far from Vishwanath temple and old city. Overall stay was good.",
+              "isHostHighlight": false,
+              "photos": [],
+              "localizedPaidPromotionDisclaimer": null,
+              "displayRating": 4,
+              "response": null,
+              "contextualReviewee": null,
+              "contextualReviewer": {
+                "__typename": "ContextualUser",
+                "id": "Q29udGV4dHVhbFVzZXI6MTQ5Mzk4NTM5MTA2NTM3OTE3OA==",
+                "isSuperHost": null,
+                "location": null,
+                "userRepresentationUrl": {
+                  "__typename": "UserRepresentationUrl",
+                  "profilePictureUrl": "https://a0.muscache.com/im/pictures/user/User/original/77b6a953-f233-4dda-8df9-4f65deb13dbe.jpeg?aki_policy=profile_x_medium"
+                },
+                "displayFirstName": "Madhumita"
+              },
+              "translation": {
+                "__typename": "UserProfileReviewTranslation",
+                "comments": "Preeti's place was v nice, meticulous , clean, peaceful, surrounded by greenery. Caretaker Mangal was v helpful even at odd hrs like 3am. Owner Ms Preeti was just a call away. It was v near to d conference venue Deendayal hastkala sankul and so was v convenient though far from Vishwanath temple and old city. Overall stay was good.",
+                "commentsLanguage": "en",
+                "disclaimer": "Translated from English",
+                "response": null,
+                "responseDisclaimer": null,
+                "responseLanguage": null
+              },
+              "respondedAt": null
+            },
+            {
+              "__typename": "UserProfileReview",
+              "id": "VXNlclByb2ZpbGVSZXZpZXc6MTU1NTYwOTEyOTU5NTAwNjExNA==",
+              "createdAt": "2025-11-16T07:57:39.157Z",
+              "commentV2": "We had a pleasant stay at this place. The caretaker was very active in solving any issues. The bathroom was clean. \nDeendayal Hasthkala Sankul is nearby, walking distance. The stay was well lit by sunlight. Will definitely visit and stay again when I visit Varanasi. Thank you for making our stay memorable.",
+              "isHostHighlight": false,
+              "photos": [],
+              "localizedPaidPromotionDisclaimer": null,
+              "displayRating": 5,
+              "response": null,
+              "contextualReviewee": null,
+              "contextualReviewer": {
+                "__typename": "ContextualUser",
+                "id": "Q29udGV4dHVhbFVzZXI6MTQ4NDAyMzA5NDg0NDc4NDQ3Mg==",
+                "isSuperHost": null,
+                "location": null,
+                "userRepresentationUrl": {
+                  "__typename": "UserRepresentationUrl",
+                  "profilePictureUrl": "https://a0.muscache.com/im/pictures/user/c9167fbf-7dc8-4d39-91ab-b8b5d529ac7b.jpg?aki_policy=profile_x_medium"
+                },
+                "displayFirstName": "Rupraj"
+              },
+              "translation": {
+                "__typename": "UserProfileReviewTranslation",
+                "comments": "We had a pleasant stay at this place. The caretaker was very active in solving any issues. The bathroom was clean. \nDeendayal Hasthkala Sankul is nearby, walking distance. The stay was well lit by sunlight. Will definitely visit and stay again when I visit Varanasi. Thank you for making our stay memorable.",
+                "commentsLanguage": "en",
+                "disclaimer": "Translated from English",
+                "response": null,
+                "responseDisclaimer": null,
+                "responseLanguage": null
+              },
+              "respondedAt": null
+            }
+          ],
+          "reviewsReceivedFromGuests": {
+            "__typename": "ContextualUserReviewConnection",
+            "edges": [
+              {
+                "__typename": "GuestUserReviewEdge",
+                "node": {
+                  "__typename": "UserReviewTextSearch",
+                  "review": {
+                    "__typename": "StayListingReview",
+                    "id": "U3RheUxpc3RpbmdSZXZpZXc6MTU3MDgzMDg1NjU4NzI0NjcyMQ==",
+                    "createdAt": "2025-12-07T08:00:30.418Z",
+                    "commentV2": "Great",
+                    "photos": [],
+                    "localizedPaidPromotionDisclaimer": null,
+                    "displayRating": 5,
+                    "publicResponse": null,
+                    "contextualReviewee": {
+                      "__typename": "ContextualUser",
+                      "id": "Q29udGV4dHVhbFVzZXI6MTQ2Mzg4Mjg4Mzk3NTIwMjM5Mg==",
+                      "isSuperHost": false,
+                      "location": null,
+                      "userRepresentationUrl": {
+                        "__typename": "UserRepresentationUrl",
+                        "profilePictureUrl": "https://a0.muscache.com/im/pictures/user/User-566520545/original/213ce55b-7930-48b3-a875-2ccd37c45cb8.jpeg?aki_policy=profile_x_medium"
+                      },
+                      "displayFirstName": "Preeti"
+                    },
+                    "contextualReviewer": {
+                      "__typename": "ContextualUser",
+                      "id": "Q29udGV4dHVhbFVzZXI6MTQ4Njg4NzAxODc1NTAwNjkwMg==",
+                      "isSuperHost": null,
+                      "location": null,
+                      "userRepresentationUrl": {
+                        "__typename": "UserRepresentationUrl",
+                        "profilePictureUrl": "https://a0.muscache.com/im/pictures/user/User/original/6e3319ce-72f3-4aac-bbd4-652e48d59de7.jpeg?aki_policy=profile_x_medium"
+                      },
+                      "displayFirstName": "Debopratim"
+                    },
+                    "translation": {
+                      "__typename": "UserProfileReviewTranslation",
+                      "comments": "Great",
+                      "commentsLanguage": "en",
+                      "disclaimer": "Translated from English",
+                      "response": null,
+                      "responseDisclaimer": null,
+                      "responseLanguage": null
+                    },
+                    "respondedAt": null,
+                    "revieweeRole": "HOST"
+                  }
+                }
+              },
+              {
+                "__typename": "GuestUserReviewEdge",
+                "node": {
+                  "__typename": "UserReviewTextSearch",
+                  "review": {
+                    "__typename": "StayListingReview",
+                    "id": "U3RheUxpc3RpbmdSZXZpZXc6MTU2Mjg1NzYwNTc1MDgwMjc3Nw==",
+                    "createdAt": "2025-11-26T07:59:04.850Z",
+                    "commentV2": "Good",
+                    "photos": [],
+                    "localizedPaidPromotionDisclaimer": null,
+                    "displayRating": 3,
+                    "publicResponse": null,
+                    "contextualReviewee": {
+                      "__typename": "ContextualUser",
+                      "id": "Q29udGV4dHVhbFVzZXI6MTQ2Mzg4Mjg4Mzk3NTIwMjM5Mg==",
+                      "isSuperHost": false,
+                      "location": null,
+                      "userRepresentationUrl": {
+                        "__typename": "UserRepresentationUrl",
+                        "profilePictureUrl": "https://a0.muscache.com/im/pictures/user/User-566520545/original/213ce55b-7930-48b3-a875-2ccd37c45cb8.jpeg?aki_policy=profile_x_medium"
+                      },
+                      "displayFirstName": "Preeti"
+                    },
+                    "contextualReviewer": {
+                      "__typename": "ContextualUser",
+                      "id": "Q29udGV4dHVhbFVzZXI6MTUzNTYxMjM2ODU2OTIzNzAyNQ==",
+                      "isSuperHost": null,
+                      "location": "Lucknow, India",
+                      "userRepresentationUrl": {
+                        "__typename": "UserRepresentationUrl",
+                        "profilePictureUrl": "https://a0.muscache.com/im/pictures/user/User/original/b6822635-0531-4a9c-aa74-a8abe60ba7a8.jpeg?aki_policy=profile_x_medium"
+                      },
+                      "displayFirstName": "Vishnu"
+                    },
+                    "translation": {
+                      "__typename": "UserProfileReviewTranslation",
+                      "comments": "Good",
+                      "commentsLanguage": "en",
+                      "disclaimer": "Translated from English",
+                      "response": null,
+                      "responseDisclaimer": null,
+                      "responseLanguage": null
+                    },
+                    "respondedAt": null,
+                    "revieweeRole": "HOST"
+                  }
+                }
+              },
+              {
+                "__typename": "GuestUserReviewEdge",
+                "node": {
+                  "__typename": "UserReviewTextSearch",
+                  "review": {
+                    "__typename": "StayListingReview",
+                    "id": "U3RheUxpc3RpbmdSZXZpZXc6MTU2MTQyMTIwNjI2NTE5ODk4MQ==",
+                    "createdAt": "2025-11-24T08:25:12.688Z",
+                    "commentV2": "My stay at Karuna Villa was absolutely wonderful , one of the best parts was that all the major visiting sites were nearby, making it super easy to explore . I highly recommend staying here , you’ll feel welcomed, relaxed, and well taken care of. Thank you Preeti, for being such an amazing host. Looking forward to coming back soon!",
+                    "photos": [],
+                    "localizedPaidPromotionDisclaimer": null,
+                    "displayRating": 5,
+                    "publicResponse": null,
+                    "contextualReviewee": {
+                      "__typename": "ContextualUser",
+                      "id": "Q29udGV4dHVhbFVzZXI6MTQ2Mzg4Mjg4Mzk3NTIwMjM5Mg==",
+                      "isSuperHost": false,
+                      "location": null,
+                      "userRepresentationUrl": {
+                        "__typename": "UserRepresentationUrl",
+                        "profilePictureUrl": "https://a0.muscache.com/im/pictures/user/User-566520545/original/213ce55b-7930-48b3-a875-2ccd37c45cb8.jpeg?aki_policy=profile_x_medium"
+                      },
+                      "displayFirstName": "Preeti"
+                    },
+                    "contextualReviewer": {
+                      "__typename": "ContextualUser",
+                      "id": "Q29udGV4dHVhbFVzZXI6MTU2MDU4NzIxNTg4NTc5NDk4NQ==",
+                      "isSuperHost": null,
+                      "location": "Airhe, India",
+                      "userRepresentationUrl": {
+                        "__typename": "UserRepresentationUrl",
+                        "profilePictureUrl": "https://a0.muscache.com/im/pictures/user/User/original/8538429f-e3d4-4cde-a440-16685b7bb752.jpeg?aki_policy=profile_x_medium"
+                      },
+                      "displayFirstName": "Siddhant"
+                    },
+                    "translation": {
+                      "__typename": "UserProfileReviewTranslation",
+                      "comments": "My stay at Karuna Villa was absolutely wonderful , one of the best parts was that all the major visiting sites were nearby, making it super easy to explore . I highly recommend staying here , you’ll feel welcomed, relaxed, and well taken care of. Thank you Preeti, for being such an amazing host. Looking forward to coming back soon!",
+                      "commentsLanguage": "en",
+                      "disclaimer": "Translated from English",
+                      "response": null,
+                      "responseDisclaimer": null,
+                      "responseLanguage": null
+                    },
+                    "respondedAt": null,
+                    "revieweeRole": "HOST"
+                  }
+                }
+              },
+              {
+                "__typename": "GuestUserReviewEdge",
+                "node": {
+                  "__typename": "UserReviewTextSearch",
+                  "review": {
+                    "__typename": "StayListingReview",
+                    "id": "U3RheUxpc3RpbmdSZXZpZXc6MTU1NTY1NTY4MzUwNDM1ODI3OA==",
+                    "createdAt": "2025-11-16T09:30:08.816Z",
+                    "commentV2": "Preeti's place was v nice, meticulous , clean, peaceful, surrounded by greenery. Caretaker Mangal was v helpful even at odd hrs like 3am. Owner Ms Preeti was just a call away. It was v near to d conference venue Deendayal hastkala sankul and so was v convenient though far from Vishwanath temple and old city. Overall stay was good.",
+                    "photos": [],
+                    "localizedPaidPromotionDisclaimer": null,
+                    "displayRating": 4,
+                    "publicResponse": null,
+                    "contextualReviewee": {
+                      "__typename": "ContextualUser",
+                      "id": "Q29udGV4dHVhbFVzZXI6MTQ2Mzg4Mjg4Mzk3NTIwMjM5Mg==",
+                      "isSuperHost": false,
+                      "location": null,
+                      "userRepresentationUrl": {
+                        "__typename": "UserRepresentationUrl",
+                        "profilePictureUrl": "https://a0.muscache.com/im/pictures/user/User-566520545/original/213ce55b-7930-48b3-a875-2ccd37c45cb8.jpeg?aki_policy=profile_x_medium"
+                      },
+                      "displayFirstName": "Preeti"
+                    },
+                    "contextualReviewer": {
+                      "__typename": "ContextualUser",
+                      "id": "Q29udGV4dHVhbFVzZXI6MTQ5Mzk4NTM5MTA2NTM3OTE3OA==",
+                      "isSuperHost": null,
+                      "location": "Mumbai, India",
+                      "userRepresentationUrl": {
+                        "__typename": "UserRepresentationUrl",
+                        "profilePictureUrl": "https://a0.muscache.com/im/pictures/user/User/original/77b6a953-f233-4dda-8df9-4f65deb13dbe.jpeg?aki_policy=profile_x_medium"
+                      },
+                      "displayFirstName": "Madhumita"
+                    },
+                    "translation": {
+                      "__typename": "UserProfileReviewTranslation",
+                      "comments": "Preeti's place was v nice, meticulous , clean, peaceful, surrounded by greenery. Caretaker Mangal was v helpful even at odd hrs like 3am. Owner Ms Preeti was just a call away. It was v near to d conference venue Deendayal hastkala sankul and so was v convenient though far from Vishwanath temple and old city. Overall stay was good.",
+                      "commentsLanguage": "en",
+                      "disclaimer": "Translated from English",
+                      "response": null,
+                      "responseDisclaimer": null,
+                      "responseLanguage": null
+                    },
+                    "respondedAt": null,
+                    "revieweeRole": "HOST"
+                  }
+                }
+              },
+              {
+                "__typename": "GuestUserReviewEdge",
+                "node": {
+                  "__typename": "UserReviewTextSearch",
+                  "review": {
+                    "__typename": "StayListingReview",
+                    "id": "U3RheUxpc3RpbmdSZXZpZXc6MTU1NTYwOTEyOTU5NTAwNjExNA==",
+                    "createdAt": "2025-11-16T07:57:39.157Z",
+                    "commentV2": "We had a pleasant stay at this place. The caretaker was very active in solving any issues. The bathroom was clean. \nDeendayal Hasthkala Sankul is nearby, walking distance. The stay was well lit by sunlight. Will definitely visit and stay again when I visit Varanasi. Thank you for making our stay memorable.",
+                    "photos": [],
+                    "localizedPaidPromotionDisclaimer": null,
+                    "displayRating": 5,
+                    "publicResponse": null,
+                    "contextualReviewee": {
+                      "__typename": "ContextualUser",
+                      "id": "Q29udGV4dHVhbFVzZXI6MTQ2Mzg4Mjg4Mzk3NTIwMjM5Mg==",
+                      "isSuperHost": false,
+                      "location": null,
+                      "userRepresentationUrl": {
+                        "__typename": "UserRepresentationUrl",
+                        "profilePictureUrl": "https://a0.muscache.com/im/pictures/user/User-566520545/original/213ce55b-7930-48b3-a875-2ccd37c45cb8.jpeg?aki_policy=profile_x_medium"
+                      },
+                      "displayFirstName": "Preeti"
+                    },
+                    "contextualReviewer": {
+                      "__typename": "ContextualUser",
+                      "id": "Q29udGV4dHVhbFVzZXI6MTQ4NDAyMzA5NDg0NDc4NDQ3Mg==",
+                      "isSuperHost": null,
+                      "location": "India",
+                      "userRepresentationUrl": {
+                        "__typename": "UserRepresentationUrl",
+                        "profilePictureUrl": "https://a0.muscache.com/im/pictures/user/c9167fbf-7dc8-4d39-91ab-b8b5d529ac7b.jpg?aki_policy=profile_x_medium"
+                      },
+                      "displayFirstName": "Rupraj"
+                    },
+                    "translation": {
+                      "__typename": "UserProfileReviewTranslation",
+                      "comments": "We had a pleasant stay at this place. The caretaker was very active in solving any issues. The bathroom was clean. \nDeendayal Hasthkala Sankul is nearby, walking distance. The stay was well lit by sunlight. Will definitely visit and stay again when I visit Varanasi. Thank you for making our stay memorable.",
+                      "commentsLanguage": "en",
+                      "disclaimer": "Translated from English",
+                      "response": null,
+                      "responseDisclaimer": null,
+                      "responseLanguage": null
+                    },
+                    "respondedAt": null,
+                    "revieweeRole": "HOST"
+                  }
+                }
+              }
+            ],
+            "pageInfo": {
+              "__typename": "PageInfoWithCount",
+              "totalCount": 41
+            }
+          },
+          "reviewsReceivedFromHosts": null
+        }
+      },
+      "extensions": {
+        "traceId": "G1nJ6CzGOG0CpWrVEbpgUg=="
+      }
+    }
+  ]
+}

@@ -18,7 +18,7 @@ const amenities = [
 const Amenities = () => {
     return (
         <section className="amenities-section" id="experiences">
-            <div className="container">
+            <div className="amenities-container">
                 <div className="section-header">
                     <span className="section-subtitle">Services & Facilities</span>
                     <h2 className="section-title">Designed for Comfort</h2>

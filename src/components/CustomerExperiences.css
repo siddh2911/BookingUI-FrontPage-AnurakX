@@ -1,0 +1,290 @@
+.customer-experiences-section {
+    padding: 6rem 1rem;
+    background: linear-gradient(to bottom, #f9f9f9, #ffffff);
+    overflow: hidden;
+}
+
+.exp-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.exp-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.exp-subtitle {
+    display: block;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #888;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.exp-header h2 {
+    font-size: 3.5rem;
+    margin: 0;
+    color: #1a1a1a;
+    font-weight: 300;
+    line-height: 1.1;
+    font-family: 'Playfair Display', serif;
+    /* Assuming this font is available */
+}
+
+.exp-divider {
+    width: 60px;
+    height: 1px;
+    background-color: #d4a373;
+    margin: 1.5rem auto;
+}
+
+.exp-header p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Slider Wrapper & Navigation */
+.slider-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Slider Layout */
+.experiences-slider {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 2rem;
+    /* Space for shadow/hover */
+    padding-left: 0;
+    /* Remove padding to align left */
+    padding-right: 0.5rem;
+    width: 100%;
+
+    /* Hide scrollbar for cleaner look */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    scroll-behavior: smooth;
+    justify-content: flex-start;
+    /* Align contents to start */
+}
+
+.experiences-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.nav-btn {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: none;
+    background: #ffffff;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
+    /* Deep soft shadow */
+    color: #1a1a1a;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    z-index: 10;
+    flex-shrink: 0;
+    margin: 0 0.5rem;
+}
+
+.nav-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    background: #1a1a1a;
+    color: #ffffff;
+}
+
+.nav-btn:active {
+    transform: scale(0.95);
+}
+
+.prev-btn {
+    margin-right: 1rem;
+}
+
+.next-btn {
+    margin-left: 1rem;
+}
+
+/* Mobile: Hide buttons, use swipe */
+@media (max-width: 768px) {
+    .nav-btn {
+        display: none;
+    }
+}
+
+/* Premium Experience Card */
+.experience-card {
+    flex: 0 0 310px;
+    /* Fixed width for slider items */
+    scroll-snap-align: start;
+    /* Align to left edge */
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+
+    /* Initial state for GSAP */
+    /* opacity: 0;  <-- REMOVED: Let GSAP handle opacity from 0 -> 1 */
+    /* transform handled by GSAP */
+    /* Ensure opacity is visible */
+    opacity: 1;
+}
+
+.experience-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+}
+
+/* ImageWrapper */
+.card-image-wrapper {
+    position: relative;
+    height: 300px;
+    /* Taller images */
+    overflow: hidden;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.experience-card:hover .card-image {
+    transform: scale(1.08);
+    /* Subtle zoom */
+}
+
+.card-overlay {
+    position: absolute;
+    top: 1.2rem;
+    left: 1.2rem;
+}
+
+.chip {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Content */
+.card-content {
+    padding: 2.5rem;
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.quote-icon {
+    color: #d4a373;
+    margin-bottom: 1.2rem;
+    fill: rgba(212, 163, 115, 0.2);
+    /* Subtle fill */
+}
+
+.card-quote {
+    font-size: 1.15rem;
+    font-style: italic;
+    color: #2c2c2c;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    font-family: 'Georgia', serif;
+    /* Serif for quotes looks more premium */
+    /* Uniform Size Logic */
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    /* Limit to 4 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 7.6rem;
+    /* Fixed height based on line-height * lines approx */
+    text-overflow: ellipsis;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    padding-top: 1.5rem;
+    margin-top: auto;
+}
+
+.card-author h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: -0.02em;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 0.3rem;
+}
+
+.card-rating {
+    display: flex;
+    color: #d4a373;
+    /* Gold-ish color */
+}
+
+.star-icon {
+    margin-left: 2px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .exp-header h2 {
+        font-size: 2.5rem;
+    }
+
+    .experiences-slider {
+        gap: 1rem;
+        padding-left: 1rem;
+        /* Suggest start */
+    }
+
+    .experience-card {
+        flex: 0 0 85vw;
+        /* Show partial next card */
+        max-width: none;
+    }
+}

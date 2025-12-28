@@ -10,43 +10,31 @@ const StorySection = () => {
 
     useLayoutEffect(() => {
         const ctx = gsap.context(() => {
-            const mm = gsap.matchMedia();
-
-            mm.add("(min-width: 769px)", () => {
-                const tl = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: sectionRef.current,
-                        start: "top 80%",
-                        end: "bottom 60%",
-                        scrub: 1,
-                        toggleActions: "play none none reverse"
-                    }
-                });
-                tl.from(".chapter-marker", { y: 20, opacity: 0, duration: 0.8 })
-                    .from("h2", { y: 30, opacity: 0, duration: 0.8 }, "-=0.6")
-                    .from(".header-line", { width: 0, duration: 1, ease: "power2.out" }, "-=0.4")
-                    .from(".story-img-card", { y: 50, opacity: 0, duration: 1, stagger: 0.2, ease: "power3.out" }, "-=0.5")
-                    .from(".story-editorial-text", { x: 30, opacity: 0, duration: 1 }, "-=0.8");
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: sectionRef.current,
+                    start: "top 85%", // Triggers as soon as it enters view
+                    toggleActions: "play none none reverse"
+                    // Removed 'scrub' to fix timing issue: animation will play completely once triggered
+                }
             });
 
-            mm.add("(max-width: 768px)", () => {
-                const tl = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: sectionRef.current,
-                        start: "top 85%", // Start slightly earlier
-                        end: "bottom 80%", // Shorter scroll distance to complete
-                        scrub: 0.5, // Faster scrub response
-                        toggleActions: "play none none reverse"
-                    }
-                });
-                // Faster sequence for mobile
-                tl.from(".chapter-marker", { y: 10, opacity: 0, duration: 0.4 })
-                    .from("h2", { y: 20, opacity: 0, duration: 0.4 }, "-=0.3")
-                    .from(".header-line", { width: 0, duration: 0.4, ease: "power2.out" }, "-=0.3")
-                    .from(".story-img-card", { y: 30, opacity: 0, duration: 0.5, stagger: 0.1 }, "-=0.3")
-                    // Text comes in much sooner
-                    .from(".story-editorial-text", { y: 20, opacity: 0, duration: 0.5 }, "-=0.6");
-            });
+            tl.from(".chapter-marker", { y: 20, opacity: 0, duration: 0.8, ease: "power2.out" })
+                .from("h2", { y: 30, opacity: 0, duration: 0.8, ease: "power2.out" }, "-=0.6")
+                .from(".header-line", { width: 0, duration: 1, ease: "power2.out" }, "-=0.4")
+                .from(".story-img-card", {
+                    y: 50,
+                    opacity: 0,
+                    duration: 1,
+                    stagger: 0.2,
+                    ease: "power3.out"
+                }, "-=0.6")
+                .from(".story-editorial-text", {
+                    x: 30,
+                    opacity: 0,
+                    duration: 1,
+                    ease: "power2.out"
+                }, "-=0.8");
 
         }, sectionRef);
 
