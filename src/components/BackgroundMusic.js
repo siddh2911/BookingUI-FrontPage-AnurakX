@@ -1,10 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Volume2, VolumeX } from 'lucide-react';
 import './BackgroundMusic.css';
 
 const BackgroundMusic = () => {
     const [isPlaying, setIsPlaying] = useState(false);
     const audioRef = useRef(null);
+    const location = useLocation();
+    const isFoodPage = location.pathname === '/food';
 
     useEffect(() => {
         if (audioRef.current) {
@@ -24,7 +27,7 @@ const BackgroundMusic = () => {
     };
 
     return (
-        <div className="background-music-container">
+        <div className={`background-music-container ${isFoodPage ? 'on-food-page' : ''}`}>
             <audio
                 ref={audioRef}
                 src="/background.mp3"

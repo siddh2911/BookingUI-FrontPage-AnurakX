@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import RoomList from './components/RoomList';
-import Amenities from './components/Amenities';
 import Footer from './components/Footer';
 import AvailabilityModal from './components/AvailabilityModal';
 import BackgroundMusic from './components/BackgroundMusic';
-import Dashboard from './components/Dashboard';
-import StorySection from './components/StorySection'; // Import StorySection
+import Home from './components/Home';
+import FoodOrder from './components/FoodOrder';
 import './App.css';
 
 function App() {
@@ -57,7 +55,8 @@ function App() {
 
       setSearchResults(updatedResults);
 
-      // Scroll to rooms section
+      // Scroll to rooms section - Only if on home page? 
+      // For now, simpler to just update state. visual scroll might depend on where we are.
       setTimeout(() => {
         const roomsSection = document.getElementById('rooms');
         if (roomsSection) {
@@ -80,11 +79,9 @@ function App() {
 
   const handleBookStay = async () => {
     if (!selectedDates.checkIn || !selectedDates.checkOut) {
-      // Scroll to booking search section
-      const searchSection = document.getElementById('booking-search');
-      if (searchSection) {
-        searchSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
+      // If we are not on Home, we might need to navigate there first? 
+      // Ideally "Book Stay" is on Home. 
+      // If this is called from Header "Book Now", we toggle modal.
       setIsModalOpen(true);
       return;
     }
@@ -93,40 +90,38 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <Header onBookNow={toggleModal} />
+    <Router>
+      <div className="App">
+        {/* Header needs to be inside Router to use Link/useLocation if updated */}
+        <Header onBookNow={toggleModal} />
 
-      <Hero
-        onSearch={handleBookStay}
-        onOpenCalendar={toggleModal}
-        checkIn={selectedDates.checkIn}
-        checkOut={selectedDates.checkOut}
-      />
+        <Routes>
+          <Route path="/" element={
+            <Home
+              onSearch={handleBookStay}
+              onOpenCalendar={toggleModal}
+              checkIn={selectedDates.checkIn}
+              checkOut={selectedDates.checkOut}
+              searchResults={searchResults}
+              isLoading={isLoading}
+              hasSearched={hasSearched}
+            />
+          } />
+          <Route path="/food" element={<FoodOrder />} />
+        </Routes>
 
-
-
-      <RoomList
-        rooms={searchResults}
-        isLoading={isLoading}
-        hasSearched={hasSearched}
-        onSearch={handleBookStay}
-      />
-
-      <StorySection />
-
-      <Dashboard />
-
-      <Amenities />
-
-      <Footer />
-      <AvailabilityModal
-        isOpen={isModalOpen}
-        onClose={toggleModal}
-        onDateSelect={handleDateSelect}
-      />
-      <BackgroundMusic />
-    </div>
+        <Footer />
+        <AvailabilityModal
+          isOpen={isModalOpen}
+          onClose={toggleModal}
+          onDateSelect={handleDateSelect}
+        />
+        <BackgroundMusic />
+      </div>
+    </Router>
   );
 }
+
+
 
 export default App;

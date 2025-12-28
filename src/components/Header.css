@@ -12,13 +12,20 @@
 }
 
 .standard-header.scrolled {
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    background: #FFFFFF;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     color: var(--text-primary);
     padding: 18px 0;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.standard-header.scrolled .logo,
+.standard-header.scrolled .desktop-nav a {
+    color: var(--text-primary);
+}
+
+.standard-header.scrolled .desktop-nav a:hover {
+    color: var(--accent);
 }
 
 .header-content {
@@ -98,16 +105,21 @@
 
 @media (max-width: 768px) {
     .standard-header {
-        background-color: var(--text-primary);
-        /* Navy blue background for visibility */
+        background-color: var(--text-primary) !important;
+        /* Force Navy blue background for consistency across all pages */
         position: relative;
         padding: 15px 0;
-        /* Unfix on mobile if needed, or keep fixed */
+    }
+
+    .standard-header.scrolled {
+        background-color: var(--text-primary) !important;
+        padding: 15px 0;
     }
 
     .header-content {
         flex-direction: column;
         gap: 15px;
+        text-align: center;
     }
 
     .desktop-nav {
@@ -118,9 +130,11 @@
 
     .desktop-nav a {
         font-size: 12px;
+        color: white !important;
     }
 
     .logo {
         font-size: 32px;
+        color: white !important;
     }
 }
