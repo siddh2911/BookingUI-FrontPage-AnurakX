@@ -1,6 +1,6 @@
 .standard-footer {
     background-color: #0f172a;
-    /* Dark Slate matching reference */
+    
     color: white;
     padding: 80px 0 30px;
 }
@@ -91,7 +91,7 @@
     color: rgba(255, 255, 255, 0.5);
 }
 
-/* Ensure Admin Link matches exactly */
+
 .admin-link {
     color: rgba(255, 255, 255, 0.7) !important;
     text-decoration: none !important;

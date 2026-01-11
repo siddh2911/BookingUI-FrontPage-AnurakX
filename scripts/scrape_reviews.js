@@ -19,7 +19,7 @@ const path = require('path');
             timeout: 60000
         });
 
-        // 1. Click "Show all <number> reviews"
+        
         console.log('Looking for "Show all reviews" button...');
         await page.waitForSelector('button', { timeout: 5000 });
         const buttonClicked = await page.evaluate(() => {
@@ -40,7 +40,7 @@ const path = require('path');
 
         console.log('Clicked "Show all reviews". Waiting for popup...');
 
-        // 2. Pop up open with class that start with "bqtf19k"
+        
         try {
             await page.waitForFunction(() => {
                 const divs = Array.from(document.querySelectorAll('div'));
@@ -52,7 +52,7 @@ const path = require('path');
             await page.waitForSelector('[role="dialog"]');
         }
 
-        // Get the modal handle
+        
         const modalHandle = await page.evaluateHandle(() => {
             const specific = Array.from(document.querySelectorAll('div')).find(d => d.className.includes('bqtf19k'));
             return specific || document.querySelector('[role="dialog"]');
@@ -62,13 +62,13 @@ const path = require('path');
         let noChangeCount = 0;
         const MAX_NO_CHANGE = 5;
 
-        // Loop: Capture -> Click Button -> Scroll
+        
         for (let i = 0; i < 100; i++) {
 
-            // A. Capture reviews one by one
+            
             const extracted = await page.evaluate((modal) => {
                 const items = [];
-                // UPDATED STRATEGY: Find containers by role="group" and aria-labelledby containing "review"
+                
                 const reviewCards = Array.from(modal.querySelectorAll('div[role="group"]')).filter(div => {
                     const label = div.getAttribute('aria-labelledby');
                     return label && label.includes('review');
@@ -76,19 +76,19 @@ const path = require('path');
 
                 if (reviewCards.length > 0) {
                     reviewCards.forEach(card => {
-                        // 1. TEXT
+                        
                         const textId = card.getAttribute('aria-labelledby');
                         const textContainer = card.querySelector(`[id="${textId}"]`) || card.querySelector(`div[dir="ltr"]`);
                         const text = textContainer ? textContainer.innerText : "";
 
-                        // 2. RATING
+                        
                         let rating = 5;
                         const ratingText = card.innerText.match(/Rating (\d+) out of 5/);
                         if (ratingText) {
                             rating = parseInt(ratingText[1]);
                         }
 
-                        // 3. IMAGE
+                        
                         let image = '';
                         let pictureElement = card.querySelector('picture[class*="p1lr305w"]');
                         if (!pictureElement) {
@@ -112,7 +112,7 @@ const path = require('path');
                             }
                         }
 
-                        // 4. LOCATION: User Strict Selector "div class starts with s17vloqa -> span"
+                        
                         let location = "India";
                         const locContainer = card.querySelector('div[class*="s17vloqa"]');
                         if (locContainer) {
@@ -128,7 +128,7 @@ const path = require('path');
                             location = 'India';
                         }
 
-                        // 5. NAME: User Strict Selector "div class starts with t126ex63"
+                        
                         let name = "Airbnb Guest";
                         const nameContainer = card.querySelector('div[class*="t126ex63"]');
                         if (nameContainer) {
@@ -158,8 +158,8 @@ const path = require('path');
             });
             console.log(`Iteration ${i}: Found ${extracted.length} candidates. Added ${added} new. Total Unique: ${allReviewsMap.size}`);
 
-            // B. Click "Show more reviews" inside class "lqsm05"
-            // AND C. Scroll
+            
+            
             const actionResult = await page.evaluate(async (modal) => {
                 const containers = Array.from(modal.querySelectorAll('div, span, section'));
                 const lqsmContainer = containers.find(d => d.className.includes('lqsm05'));
@@ -221,7 +221,7 @@ const path = require('path');
                 quote: r.text,
                 rating: r.rating || 5,
                 image: r.image || '',
-                name: r.name || "Airbnb Guest", // Use extracted name
+                name: r.name || "Airbnb Guest", 
                 location: r.location && r.location !== "Airbnb" ? r.location : "India"
             }));
 

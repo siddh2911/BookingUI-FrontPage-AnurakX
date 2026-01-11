@@ -23,7 +23,7 @@ const CountUp = ({ end, duration = 2000, decimals = 0, prefix = '', suffix = '',
             const progress = timestamp - startTime;
             const percentage = Math.min(progress / duration, 1);
 
-            // Easing function (easeOutExpo)
+            
             const ease = percentage === 1 ? 1 : 1 - Math.pow(2, -10 * percentage);
 
             const currentCount = ease * end;
@@ -51,7 +51,7 @@ const CountUp = ({ end, duration = 2000, decimals = 0, prefix = '', suffix = '',
 };
 
 const Dashboard = () => {
-    // ... stats mock data ...
+    
     const [stats] = useState({
         rating: 4.92,
         reviews: 44,
@@ -76,28 +76,28 @@ const Dashboard = () => {
                 trigger: sectionRef.current,
                 start: "top 85%",
                 onEnter: () => setIsVisible(true),
-                onLeaveBack: () => setIsVisible(false), // Reset when scrolling back up
-                // Removed 'once: true' to allow replay
+                onLeaveBack: () => setIsVisible(false), 
+                
             });
 
             gsap.fromTo(".stat-card",
                 {
                     y: 60,
-                    autoAlpha: 0, // autoAlpha handles opacity + visibility
+                    autoAlpha: 0, 
                     scale: 0.95
                 },
                 {
                     scrollTrigger: {
                         trigger: sectionRef.current,
-                        start: "top 85%", // Trigger on section for the group
+                        start: "top 85%", 
                         toggleActions: "play none none reverse"
                     },
                     y: 0,
                     autoAlpha: 1,
                     scale: 1,
                     duration: 0.8,
-                    // If grid triggers as one unit, stagger is fine. 
-                    // But on mobile, if they stack, we might want faster stagger.
+                    
+                    
                     stagger: 0.15,
                     ease: "back.out(1.2)",
                     clearProps: "transform"
@@ -116,7 +116,7 @@ const Dashboard = () => {
 
             <div className="stats-grid">
 
-                {/* Rating Card */}
+                
                 <div className="stat-card glass-panel">
                     <div className="stat-icon-wrapper yellow">
                         <Star size={24} />
@@ -130,7 +130,7 @@ const Dashboard = () => {
                     </div>
                 </div>
 
-                {/* Bookings Card */}
+                
                 <div className="stat-card glass-panel">
                     <div className="stat-icon-wrapper purple">
                         <Calendar size={24} />
@@ -149,7 +149,7 @@ const Dashboard = () => {
 
 
 
-                {/* Happy Guests Card */}
+                
                 <div className="stat-card glass-panel">
                     <div className="stat-icon-wrapper red">
                         <Heart size={24} />
@@ -166,7 +166,7 @@ const Dashboard = () => {
                     </div>
                 </div>
 
-                {/* Awards Won Card */}
+                
                 <div className="stat-card glass-panel">
                     <div className="stat-icon-wrapper gold">
                         <Award size={24} />

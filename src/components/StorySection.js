@@ -13,9 +13,9 @@ const StorySection = () => {
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: sectionRef.current,
-                    start: "top 85%", // Triggers as soon as it enters view
+                    start: "top 85%", 
                     toggleActions: "play none none reverse"
-                    // Removed 'scrub' to fix timing issue: animation will play completely once triggered
+                    
                 }
             });
 

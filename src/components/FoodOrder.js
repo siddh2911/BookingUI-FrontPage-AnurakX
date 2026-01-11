@@ -7,7 +7,7 @@ import './FoodOrder.css';
 gsap.registerPlugin(ScrollTrigger);
 
 const MENU_CATEGORIES = [
-    // ... (rest of categories)
+    
     { id: 'all', label: 'All' },
     { id: 'banaras', label: 'Banaras Specials' },
     { id: 'mains', label: 'Main Course' },
@@ -113,7 +113,7 @@ const FoodOrder = () => {
     const [searchQuery, setSearchQuery] = useState('');
     const [cart, setCart] = useState([]);
     const [isCartOpen, setIsCartOpen] = useState(false);
-    const [orderStep, setOrderStep] = useState('browsing'); // browsing, checking-out, success
+    const [orderStep, setOrderStep] = useState('browsing'); 
     const [roomNumber, setRoomNumber] = useState('');
     const [specialRequests, setSpecialRequests] = useState('');
 
@@ -132,12 +132,12 @@ const FoodOrder = () => {
         });
     }, [activeCategory, searchQuery]);
 
-    // 1. Unified Cinematic Entry (Hero + Navigation)
+    
     useEffect(() => {
         const ctx = gsap.context(() => {
             const entryTl = gsap.timeline();
 
-            // Initial state set to avoid FOUC
+            
             gsap.set([".hero-content > *", ".cat-tab"], { autoAlpha: 0, y: 30 });
             gsap.set(".food-hero-bg", { scale: 1.1, opacity: 0 });
 
@@ -167,12 +167,12 @@ const FoodOrder = () => {
         return () => ctx.revert();
     }, []);
 
-    // 2. Dynamic Grid Reveals (ScrollTrigger + Batch)
+    
     useEffect(() => {
         const ctx = gsap.context(() => {
             const cards = gsap.utils.toArray(".menu-card-premium");
 
-            // Set initial state via GSAP
+            
             gsap.set(cards, { autoAlpha: 0, y: 30 });
 
             ScrollTrigger.batch(cards, {
@@ -194,7 +194,7 @@ const FoodOrder = () => {
         return () => ctx.revert();
     }, [filteredItems]);
 
-    // Total Amount Counting & Badge Pop Animation
+    
     useEffect(() => {
         if (totalAmount > 0) {
             const tl = gsap.timeline();
@@ -213,7 +213,7 @@ const FoodOrder = () => {
         }
     }, [totalAmount]);
 
-    // Floating Cart Entrance Animation
+    
     useEffect(() => {
         if (totalItems > 0) {
             gsap.fromTo(".floating-cart-btn",
@@ -223,7 +223,7 @@ const FoodOrder = () => {
         }
     }, [totalItems > 0]);
 
-    // Cart Drawer Content Reveal
+    
     useEffect(() => {
         if (isCartOpen && cart.length > 0) {
             const tl = gsap.timeline({ delay: 0.2 });
@@ -250,7 +250,7 @@ const FoodOrder = () => {
             return [...prev, { ...item, quantity: 1 }];
         });
 
-        // Sophisticated feedback on cart button
+        
         gsap.fromTo(".floating-cart-btn",
             { scale: 1 },
             { scale: 1.08, duration: 0.4, ease: "elastic.out(1.2, 0.4)" }
@@ -277,7 +277,7 @@ const FoodOrder = () => {
         setIsCartOpen(false);
         window.scrollTo({ top: 0, behavior: 'smooth' });
 
-        // Celebratory Success Timeline
+        
         setTimeout(() => {
             const tl = gsap.timeline();
             tl.fromTo(".success-card",
@@ -313,7 +313,7 @@ const FoodOrder = () => {
 
     return (
         <div className="food-order-page" ref={pageRef}>
-            {/* Cart Drawer */}
+            
             <div className={`cart-drawer-backdrop ${isCartOpen ? 'open' : ''}`} onClick={() => setIsCartOpen(false)} />
             <div className={`cart-drawer ${isCartOpen ? 'open' : ''}`}>
                 <div className="drawer-header">
@@ -475,7 +475,7 @@ const FoodOrder = () => {
                 </div>
             </div>
 
-            {/* Floating Cart Button */}
+            
             {totalItems > 0 && (
                 <button className="floating-cart-btn" onClick={() => setIsCartOpen(true)}>
                     <div className="cart-icon-wrapper">

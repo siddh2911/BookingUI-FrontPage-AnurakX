@@ -24,7 +24,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Enhance perceived quality */
+    
     image-rendering: -webkit-optimize-contrast;
     filter: contrast(1.1) saturate(1.1);
 }
@@ -84,7 +84,7 @@
 .hero-search-wrapper {
     position: absolute;
     bottom: -40px;
-    /* Overlap the bottom edge */
+    
     width: 100%;
     display: flex;
     justify-content: center;
@@ -95,20 +95,20 @@
     .hero-container {
         height: 70vh;
         min-height: 500px;
-        /* Prevent it from being too short on small screens */
+        
     }
 
-    /* Darker overlay for mobile to improve text readability */
+    
     .hero-overlay {
         background: rgba(0, 0, 0, 0.6);
     }
 
     .hero-title {
         font-size: 28px;
-        /* More compact title */
+        
         margin-bottom: 12px;
         text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-        /* Strong shadow for legibility */
+        
     }
 
     .hero-subtitle {
@@ -121,15 +121,15 @@
 
     .hero-content {
         margin-bottom: 0;
-        /* Let search bar positioning handle spacing */
+        
         transform: translateY(-110px);
-        /* Shift up further to clear search box */
+        
     }
 
     .hero-search-wrapper {
         position: absolute;
         bottom: 16px;
-        /* Stick to bottom on mobile */
+        
         margin: 0;
         padding: 0 1rem;
         width: 100%;

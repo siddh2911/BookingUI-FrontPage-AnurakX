@@ -17,7 +17,7 @@ const Header = ({ onBookNow }) => {
     e.preventDefault();
     if (location.pathname !== '/') {
       navigate('/');
-      // Wait for navigation and then scroll
+      
       setTimeout(() => {
         const element = document.getElementById(hash);
         if (element) element.scrollIntoView({ behavior: 'smooth' });

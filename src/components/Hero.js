@@ -18,9 +18,9 @@ const Hero = ({ onSearch, onOpenCalendar, checkIn, checkOut }) => {
         <section className="hero-container">
             <div className="hero-bg">
                 <video
-                    key={`${currentVideoIndex}-${videoPlaylist.length}`} // Force re-render if playlist changes
+                    key={`${currentVideoIndex}-${videoPlaylist.length}`} 
                     autoPlay
-                    loop={videoPlaylist.length === 1} // Native loop if only one video
+                    loop={videoPlaylist.length === 1} 
                     muted
                     playsInline
                     className="hero-video"

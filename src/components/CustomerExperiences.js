@@ -39,10 +39,10 @@ const experiences = realReviews.length > 0 ? realReviews : [
     }
 ];
 
-// Helper to get HD image (Raw Original)
+
 const getHDImage = (url) => {
     if (!url) return '';
-    // Strip query params to get the raw original image
+    
     return url.split('?')[0];
 };
 
@@ -51,26 +51,26 @@ const CustomerExperiences = () => {
     const sliderRef = useRef(null);
     const nudgeTween = useRef(null);
 
-    // 1. Clean Data: Replace "Airbnb" location with "India"
+    
     const cleanedExperiences = experiences.map(exp => ({
         ...exp,
         location: (exp.location === 'Airbnb' || exp.location === 'airbnb') ? 'India' : exp.location
     }));
 
-    // 2. Sort: Priority (Pooja > Phungshokngam) then Images
+    
     const sortedExperiences = [...cleanedExperiences].sort((a, b) => {
         const nameA = (a.name || '').toLowerCase();
         const nameB = (b.name || '').toLowerCase();
 
-        // Level 1: Pooja
+        
         if (nameA.includes('pooja')) return -1;
         if (nameB.includes('pooja')) return 1;
 
-        // Level 2: Phungshokngam
+        
         if (nameA.includes('phungshokngam')) return -1;
         if (nameB.includes('phungshokngam')) return 1;
 
-        // Level 3: Has Image
+        
         const hasImgA = a.image && a.image.length > 0;
         const hasImgB = b.image && b.image.length > 0;
         if (hasImgA && !hasImgB) return -1;
@@ -82,7 +82,7 @@ const CustomerExperiences = () => {
     useLayoutEffect(() => {
         const mm = gsap.matchMedia();
         const ctx = gsap.context(() => {
-            // Header Animation (Works everywhere)
+            
             gsap.from(".exp-header-content", {
                 y: 50,
                 opacity: 0,
@@ -94,7 +94,7 @@ const CustomerExperiences = () => {
                 }
             });
 
-            // Slider Entry Animation (Works everywhere)
+            
             gsap.from(".experience-card", {
                 x: 100,
                 duration: 1,
@@ -106,19 +106,19 @@ const CustomerExperiences = () => {
                 }
             });
 
-            // Premium "Kinetic Nudge" Loop (STRICTLY MOBILE ONLY)
-            // matchMedia ensures this context runs ONLY when condition is met
+            
+            
             mm.add("(max-width: 768px)", () => {
-                // Wait for entry to finish roughly (1s + stagger) before starting nudge
-                // or just use delay
+                
+                
                 nudgeTween.current = gsap.to(".experience-card", {
-                    x: -80, // Deep nudge
+                    x: -80, 
                     duration: 1.6,
                     ease: "power2.inOut",
-                    yoyo: true, // Return to center
-                    repeat: -1, // Infinite loop
+                    yoyo: true, 
+                    repeat: -1, 
                     repeatDelay: 1.5,
-                    delay: 1.5, // Wait for entry animation
+                    delay: 1.5, 
                     scrollTrigger: {
                         trigger: ".experiences-slider",
                         start: "top 85%",
@@ -128,12 +128,12 @@ const CustomerExperiences = () => {
             });
         }, sectionRef);
 
-        return () => ctx.revert(); // Reverts matchMedia too inside context
+        return () => ctx.revert(); 
     }, []);
 
     const scroll = (direction) => {
         if (sliderRef.current) {
-            const scrollAmount = 350 + 32; // Card width + gap
+            const scrollAmount = 350 + 32; 
             sliderRef.current.scrollBy({
                 left: direction === 'left' ? -scrollAmount : scrollAmount,
                 behavior: 'smooth'
@@ -171,7 +171,7 @@ const CustomerExperiences = () => {
                                 key={exp.id}
                                 className="experience-card"
                             >
-                                {/* ... card content ... */}
+                                
                                 <div className="card-image-wrapper">
                                     {exp.image ? (
                                         <img

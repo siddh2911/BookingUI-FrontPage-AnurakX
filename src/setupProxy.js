@@ -6,7 +6,7 @@ module.exports = function (app) {
         createProxyMiddleware({
             target: 'https://booking-anurakx.onrender.com',
             changeOrigin: true,
-            secure: false, // For dealing with self-signed certs if any, generally safe for dev proxy to standard https
+            secure: false, 
         })
     );
 };

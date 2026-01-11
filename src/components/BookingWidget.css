@@ -1,7 +1,7 @@
 .booking-widget-container {
     position: sticky;
     top: 140px;
-    /* More offset */
+    
     margin-left: 0;
     z-index: 10;
 }
@@ -9,10 +9,10 @@
 .booking-card {
     border: none;
     border-radius: var(--radius-xl);
-    /* Larger radius 24px */
+    
     padding: 32px;
     box-shadow: var(--shadow-xl);
-    /* Soft heavy shadow */
+    
     background-color: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);

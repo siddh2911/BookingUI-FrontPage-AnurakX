@@ -32,7 +32,7 @@
     font-weight: 300;
     line-height: 1.1;
     font-family: 'Playfair Display', serif;
-    /* Assuming this font is available */
+    
 }
 
 .exp-divider {
@@ -50,34 +50,34 @@
     line-height: 1.6;
 }
 
-/* Slider Wrapper & Navigation */
+
 .slider-wrapper {
     position: relative;
     display: flex;
     align-items: center;
 }
 
-/* Slider Layout */
+
 .experiences-slider {
     display: flex;
     gap: 1.5rem;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     padding-bottom: 2rem;
-    /* Space for shadow/hover */
+    
     padding-left: 0;
-    /* Remove padding to align left */
+    
     padding-right: 0.5rem;
     width: 100%;
 
-    /* Hide scrollbar for cleaner look */
+    
     -ms-overflow-style: none;
-    /* IE and Edge */
+    
     scrollbar-width: none;
-    /* Firefox */
+    
     scroll-behavior: smooth;
     justify-content: flex-start;
-    /* Align contents to start */
+    
 }
 
 .experiences-slider::-webkit-scrollbar {
@@ -91,7 +91,7 @@
     border: none;
     background: #ffffff;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
-    /* Deep soft shadow */
+    
     color: #1a1a1a;
     font-size: 1.5rem;
     display: flex;
@@ -123,7 +123,7 @@
     margin-left: 1rem;
 }
 
-/* Mobile: Hide buttons, use swipe */
+
 @media (max-width: 768px) {
     .nav-btn {
         display: none;
@@ -132,22 +132,22 @@
     .experiences-slider {
         gap: 1rem;
         padding-left: 1rem;
-        /* Slight inset for the first card */
+        
     }
 
     .experience-card {
         flex: 0 0 80vw;
-        /* Increased peek: 80% width means 20% of next card is visible */
+        
         max-width: none;
     }
 }
 
-/* Premium Experience Card */
+
 .experience-card {
     flex: 0 0 310px;
-    /* Fixed width for slider items */
+    
     scroll-snap-align: start;
-    /* Align to left edge */
+    
     background: #ffffff;
     border-radius: 16px;
     overflow: hidden;
@@ -157,10 +157,10 @@
     display: flex;
     flex-direction: column;
 
-    /* Initial state for GSAP */
-    /* opacity: 0;  <-- REMOVED: Let GSAP handle opacity from 0 -> 1 */
-    /* transform handled by GSAP */
-    /* Ensure opacity is visible */
+    
+    
+    
+    
     opacity: 1;
 }
 
@@ -169,11 +169,11 @@
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
 }
 
-/* ImageWrapper */
+
 .card-image-wrapper {
     position: relative;
     height: 300px;
-    /* Taller images */
+    
     overflow: hidden;
 }
 
@@ -186,7 +186,7 @@
 
 .experience-card:hover .card-image {
     transform: scale(1.08);
-    /* Subtle zoom */
+    
 }
 
 .card-overlay {
@@ -210,7 +210,7 @@
     border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
-/* Content */
+
 .card-content {
     padding: 2.5rem;
     position: relative;
@@ -224,7 +224,7 @@
     color: #d4a373;
     margin-bottom: 1.2rem;
     fill: rgba(212, 163, 115, 0.2);
-    /* Subtle fill */
+    
 }
 
 .card-quote {
@@ -235,15 +235,15 @@
     margin-bottom: 2rem;
     font-weight: 400;
     font-family: 'Georgia', serif;
-    /* Serif for quotes looks more premium */
-    /* Uniform Size Logic */
+    
+    
     display: -webkit-box;
     -webkit-line-clamp: 4;
-    /* Limit to 4 lines */
+    
     -webkit-box-orient: vertical;
     overflow: hidden;
     height: 7.6rem;
-    /* Fixed height based on line-height * lines approx */
+    
     text-overflow: ellipsis;
 }
 
@@ -275,14 +275,14 @@
 .card-rating {
     display: flex;
     color: #d4a373;
-    /* Gold-ish color */
+    
 }
 
 .star-icon {
     margin-left: 2px;
 }
 
-/* Mobile Responsiveness */
+
 @media (max-width: 768px) {
     .exp-header h2 {
         font-size: 2.5rem;
@@ -291,12 +291,12 @@
     .experiences-slider {
         gap: 1rem;
         padding-left: 1rem;
-        /* Suggest start */
+        
     }
 
     .experience-card {
         flex: 0 0 85vw;
-        /* Show partial next card */
+        
         max-width: none;
     }
 }

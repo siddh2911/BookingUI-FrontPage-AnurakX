@@ -2,15 +2,15 @@ const fs = require('fs');
 const path = require('path');
 
 const rawPath = path.join(__dirname, '../src/data/airbnb_reviews_raw.json');
-// Handle missing raw file
+
 let rawData = {};
 try {
     rawData = JSON.parse(fs.readFileSync(rawPath, 'utf8'));
 } catch (e) {
-    // ignore
+    
 }
 
-// Updated to handle array of responses
+
 const extractReviews = (dataRoot) => {
     let allReviews = [];
     const processJSON = (json) => {
@@ -30,7 +30,7 @@ const extractReviews = (dataRoot) => {
 
 let reviewsArray = extractReviews(rawData);
 
-// Deduplicate by comment content
+
 const uniqueReviews = Array.from(new Map(reviewsArray.map(item => [item.commentV2, item])).values());
 
 const cleanReviews = uniqueReviews
@@ -51,7 +51,7 @@ const cleanReviews = uniqueReviews
 
 console.log(`Found ${cleanReviews.length} 5-star reviews form network data.`);
 
-// Merge with DOM data
+
 const domPath = path.join(__dirname, '../src/data/airbnb_reviews_dom.json');
 if (fs.existsSync(domPath)) {
     try {
@@ -64,28 +64,28 @@ if (fs.existsSync(domPath)) {
             let location = d.location || 'Airbnb';
             let image = d.image || '';
 
-            // 1. Parse Rating
+            
             const ratingMatch = fullText.match(/Rating (\d+) out of 5/);
             if (ratingMatch) {
                 rating = parseInt(ratingMatch[1]);
             }
 
-            // 2. Parse Name/Location
+            
             const lines = fullText.split('\n');
             if (lines.length >= 3 && fullText.includes('Rating')) {
                 if (!lines[0].includes('Rating')) name = lines[0];
                 if (!lines[1].includes('Rating')) location = lines[1];
             }
 
-            // 3. Clean Quote (Remove Header)
+            
             let cleanQuote = fullText;
             if (ratingMatch) {
-                // Split by "Rating X out of 5"
+                
                 const parts = cleanQuote.split(/Rating \d+ out of 5/);
                 if (parts.length > 1) {
                     const suffix = parts[1];
                     const suffixLines = suffix.split('\n');
-                    // Find start of content
+                    
                     const contentStartIndex = suffixLines.findIndex(l => {
                         const t = l.trim();
                         return t.length > 0 && t !== ',' && t !== '·' && !t.match(/^[A-Z][a-z]+ \d{4}$/) && !t.includes('ago') && !t.includes('weeks') && !t.includes('months');
@@ -109,7 +109,7 @@ if (fs.existsSync(domPath)) {
         })
             .filter(r => r && r.rating === 5 && r.quote.length > 2);
 
-        // Merge logic with normalization
+        
         const normalize = (str) => str.toLowerCase().replace(/[^a-z0-9]/g, '');
 
         domProcessed.forEach(r => {
@@ -121,18 +121,18 @@ if (fs.existsSync(domPath)) {
             });
 
             if (existingIndex !== -1) {
-                // Match found. Logic to pick the best one.
+                
                 const existing = cleanReviews[existingIndex];
 
-                // 1. Prefer one with an image
+                
                 if (!existing.image && r.image) {
                     cleanReviews[existingIndex] = r;
                 }
-                // 2. If same image status, prefer longer text (likely more complete)
+                
                 else if ((!!existing.image === !!r.image) && existing.quote.length < r.quote.length) {
-                    cleanReviews[existingIndex] = r; // Upgrade
+                    cleanReviews[existingIndex] = r; 
                 }
-                // Else keep existing
+                
             } else {
                 cleanReviews.push(r);
             }

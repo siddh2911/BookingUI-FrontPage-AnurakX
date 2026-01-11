@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer className="standard-footer" id="contact">
             <div className="container footer-content-grid">
-                {/* Brand */}
+                
                 <div className="footer-col">
                     <h3 className="footer-logo">KARUNA VILLA</h3>
                     <p>VDA Colony, Phase-1,<br />Badalalpur, Varanasi, Uttar Pradesh 221002</p>
@@ -13,7 +13,7 @@ const Footer = () => {
                     <p>karunavillastay@gmail.com</p>
                 </div>
 
-                {/* Links */}
+                
                 <div className="footer-col">
                     <h4>Explore</h4>
                     <ul>
@@ -23,7 +23,7 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                {/* Legal */}
+                
                 <div className="footer-col">
                     <h4>Information</h4>
                     <ul>
@@ -31,11 +31,11 @@ const Footer = () => {
                         <li><a href="#careers">Careers</a></li>
                         <li><a href="#privacy">Privacy Policy</a></li>
                         <li><a href="#terms">Terms of Service</a></li>
-                        {/* <li><a href="https://booking-ui-anurak-x.vercel.app" target="_blank" rel="noopener noreferrer" className="admin-link">Admin Login</a></li> */}
+                        
                     </ul>
                 </div>
 
-                {/* Newsletter */}
+                
                 <div className="footer-col">
                     <h4>Newsletter</h4>
                     <p>Subscribe for exclusive offers.</p>

@@ -1,28 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
 :root {
-  /* Colors - Classic Luxury */
+  
   --bg-primary: #FAFAFA;
-  /* Warm White/Cream */
+  
   --bg-secondary: #FFFFFF;
   --bg-accent: #F3F4F6;
 
   --text-primary: #0f172a;
-  /* Dark Slate */
+  
   --text-secondary: #475569;
-  /* Slate */
+  
 
   --accent: #D4AF37;
-  /* Gold */
+  
   --accent-hover: #B5952F;
 
-  /* Spacing */
+  
   --spacing-sm: 16px;
   --spacing-md: 32px;
   --spacing-lg: 64px;
   --spacing-xl: 96px;
 
-  /* Shadows */
+  
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
@@ -63,14 +63,14 @@ a {
   cursor: pointer;
 }
 
-/* Container Utility */
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* Button Utilities */
+
 .btn-primary {
   background-color: var(--text-primary);
   color: white;

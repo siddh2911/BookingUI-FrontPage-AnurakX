@@ -47,7 +47,7 @@
     font-size: 17px;
     color: var(--text-primary);
     font-family: 'Playfair Display', serif;
-    /* Serif for names too */
+    
 }
 
 .review-date {
@@ -62,7 +62,7 @@
     line-height: 1.8;
     color: var(--text-secondary);
     font-style: italic;
-    /* Elegant touch */
+    
 }
 
 .show-all-reviews-btn {

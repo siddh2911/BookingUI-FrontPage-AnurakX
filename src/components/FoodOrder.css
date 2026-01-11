@@ -3,7 +3,7 @@
     background-color: var(--bg-primary);
     padding-bottom: 4rem;
     padding-top: 80px;
-    /* Space for fixed header */
+    
 }
 
 @media (max-width: 768px) {
@@ -12,7 +12,7 @@
     }
 }
 
-/* Glass Panel Utility - matching Dashboard */
+
 .glass-panel {
     background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(16px);
@@ -88,15 +88,15 @@
 @media (max-width: 768px) {
     .food-hero-section {
         height: 65vh;
-        /* Slightly more height to accommodate the lower position */
+        
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        /* Control vertical position with padding */
+        
         align-items: center;
         text-align: center;
         padding-top: 25vh;
-        /* Significantly nudged down to the perfect "anchored" spot */
+        
     }
 
     .hero-content {
@@ -110,7 +110,7 @@
 
     .hero-eyebrow {
         text-align: center;
-        /* Explicit centering */
+        
         font-size: 12px;
         margin-bottom: 12px;
         width: 100%;
@@ -118,7 +118,7 @@
 
     .hero-title {
         text-align: center;
-        /* Explicit centering */
+        
         font-size: 2.2rem;
         margin-bottom: 0.75rem;
         width: 100%;
@@ -126,7 +126,7 @@
 
     .hero-subtitle {
         text-align: center;
-        /* Explicit centering */
+        
         font-size: 1rem;
         max-width: 100%;
         margin: 0 auto;
@@ -138,7 +138,7 @@
     }
 }
 
-/* --- Search & Filter --- */
+
 .search-and-filter {
     display: flex;
     justify-content: center;
@@ -243,7 +243,7 @@
     box-shadow: none;
 }
 
-/* Mobile Category Navigation Optimization */
+
 @media (max-width: 768px) {
     .category-tabs {
         justify-content: flex-start;
@@ -256,14 +256,14 @@
         margin-left: -1.5rem;
         margin-right: -1.5rem;
         -ms-overflow-style: none;
-        /* IE and Edge */
+        
         scrollbar-width: none;
-        /* Firefox */
+        
     }
 
     .category-tabs::-webkit-scrollbar {
         display: none;
-        /* Chrome, Safari and Opera */
+        
     }
 
     .cat-tab {
@@ -289,7 +289,7 @@
     width: 100%;
 }
 
-/* --- Refined Form Styles --- */
+
 .form-group-premium {
     margin-bottom: 1.25rem;
     display: flex;
@@ -327,7 +327,7 @@
     box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
 }
 
-/* --- Animations --- */
+
 .slide-up {
     animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
@@ -372,7 +372,7 @@
     border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 16px;
     overflow: hidden;
-    /* Sophisticated multi-layered shadow */
+    
     box-shadow:
         0 4px 6px -1px rgba(0, 0, 0, 0.02),
         0 10px 15px -3px rgba(0, 0, 0, 0.03),
@@ -409,7 +409,7 @@
         0 20px 25px -5px rgba(0, 0, 0, 0.05),
         0 30px 40px -10px rgba(0, 0, 0, 0.08);
     border-color: rgba(212, 175, 55, 0.2);
-    /* Subtle Gold border on hover */
+    
 }
 
 .card-image-wrapper {
@@ -481,7 +481,7 @@
     line-height: 1.5;
     margin-bottom: 1.5rem;
     min-height: 2.7em;
-    /* Ensure uniform height for logic lines */
+    
 }
 
 .card-footer {
@@ -566,7 +566,7 @@
     margin-top: 2px;
 }
 
-/* --- Cart Items & Controls --- */
+
 .cart-drawer-backdrop {
     position: fixed;
     top: 0;
@@ -593,7 +593,7 @@
     width: 450px;
     height: 100vh;
     background: rgba(250, 250, 249, 0.95);
-    /* Luxury Ivory Glass */
+    
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
     z-index: 1001;
@@ -782,7 +782,7 @@
 
 .summary-row .free {
     color: var(--accent);
-    /* Gold highlight */
+    
     font-weight: 700;
     font-size: 0.8rem;
     text-transform: uppercase;
@@ -816,7 +816,7 @@
     color: var(--text-primary);
 }
 
-/* --- Checkout Form --- */
+
 .checkout-form {
     display: flex;
     flex-direction: column;
@@ -883,7 +883,7 @@
     cursor: pointer;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     margin: 1.25rem 0 0 0;
-    /* Soft Diffusion Shadow */
+    
     box-shadow:
         0 4px 6px rgba(15, 23, 42, 0.1),
         0 8px 12px rgba(15, 23, 42, 0.1);
@@ -908,14 +908,14 @@
     transform: scale(0.98);
 }
 
-/* --- Floating Cart Button --- */
-/* --- Luxury Glassmorphic Cart Button --- */
+
+
 .floating-cart-btn {
     position: fixed;
     bottom: 2rem;
     right: 2rem;
     background: rgba(15, 23, 42, 0.85);
-    /* Sophisticated Slate Glass */
+    
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -927,7 +927,7 @@
     gap: 1.25rem;
     cursor: pointer;
     z-index: 100;
-    /* Soft Diffusion Shadow */
+    
     box-shadow:
         0 4px 6px -1px rgba(0, 0, 0, 0.1),
         0 10px 15px -3px rgba(0, 0, 0, 0.1),
@@ -952,7 +952,7 @@
 
 .cart-icon-wrapper svg {
     color: var(--accent);
-    /* Gold highlight */
+    
 }
 
 .cart-count {
@@ -995,7 +995,7 @@
     letter-spacing: 0.02em;
 }
 
-/* --- Order Success State --- */
+
 .order-success-overlay {
     height: 100vh;
     display: flex;

@@ -1,4 +1,4 @@
-/* Global Layout Styles */
+
 
 .main-content-container {
   max-width: 1280px;
@@ -6,9 +6,9 @@
   padding: 32px var(--spacing-xl);
   display: grid;
   grid-template-columns: 1.8fr 1fr;
-  /* approx 60/40 split or 66/33 */
+  
   gap: 80px;
-  /* Large gap between content and sidebar */
+  
 }
 
 @media (max-width: 1128px) {
@@ -24,8 +24,8 @@
     padding: 24px var(--spacing-md);
   }
 
-  /* On mobile/tablet, the booking widget might need to be hidden or position:static or bottom sheet */
-  /* For now, let's keep it simple, it will stack below */
+  
+  
   .content-right {
     margin-top: 40px;
   }

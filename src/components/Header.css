@@ -8,7 +8,7 @@
     transition: all 0.3s ease;
     background-color: transparent;
     color: white;
-    /* Default white on transparent hero */
+    
 }
 
 .standard-header.scrolled {
@@ -62,12 +62,12 @@
 @media (min-width: 769px) {
     .header-content {
         transform: translateX(-40px);
-        /* Shift centric slightly left */
+        
     }
 }
 
 .header-actions .btn-primary {
-    /* Override primary button for header context if needed */
+    
     padding: 10px 20px;
     font-size: 14px;
 }
@@ -106,7 +106,7 @@
 @media (max-width: 768px) {
     .standard-header {
         background-color: var(--text-primary) !important;
-        /* Force Navy blue background for consistency across all pages */
+        
         position: relative;
         padding: 15px 0;
     }

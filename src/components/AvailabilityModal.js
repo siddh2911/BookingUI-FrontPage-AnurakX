@@ -1,20 +1,21 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { X, ChevronLeft, ChevronRight, Loader } from 'lucide-react';
+import { getAvailability } from '../services/api';
 import './AvailabilityModal.css';
 
 const AvailabilityModal = ({ isOpen, onClose, onDateSelect, onSearch }) => {
-    const [currentMonth, setCurrentMonth] = useState(new Date()); // Start with current month
+    const [currentMonth, setCurrentMonth] = useState(new Date());
     const [checkInDate, setCheckInDate] = useState(null);
     const [checkOutDate, setCheckOutDate] = useState(null);
     const [availabilityData, setAvailabilityData] = useState({});
     const [loading, setLoading] = useState(false);
-    const [errorMessage, setErrorMessage] = useState(''); // Added here correctly
+    const [errorMessage, setErrorMessage] = useState('');
 
-    // ... rest of state ...
-    // State for available rooms removed as it is handled in App.js now
+
+
 
     const fetchMonthData = useCallback(async (date) => {
-        setAvailabilityData({}); // Clear old data to prevent flash of wrong status
+        setAvailabilityData({});
         setLoading(true);
         const year = date.getFullYear();
         const month = date.getMonth();
@@ -22,46 +23,42 @@ const AvailabilityModal = ({ isOpen, onClose, onDateSelect, onSearch }) => {
 
         const requests = [];
         for (let i = 1; i <= daysInMonth; i++) {
-            // Create date object for the current day (startDate)
+
             const d = new Date(year, month, i);
             const startStr = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 
-            // Create date object for the next day (endDate)
+
             const nextDay = new Date(year, month, i + 1);
             const endStr = `${nextDay.getFullYear()}-${String(nextDay.getMonth() + 1).padStart(2, '0')}-${String(nextDay.getDate()).padStart(2, '0')}`;
 
             requests.push(
-                fetch(`https://api.karunavillas.com/available-rooms?startDate=${startStr}&endDate=${endStr}`)
-                    .then(res => res.json())
+                getAvailability(startStr, endStr)
                     .then(rooms => {
-                        // USER REQUEST: Strictly use API data, ignoring status.
-                        // If the API returns any rooms, treat as available.
-                        const available = Array.isArray(rooms) ? rooms : [];
 
-                        // Debug logging for specific dates
-                        if (d.getDate() === 30 && d.getMonth() === 11) {
-                            console.log(`[AvailabilityModal] Dec 30 Data:`, available);
-                        }
-                        if (d.getDate() === 31 && d.getMonth() === 11) {
-                            console.log(`[AvailabilityModal] Dec 31 Data:`, available);
+
+                        const allRooms = Array.isArray(rooms) ? rooms : [];
+                        const available = allRooms.filter(r => r.status === 'AVAILABLE');
+
+                        
+                        if (d.getDate() === 15 || d.getDate() === 30) {
+                            console.log(`Availability check for ${startStr}:`, available.length > 0 ? 'Available' : 'Sold Out', available);
                         }
 
-                        // Find lowest price among available rooms
                         const minPrice = available.length > 0
                             ? Math.min(...available.map(r => r.pricePerNight))
                             : 0;
 
-                        let status = 'low'; // Default 'best price'
+                        let status = 'low';
                         if (available.length === 0) {
                             status = 'sold-out';
                         } else if (available.length === 1) {
-                            status = 'high'; // low availability -> high demand
+                            status = 'high';
                         }
-                        // If available.length >= 1, it stays 'low' or 'high' (available)
 
                         return { day: i, price: minPrice, status };
                     })
                     .catch(err => {
+                        console.error(`Error checking availability for ${startStr}:`, err);
                         return { day: i, price: 0, status: 'error' };
                     })
             );
@@ -81,7 +78,7 @@ const AvailabilityModal = ({ isOpen, onClose, onDateSelect, onSearch }) => {
         }
     }, []);
 
-    // Effect to reset state ONLY when modal opens
+
     useEffect(() => {
         if (isOpen) {
             setCheckInDate(null);
@@ -90,7 +87,7 @@ const AvailabilityModal = ({ isOpen, onClose, onDateSelect, onSearch }) => {
         }
     }, [isOpen]);
 
-    // Effect to fetch data when month or open state changes
+
     useEffect(() => {
         if (isOpen) {
             fetchMonthData(currentMonth);
@@ -107,35 +104,35 @@ const AvailabilityModal = ({ isOpen, onClose, onDateSelect, onSearch }) => {
 
 
     const handleDateClick = (date) => {
-        // Clear error on interact
+
         setErrorMessage('');
 
         if (!checkInDate || (checkInDate && checkOutDate)) {
-            // Starting new selection
+
             setCheckInDate(date);
             setCheckOutDate(null);
         } else if (date > checkInDate) {
-            // Completing selection
+
             setCheckOutDate(date);
 
-            // Notify parent of selection regardless of validity (User Request: "user can select the dates")
+
             if (onDateSelect) onDateSelect(checkInDate, date);
 
-            // Notify parent of selection regardless of validity (User Request: "user can select the dates")
+
             if (onDateSelect) onDateSelect(checkInDate, date);
 
-            // REMOVED VALIDATION as per request: "Sorry, these dates are not available. should not come"
-            // We allow closing even if dates are technically "sold out" in the calendar view, 
-            // relying on the main room list to show "Sold Out" status.
+
+
+
             if (onClose) onClose();
         } else {
-            // Reset to check-in if clicked earlier date
+
             setCheckInDate(date);
             setCheckOutDate(null);
         }
     };
 
-    // ... rest of helper functions ...
+
 
     const isDateSelected = (date) => {
         if (!checkInDate) return false;
@@ -148,45 +145,45 @@ const AvailabilityModal = ({ isOpen, onClose, onDateSelect, onSearch }) => {
     const daysInMonth = (date) => new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
     const firstDayOfMonth = (date) => new Date(date.getFullYear(), date.getMonth(), 1).getDay();
 
-    // ... (rest of state is same, ensure line numbers match if needed, but replace_file_content replaces chunks)
 
-    // We need to inject the state definition at the top. 
-    // Wait, I can't inject state easily with a partial replace if I don't include the top.
-    // I will do a larger replace to include the state and the render logic.
 
-    // Actually, I'll split this into:
-    // 1. Add state variable.
-    // 2. Update handleDateClick and generateDays.
-    // 3. Update return JSX to show error.
 
-    // Let's do a larger chunk to cover generateDays and handleDateClick together.
+
+
+
+
+
+
+
+
+
 
     const generateDays = (date) => {
         const days = [];
         const totalDays = daysInMonth(date);
         const startDay = firstDayOfMonth(date);
 
-        // Empty slots
+
         for (let i = 0; i < startDay; i++) {
             days.push(<div key={`empty-${i}`} className="calendar-day empty"></div>);
         }
 
-        // Days
+
         for (let i = 1; i <= totalDays; i++) {
             const dateObj = new Date(date.getFullYear(), date.getMonth(), i);
             const isPast = dateObj < new Date(new Date().setHours(0, 0, 0, 0));
             const dayData = availabilityData[i];
             const isSelected = isDateSelected(dateObj);
 
-            // Loading state placeholder or actual data
+
             const status = dayData ? dayData.status : 'loading';
 
-            // Treat 'error' as 'sold-out' for safety, but for VISUALS we will relaxed it.
-            // effectively 'sold-out' logic for VALIDATION remains, but VISUALS are standard.
+
+
             const effectiveStatus = (status === 'error' || status === 'sold-out') ? 'sold-out' : status;
 
-            // Usage: only 'high' gets special treatment? Or maybe just keep everything clean.
-            // User said "no grey boxes", but for "sold-out" we need a specific class to apply the visual "cut".
+
+
             let demandClass = 'low-demand';
             if (effectiveStatus === 'high') demandClass = 'high-demand';
             else if (effectiveStatus === 'sold-out') demandClass = 'sold-out';
@@ -195,14 +192,14 @@ const AvailabilityModal = ({ isOpen, onClose, onDateSelect, onSearch }) => {
                 <div
                     key={i}
                     onClick={() => {
-                        if (isPast) return; // Still prevent past dates? Usually yes.
+                        if (isPast) return;
 
-                        // RELAXED LOGIC: Allow clicking ANY future date.
-                        // Validation happens in handleDateClick.
+
+
                         handleDateClick(dateObj);
                     }}
                     className={`calendar-day ${isPast ? 'past-date' : demandClass} ${isSelected ? 'date-selected' : ''}`}
-                // title={effectiveStatus === 'sold-out' ? 'Sold Out' : ''} // Keep title for info? Or remove? User said "if not available just add sorry message". Title is fine for hover context.
+
                 >
                     <span className="day-number">{i}</span>
                 </div>
@@ -259,7 +256,7 @@ const AvailabilityModal = ({ isOpen, onClose, onDateSelect, onSearch }) => {
                     <div className="legend-item">
                         <span className="dot high"></span> High Demand
                     </div>
-                    {/* Sold Out legend removed as per request */}
+
                 </div>
 
                 {errorMessage && (

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { getRooms, getAvailability } from './services/api';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import AvailabilityModal from './components/AvailabilityModal';
@@ -17,16 +18,15 @@ function App() {
   const [hasSearched, setHasSearched] = useState(false);
 
   useEffect(() => {
-    // Fetch all rooms on load
+
     const fetchAllRooms = async () => {
       setIsLoading(true);
       try {
-        const response = await fetch('https://api.karunavillas.com/allRooms');
-        const data = await response.json();
+        const data = await getRooms();
         setAllRooms(data);
         setSearchResults(data);
       } catch (error) {
-        // Silent failure for all rooms fetch
+
       } finally {
         setIsLoading(false);
       }
@@ -44,19 +44,29 @@ function App() {
     const endStr = `${checkOut.getFullYear()}-${String(checkOut.getMonth() + 1).padStart(2, '0')}-${String(checkOut.getDate()).padStart(2, '0')}`;
 
     try {
-      const response = await fetch(`https://api.karunavillas.com/available-rooms?startDate=${startStr}&endDate=${endStr}`);
-      const availableData = await response.json();
+      const availableData = await getAvailability(startStr, endStr);
 
-      // Merge availability status into all rooms
-      const updatedResults = allRooms.map(room => ({
-        ...room,
-        isAvailable: availableData.some(availableRoom => availableRoom.id === room.id)
-      }));
+      const updatedResults = allRooms.map(room => {
+        
+        const availableRoom = availableData.find(ar => String(ar.id) === String(room.id) && ar.status === 'AVAILABLE');
+
+        if (availableRoom) {
+          return {
+            ...room,
+            isAvailable: true,
+            pricePerNight: availableRoom.pricePerNight 
+          };
+        }
+        return {
+          ...room,
+          isAvailable: false
+        };
+      });
 
       setSearchResults(updatedResults);
 
-      // Scroll to rooms section - Only if on home page? 
-      // For now, simpler to just update state. visual scroll might depend on where we are.
+
+
       setTimeout(() => {
         const roomsSection = document.getElementById('rooms');
         if (roomsSection) {
@@ -64,7 +74,7 @@ function App() {
         }
       }, 100);
     } catch (error) {
-      // If API fails, better to show all as unavailable or retain previous state than empty
+
       const updatedResults = allRooms.map(room => ({ ...room, isAvailable: false }));
       setSearchResults(updatedResults);
     } finally {
@@ -79,9 +89,9 @@ function App() {
 
   const handleBookStay = async () => {
     if (!selectedDates.checkIn || !selectedDates.checkOut) {
-      // If we are not on Home, we might need to navigate there first? 
-      // Ideally "Book Stay" is on Home. 
-      // If this is called from Header "Book Now", we toggle modal.
+
+
+
       setIsModalOpen(true);
       return;
     }
@@ -92,7 +102,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        {/* Header needs to be inside Router to use Link/useLocation if updated */}
+
         <Header onBookNow={toggleModal} />
 
         <Routes>

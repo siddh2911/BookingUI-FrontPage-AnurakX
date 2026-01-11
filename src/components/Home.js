@@ -23,8 +23,8 @@ const Home = ({
 
     useLayoutEffect(() => {
         const ctx = gsap.context(() => {
-            // Animate all direct children sections of the content wrapper
-            // Staggering them slightly or just triggering individually
+            
+            
             const sections = gsap.utils.toArray(".page-section");
 
             sections.forEach(section => {
@@ -37,7 +37,7 @@ const Home = ({
                         ease: "power3.out",
                         scrollTrigger: {
                             trigger: section,
-                            start: "top 85%", // Start animation when top of section hits 85% of viewport height
+                            start: "top 85%", 
                             toggleActions: "play none none reverse"
                         }
                     }
@@ -57,7 +57,7 @@ const Home = ({
                 checkOut={checkOut}
             />
 
-            {/* Wrapper for animated content below Hero */}
+            
             <div ref={contentRef} style={{ overflow: 'hidden' }}>
                 <div className="page-section">
                     <StorySection />
@@ -67,7 +67,7 @@ const Home = ({
                         rooms={searchResults}
                         isLoading={isLoading}
                         hasSearched={hasSearched}
-                        onSearch={onSearch} // Assuming search logic might be needed passed down?
+                        onSearch={onSearch} 
                     />
                 </div>
                 <div className="page-section">

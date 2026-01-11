@@ -6,7 +6,7 @@
 
 .story-container {
     max-width: 1200px;
-    /* Increased for visuals */
+    
     margin: 0 auto;
 }
 
@@ -42,7 +42,7 @@
     width: 60px;
     height: 3px;
     background: #d4a373;
-    /* Gold accent */
+    
     margin: 2rem auto 0;
 }
 
@@ -53,7 +53,7 @@
     align-items: center;
 }
 
-/* Visuals Column */
+
 .story-visuals {
     position: relative;
     height: 500px;
@@ -99,7 +99,7 @@
 }
 
 
-/* Text Column */
+
 .story-editorial-text h3 {
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
@@ -162,12 +162,12 @@
 @media (max-width: 900px) {
     .story-section {
         padding: 4rem 1.5rem;
-        /* Reduced padding */
+        
     }
 
     .story-header h2 {
         font-size: 2.5rem;
-        /* Smaller headline */
+        
     }
 
     .story-content-wrapper {
@@ -177,7 +177,7 @@
 
     .story-visuals {
         height: 350px;
-        /* Compact visuals */
+        
         order: -1;
         margin-bottom: 2rem;
     }

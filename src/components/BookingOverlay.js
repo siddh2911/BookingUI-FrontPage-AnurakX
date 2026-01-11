@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './BookingOverlay.css';
 import BookingWidget from './BookingWidget';
 
-// Reuse the logic of BookingWidget but style it as a minimal form inside the overlay
+
 const BookingOverlay = () => {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -21,8 +21,7 @@ const BookingOverlay = () => {
                     <h2>Secure Your Sanctuary</h2>
                     <p>Enter your details to initiate a reservation inquiry.</p>
 
-                    {/* Placeholder for the complex form re-using standard inputs if needed, 
-                        but simplified for this aesthetic */}
+                    
                     <form className="minimal-form">
                         <div className="input-group">
                             <input type="text" placeholder="Name" />

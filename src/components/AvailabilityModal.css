@@ -99,7 +99,7 @@
     justify-content: center;
     gap: 4px;
     height: 50px;
-    /* Fixed height for squares */
+    
 }
 
 .calendar-day:hover {
@@ -144,25 +144,25 @@
 
 .calendar-day.sold-out {
     opacity: 1;
-    /* Keep container full opacity for the line */
+    
     position: relative;
     color: #e5e7eb;
-    /* Very faint text for the day number */
+    
     pointer-events: auto;
 }
 
-/* The "Cut" visual */
+
 .calendar-day.sold-out::after {
     content: '';
     position: absolute;
     top: 50%;
     left: 50%;
     width: 60%;
-    /* Slightly more contained */
+    
     height: 1.5px;
-    /* Thicker, cleaner line */
+    
     background-color: #ef4444;
-    /* Red cut */
+    
     transform: translate(-50%, -50%) rotate(-45deg);
     pointer-events: none;
     border-radius: 2px;
@@ -170,7 +170,7 @@
 
 .calendar-day.sold-out .day-price {
     display: none;
-    /* Hide price completely for clean look */
+    
 }
 
 .calendar-loading {
@@ -264,11 +264,11 @@
 
     .calendar-day {
         min-height: 42px;
-        /* Ensure tough target */
+        
         height: 42px;
-        /* Force square-ish look */
+        
         padding: 0;
-        /* Remove padding to center content */
+        
         border-radius: 6px;
     }
 
@@ -278,7 +278,7 @@
 
     .day-price {
         display: none;
-        /* Hide price on very small screens if it clutters, or keep small */
+        
     }
 
     .forecast-legend {

@@ -13,7 +13,7 @@ const BookingSearch = ({ onSearch, onOpenCalendar, checkIn, checkOut }) => {
 
     const handleCouponChange = (e) => {
         setCoupon(e.target.value);
-        setCouponMessage(''); // Clear message on typing
+        setCouponMessage(''); 
     };
 
     const handleSearchClick = () => {
@@ -26,14 +26,14 @@ const BookingSearch = ({ onSearch, onOpenCalendar, checkIn, checkOut }) => {
             }
         }
 
-        // Proceed with search action
+        
         onSearch();
     };
 
     return (
         <div className="booking-search-bar">
             <div className="search-field">
-                {/* ... existing fields ... */}
+                
                 <label>Check-in</label>
                 <div className="input-with-icon" onClick={onOpenCalendar} style={{ cursor: 'pointer' }}>
                     <Calendar size={18} className="field-icon" />
