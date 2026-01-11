@@ -7,7 +7,6 @@ import './FoodOrder.css';
 gsap.registerPlugin(ScrollTrigger);
 
 const MENU_CATEGORIES = [
-    
     { id: 'all', label: 'All' },
     { id: 'banaras', label: 'Banaras Specials' },
     { id: 'mains', label: 'Main Course' },
@@ -113,7 +112,7 @@ const FoodOrder = () => {
     const [searchQuery, setSearchQuery] = useState('');
     const [cart, setCart] = useState([]);
     const [isCartOpen, setIsCartOpen] = useState(false);
-    const [orderStep, setOrderStep] = useState('browsing'); 
+    const [orderStep, setOrderStep] = useState('browsing');
     const [roomNumber, setRoomNumber] = useState('');
     const [specialRequests, setSpecialRequests] = useState('');
 
@@ -132,12 +131,10 @@ const FoodOrder = () => {
         });
     }, [activeCategory, searchQuery]);
 
-    
     useEffect(() => {
         const ctx = gsap.context(() => {
             const entryTl = gsap.timeline();
 
-            
             gsap.set([".hero-content > *", ".cat-tab"], { autoAlpha: 0, y: 30 });
             gsap.set(".food-hero-bg", { scale: 1.1, opacity: 0 });
 
@@ -167,12 +164,10 @@ const FoodOrder = () => {
         return () => ctx.revert();
     }, []);
 
-    
     useEffect(() => {
         const ctx = gsap.context(() => {
             const cards = gsap.utils.toArray(".menu-card-premium");
 
-            
             gsap.set(cards, { autoAlpha: 0, y: 30 });
 
             ScrollTrigger.batch(cards, {
@@ -194,7 +189,6 @@ const FoodOrder = () => {
         return () => ctx.revert();
     }, [filteredItems]);
 
-    
     useEffect(() => {
         if (totalAmount > 0) {
             const tl = gsap.timeline();
@@ -213,7 +207,6 @@ const FoodOrder = () => {
         }
     }, [totalAmount]);
 
-    
     useEffect(() => {
         if (totalItems > 0) {
             gsap.fromTo(".floating-cart-btn",
@@ -223,7 +216,6 @@ const FoodOrder = () => {
         }
     }, [totalItems > 0]);
 
-    
     useEffect(() => {
         if (isCartOpen && cart.length > 0) {
             const tl = gsap.timeline({ delay: 0.2 });
@@ -250,7 +242,6 @@ const FoodOrder = () => {
             return [...prev, { ...item, quantity: 1 }];
         });
 
-        
         gsap.fromTo(".floating-cart-btn",
             { scale: 1 },
             { scale: 1.08, duration: 0.4, ease: "elastic.out(1.2, 0.4)" }
@@ -267,7 +258,6 @@ const FoodOrder = () => {
         }).filter(item => item.quantity > 0));
     };
 
-
     const handlePlaceOrder = (e) => {
         e.preventDefault();
         setOrderStep('success');
@@ -277,7 +267,6 @@ const FoodOrder = () => {
         setIsCartOpen(false);
         window.scrollTo({ top: 0, behavior: 'smooth' });
 
-        
         setTimeout(() => {
             const tl = gsap.timeline();
             tl.fromTo(".success-card",
@@ -313,7 +302,6 @@ const FoodOrder = () => {
 
     return (
         <div className="food-order-page" ref={pageRef}>
-            
             <div className={`cart-drawer-backdrop ${isCartOpen ? 'open' : ''}`} onClick={() => setIsCartOpen(false)} />
             <div className={`cart-drawer ${isCartOpen ? 'open' : ''}`}>
                 <div className="drawer-header">
@@ -475,7 +463,6 @@ const FoodOrder = () => {
                 </div>
             </div>
 
-            
             {totalItems > 0 && (
                 <button className="floating-cart-btn" onClick={() => setIsCartOpen(true)}>
                     <div className="cart-icon-wrapper">

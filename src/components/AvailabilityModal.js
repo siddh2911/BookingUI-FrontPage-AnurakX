@@ -39,10 +39,7 @@ const AvailabilityModal = ({ isOpen, onClose, onDateSelect, onSearch }) => {
                         const allRooms = Array.isArray(rooms) ? rooms : [];
                         const available = allRooms.filter(r => r.status === 'AVAILABLE');
 
-                        
-                        if (d.getDate() === 15 || d.getDate() === 30) {
-                            console.log(`Availability check for ${startStr}:`, available.length > 0 ? 'Available' : 'Sold Out', available);
-                        }
+
 
                         const minPrice = available.length > 0
                             ? Math.min(...available.map(r => r.pricePerNight))
@@ -58,7 +55,6 @@ const AvailabilityModal = ({ isOpen, onClose, onDateSelect, onSearch }) => {
                         return { day: i, price: minPrice, status };
                     })
                     .catch(err => {
-                        console.error(`Error checking availability for ${startStr}:`, err);
                         return { day: i, price: 0, status: 'error' };
                     })
             );
@@ -72,7 +68,6 @@ const AvailabilityModal = ({ isOpen, onClose, onDateSelect, onSearch }) => {
             });
             setAvailabilityData(dataMap);
         } catch (error) {
-            console.error("Failed to fetch availability", error);
         } finally {
             setLoading(false);
         }
@@ -104,29 +99,16 @@ const AvailabilityModal = ({ isOpen, onClose, onDateSelect, onSearch }) => {
 
 
     const handleDateClick = (date) => {
-
         setErrorMessage('');
 
         if (!checkInDate || (checkInDate && checkOutDate)) {
-
             setCheckInDate(date);
             setCheckOutDate(null);
         } else if (date > checkInDate) {
-
             setCheckOutDate(date);
-
-
             if (onDateSelect) onDateSelect(checkInDate, date);
-
-
-            if (onDateSelect) onDateSelect(checkInDate, date);
-
-
-
-
             if (onClose) onClose();
         } else {
-
             setCheckInDate(date);
             setCheckOutDate(null);
         }

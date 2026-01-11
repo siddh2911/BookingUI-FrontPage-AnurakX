@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Header.css';
+import PromoNotification from './PromoNotification';
 
 const Header = ({ onBookNow }) => {
   const [scrolled, setScrolled] = useState(false);
@@ -17,7 +18,7 @@ const Header = ({ onBookNow }) => {
     e.preventDefault();
     if (location.pathname !== '/') {
       navigate('/');
-      
+
       setTimeout(() => {
         const element = document.getElementById(hash);
         if (element) element.scrollIntoView({ behavior: 'smooth' });
@@ -42,34 +43,40 @@ const Header = ({ onBookNow }) => {
   };
 
   return (
-    <header className={`standard-header ${scrolled || location.pathname !== '/' ? 'scrolled' : ''}`}>
-      <div className="container header-content">
-        <Link
-          to="/"
-          className="logo"
-          style={{ textDecoration: 'none', color: 'inherit' }}
-          onClick={handleLogoClick}
-        >
-          KARUNA VILLA
-        </Link>
-
-        <nav className="desktop-nav">
+    <div className="header-wrapper">
+      <PromoNotification />
+      <header
+        className={`standard-header ${scrolled || location.pathname !== '/' ? 'scrolled' : ''}`}
+        style={{ position: 'relative', top: 'auto' }}
+      >
+        <div className="container header-content">
           <Link
-            to="/food"
-            className={location.pathname === '/food' ? 'active' : ''}
-            onClick={handleDiningClick}
+            to="/"
+            className="logo"
+            style={{ textDecoration: 'none', color: 'inherit' }}
+            onClick={handleLogoClick}
           >
-            Dining
+            KARUNA VILLA
           </Link>
-          <a href="#experiences" onClick={(e) => handleHashLink(e, 'experiences')}>Experiences</a>
-          <a href="#contact" onClick={(e) => handleHashLink(e, 'contact')}>Contact</a>
-        </nav>
 
-        <div className="header-actions">
-          <button className="btn-primary" onClick={onBookNow}>Book Now</button>
+          <nav className="desktop-nav">
+            <Link
+              to="/food"
+              className={location.pathname === '/food' ? 'active' : ''}
+              onClick={handleDiningClick}
+            >
+              Dining
+            </Link>
+            <a href="#experiences" onClick={(e) => handleHashLink(e, 'experiences')}>Experiences</a>
+            <a href="#contact" onClick={(e) => handleHashLink(e, 'contact')}>Contact</a>
+          </nav>
+
+          <div className="header-actions">
+            <button className="btn-primary" onClick={onBookNow}>Book Now</button>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
+    </div>
   );
 };
 

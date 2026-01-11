@@ -1,12 +1,12 @@
 .story-section {
-    padding: 8rem 2rem;
+    padding: 10rem 2rem 6rem 2rem;
     position: relative;
     background: linear-gradient(180deg, #fff 0%, #fafafa 100%);
 }
 
 .story-container {
     max-width: 1200px;
-    
+
     margin: 0 auto;
 }
 
@@ -42,7 +42,7 @@
     width: 60px;
     height: 3px;
     background: #d4a373;
-    
+
     margin: 2rem auto 0;
 }
 
@@ -161,13 +161,11 @@
 
 @media (max-width: 900px) {
     .story-section {
-        padding: 4rem 1.5rem;
-        
+        padding: 6rem 1.5rem;
     }
 
     .story-header h2 {
         font-size: 2.5rem;
-        
     }
 
     .story-content-wrapper {
@@ -177,7 +175,6 @@
 
     .story-visuals {
         height: 350px;
-        
         order: -1;
         margin-bottom: 2rem;
     }

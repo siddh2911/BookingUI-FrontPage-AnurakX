@@ -3,7 +3,6 @@
     background-color: var(--bg-primary);
     padding-bottom: 4rem;
     padding-top: 80px;
-    
 }
 
 @media (max-width: 768px) {
@@ -11,7 +10,6 @@
         padding-top: 0;
     }
 }
-
 
 .glass-panel {
     background: rgba(255, 255, 255, 0.7);
@@ -88,15 +86,12 @@
 @media (max-width: 768px) {
     .food-hero-section {
         height: 65vh;
-        
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        
         align-items: center;
         text-align: center;
         padding-top: 25vh;
-        
     }
 
     .hero-content {
@@ -110,7 +105,6 @@
 
     .hero-eyebrow {
         text-align: center;
-        
         font-size: 12px;
         margin-bottom: 12px;
         width: 100%;
@@ -118,7 +112,6 @@
 
     .hero-title {
         text-align: center;
-        
         font-size: 2.2rem;
         margin-bottom: 0.75rem;
         width: 100%;
@@ -126,7 +119,6 @@
 
     .hero-subtitle {
         text-align: center;
-        
         font-size: 1rem;
         max-width: 100%;
         margin: 0 auto;
@@ -137,7 +129,6 @@
         gap: 1.5rem;
     }
 }
-
 
 .search-and-filter {
     display: flex;
@@ -199,7 +190,6 @@
     background: #f4f4f5;
 }
 
-
 .category-tabs {
     display: flex;
     justify-content: center;
@@ -243,7 +233,6 @@
     box-shadow: none;
 }
 
-
 @media (max-width: 768px) {
     .category-tabs {
         justify-content: flex-start;
@@ -256,14 +245,11 @@
         margin-left: -1.5rem;
         margin-right: -1.5rem;
         -ms-overflow-style: none;
-        
         scrollbar-width: none;
-        
     }
 
     .category-tabs::-webkit-scrollbar {
         display: none;
-        
     }
 
     .cat-tab {
@@ -288,7 +274,6 @@
 .cat-tab.active::after {
     width: 100%;
 }
-
 
 .form-group-premium {
     margin-bottom: 1.25rem;
@@ -327,7 +312,6 @@
     box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
 }
 
-
 .slide-up {
     animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
@@ -342,9 +326,6 @@
     from {
         transform: translateY(30px);
         opacity: 0;
-    }
-
-    to {
         transform: translateY(0);
         opacity: 1;
     }
@@ -362,17 +343,16 @@
 
 .menu-grid-premium {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    gap: 1.5rem;
     margin-bottom: 4rem;
 }
 
 .menu-card-premium {
     background: white;
     border: 1px solid rgba(0, 0, 0, 0.05);
-    border-radius: 16px;
+    border-radius: 24px;
     overflow: hidden;
-    
     box-shadow:
         0 4px 6px -1px rgba(0, 0, 0, 0.02),
         0 10px 15px -3px rgba(0, 0, 0, 0.03),
@@ -409,7 +389,6 @@
         0 20px 25px -5px rgba(0, 0, 0, 0.05),
         0 30px 40px -10px rgba(0, 0, 0, 0.08);
     border-color: rgba(212, 175, 55, 0.2);
-    
 }
 
 .card-image-wrapper {
@@ -481,7 +460,6 @@
     line-height: 1.5;
     margin-bottom: 1.5rem;
     min-height: 2.7em;
-    
 }
 
 .card-footer {
@@ -566,7 +544,6 @@
     margin-top: 2px;
 }
 
-
 .cart-drawer-backdrop {
     position: fixed;
     top: 0;
@@ -593,7 +570,6 @@
     width: 450px;
     height: 100vh;
     background: rgba(250, 250, 249, 0.95);
-    
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
     z-index: 1001;
@@ -782,7 +758,6 @@
 
 .summary-row .free {
     color: var(--accent);
-    
     font-weight: 700;
     font-size: 0.8rem;
     text-transform: uppercase;
@@ -815,7 +790,6 @@
     font-weight: 600;
     color: var(--text-primary);
 }
-
 
 .checkout-form {
     display: flex;
@@ -883,7 +857,6 @@
     cursor: pointer;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     margin: 1.25rem 0 0 0;
-    
     box-shadow:
         0 4px 6px rgba(15, 23, 42, 0.1),
         0 8px 12px rgba(15, 23, 42, 0.1);
@@ -908,14 +881,11 @@
     transform: scale(0.98);
 }
 
-
-
 .floating-cart-btn {
     position: fixed;
     bottom: 2rem;
     right: 2rem;
     background: rgba(15, 23, 42, 0.85);
-    
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -927,7 +897,6 @@
     gap: 1.25rem;
     cursor: pointer;
     z-index: 100;
-    
     box-shadow:
         0 4px 6px -1px rgba(0, 0, 0, 0.1),
         0 10px 15px -3px rgba(0, 0, 0, 0.1),
@@ -952,7 +921,6 @@
 
 .cart-icon-wrapper svg {
     color: var(--accent);
-    
 }
 
 .cart-count {
@@ -994,7 +962,6 @@
     color: white;
     letter-spacing: 0.02em;
 }
-
 
 .order-success-overlay {
     height: 100vh;

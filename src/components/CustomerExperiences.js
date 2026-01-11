@@ -7,8 +7,6 @@ import realReviews from '../data/reviews.json';
 
 gsap.registerPlugin(ScrollTrigger);
 
-
-
 const experiences = realReviews.length > 0 ? realReviews : [
     {
         id: 1,
@@ -39,10 +37,8 @@ const experiences = realReviews.length > 0 ? realReviews : [
     }
 ];
 
-
 const getHDImage = (url) => {
     if (!url) return '';
-    
     return url.split('?')[0];
 };
 
@@ -51,26 +47,21 @@ const CustomerExperiences = () => {
     const sliderRef = useRef(null);
     const nudgeTween = useRef(null);
 
-    
     const cleanedExperiences = experiences.map(exp => ({
         ...exp,
         location: (exp.location === 'Airbnb' || exp.location === 'airbnb') ? 'India' : exp.location
     }));
 
-    
     const sortedExperiences = [...cleanedExperiences].sort((a, b) => {
         const nameA = (a.name || '').toLowerCase();
         const nameB = (b.name || '').toLowerCase();
 
-        
         if (nameA.includes('pooja')) return -1;
         if (nameB.includes('pooja')) return 1;
 
-        
         if (nameA.includes('phungshokngam')) return -1;
         if (nameB.includes('phungshokngam')) return 1;
 
-        
         const hasImgA = a.image && a.image.length > 0;
         const hasImgB = b.image && b.image.length > 0;
         if (hasImgA && !hasImgB) return -1;
@@ -82,7 +73,6 @@ const CustomerExperiences = () => {
     useLayoutEffect(() => {
         const mm = gsap.matchMedia();
         const ctx = gsap.context(() => {
-            
             gsap.from(".exp-header-content", {
                 y: 50,
                 opacity: 0,
@@ -94,7 +84,6 @@ const CustomerExperiences = () => {
                 }
             });
 
-            
             gsap.from(".experience-card", {
                 x: 100,
                 duration: 1,
@@ -106,19 +95,15 @@ const CustomerExperiences = () => {
                 }
             });
 
-            
-            
             mm.add("(max-width: 768px)", () => {
-                
-                
                 nudgeTween.current = gsap.to(".experience-card", {
-                    x: -80, 
+                    x: -80,
                     duration: 1.6,
                     ease: "power2.inOut",
-                    yoyo: true, 
-                    repeat: -1, 
+                    yoyo: true,
+                    repeat: -1,
                     repeatDelay: 1.5,
-                    delay: 1.5, 
+                    delay: 1.5,
                     scrollTrigger: {
                         trigger: ".experiences-slider",
                         start: "top 85%",
@@ -128,12 +113,12 @@ const CustomerExperiences = () => {
             });
         }, sectionRef);
 
-        return () => ctx.revert(); 
+        return () => ctx.revert();
     }, []);
 
     const scroll = (direction) => {
         if (sliderRef.current) {
-            const scrollAmount = 350 + 32; 
+            const scrollAmount = 350 + 32;
             sliderRef.current.scrollBy({
                 left: direction === 'left' ? -scrollAmount : scrollAmount,
                 behavior: 'smooth'
@@ -171,7 +156,6 @@ const CustomerExperiences = () => {
                                 key={exp.id}
                                 className="experience-card"
                             >
-                                
                                 <div className="card-image-wrapper">
                                     {exp.image ? (
                                         <img

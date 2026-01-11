@@ -1,0 +1,121 @@
+.promo-notification {
+    background: linear-gradient(90deg, #1e293b 0%, #0f172a 100%);
+    color: white;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1001;
+    width: 100%;
+    animation: slideDown 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.promo-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    font-family: 'Inter', sans-serif;
+}
+
+.promo-icon {
+    color: var(--accent);
+    animation: bounce 2s infinite;
+}
+
+.promo-text {
+    font-weight: 500;
+}
+
+.promo-code {
+    font-weight: 700;
+    color: #1e293b;
+    padding: 4px 10px;
+    background: var(--accent);
+    border-radius: 20px;
+    margin: 0 6px;
+    box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    cursor: text;
+    user-select: text;
+    transition: transform 0.2s;
+}
+
+.promo-code:hover {
+    transform: scale(1.05);
+}
+
+.close-promo {
+    position: absolute;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.close-promo:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+@media (max-width: 600px) {
+    .promo-notification {
+        padding: 12px 16px;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .promo-content {
+        font-size: 13px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .close-promo {
+        top: 50%;
+        transform: translateY(-50%);
+        right: 12px;
+    }
+
+    .promo-notification {
+        padding-right: 40px;
+    }
+}

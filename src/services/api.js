@@ -1,19 +1,27 @@
 const API_BASE_URL = 'https://api.karunavillas.com';
 
-
 export const getRooms = async () => {
     try {
         const response = await fetch(`${API_BASE_URL}/allRooms`);
         if (!response.ok) {
             throw new Error(`Error fetching rooms: ${response.statusText}`);
         }
-        return await response.json();
+        const data = await response.json();
+
+        const littleHaven = {
+            id: 5,
+            roomName: "Little Haven",
+            pricePerNight: "10,000",
+            image: "/images/villa-2.png",
+            size: "6000 sqft",
+            guests: "4 Adults"
+        };
+
+        return [...data, littleHaven];
     } catch (error) {
-        console.error("Failed to fetch rooms:", error);
         throw error;
     }
 };
-
 
 export const getAvailability = async (startDate, endDate) => {
     try {
@@ -23,7 +31,6 @@ export const getAvailability = async (startDate, endDate) => {
         }
         return await response.json();
     } catch (error) {
-        console.error("Failed to fetch availability:", error);
         throw error;
     }
 };

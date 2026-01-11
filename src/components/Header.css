@@ -1,5 +1,15 @@
-.standard-header {
+.header-wrapper {
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+.standard-header {
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -8,7 +18,7 @@
     transition: all 0.3s ease;
     background-color: transparent;
     color: white;
-    
+
 }
 
 .standard-header.scrolled {
@@ -62,12 +72,12 @@
 @media (min-width: 769px) {
     .header-content {
         transform: translateX(-40px);
-        
+
     }
 }
 
 .header-actions .btn-primary {
-    
+
     padding: 10px 20px;
     font-size: 14px;
 }
@@ -104,10 +114,12 @@
 }
 
 @media (max-width: 768px) {
+    .header-wrapper {
+        position: absolute;
+    }
+
     .standard-header {
         background-color: var(--text-primary) !important;
-        
-        position: relative;
         padding: 15px 0;
     }
 

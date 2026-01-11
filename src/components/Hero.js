@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import BookingSearch from './BookingSearch';
 import './Hero.css';
 
-const Hero = ({ onSearch, onOpenCalendar, checkIn, checkOut }) => {
+const Hero = ({ onSearch, onOpenCalendar, checkIn, checkOut, guestCount, setGuestCount }) => {
     const videoPlaylist = [
         "/videos/IMG_7808.mp4"
     ];
@@ -18,9 +18,9 @@ const Hero = ({ onSearch, onOpenCalendar, checkIn, checkOut }) => {
         <section className="hero-container">
             <div className="hero-bg">
                 <video
-                    key={`${currentVideoIndex}-${videoPlaylist.length}`} 
+                    key={`${currentVideoIndex}-${videoPlaylist.length}`}
                     autoPlay
-                    loop={videoPlaylist.length === 1} 
+                    loop={videoPlaylist.length === 1}
                     muted
                     playsInline
                     className="hero-video"
@@ -47,6 +47,8 @@ const Hero = ({ onSearch, onOpenCalendar, checkIn, checkOut }) => {
                     onOpenCalendar={onOpenCalendar}
                     checkIn={checkIn}
                     checkOut={checkOut}
+                    guestCount={guestCount}
+                    setGuestCount={setGuestCount}
                 />
             </div>
         </section>

@@ -28,6 +28,7 @@
     flex-direction: column;
 }
 
+
 .reviewer-info {
     display: flex;
     align-items: center;
@@ -47,7 +48,7 @@
     font-size: 17px;
     color: var(--text-primary);
     font-family: 'Playfair Display', serif;
-    
+
 }
 
 .review-date {
@@ -62,7 +63,7 @@
     line-height: 1.8;
     color: var(--text-secondary);
     font-style: italic;
-    
+
 }
 
 .show-all-reviews-btn {

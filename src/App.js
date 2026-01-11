@@ -16,9 +16,10 @@ function App() {
   const [allRooms, setAllRooms] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [hasSearched, setHasSearched] = useState(false);
+  const [guestCount, setGuestCount] = useState(4);
+  const [discount, setDiscount] = useState(0);
 
   useEffect(() => {
-
     const fetchAllRooms = async () => {
       setIsLoading(true);
       try {
@@ -26,7 +27,6 @@ function App() {
         setAllRooms(data);
         setSearchResults(data);
       } catch (error) {
-
       } finally {
         setIsLoading(false);
       }
@@ -34,6 +34,12 @@ function App() {
 
     fetchAllRooms();
   }, []);
+
+  useEffect(() => {
+    if (selectedDates.checkIn && selectedDates.checkOut) {
+      performSearch(selectedDates.checkIn, selectedDates.checkOut);
+    }
+  }, [guestCount]);
 
   const toggleModal = () => setIsModalOpen(!isModalOpen);
 
@@ -46,26 +52,49 @@ function App() {
     try {
       const availableData = await getAvailability(startStr, endStr);
 
+      const checkRoomAvailability = (id, possibleName) => {
+        const ar = availableData.find(r =>
+          String(r.id) === String(id) ||
+          (r.roomName && possibleName && r.roomName.toLowerCase().includes(possibleName.toLowerCase()))
+        );
+        if (!ar) return false;
+        return ar.isAvailable === true || ar.isAvailable === 'true' || ar.isAvailable === undefined;
+      };
+
+      const areAllVillaPartsAvailable =
+        checkRoomAvailability(1, "Tranquil") &&
+        checkRoomAvailability(3, "Elite") &&
+        checkRoomAvailability(4, "Zenith");
+
       const updatedResults = allRooms.map(room => {
-        
-        const availableRoom = availableData.find(ar => String(ar.id) === String(room.id) && ar.status === 'AVAILABLE');
+        const availableRoom = availableData.find(ar => String(ar.id) === String(room.id));
+
+        if (String(room.id) === '5') {
+          return {
+            ...room,
+            guests: `${guestCount} Adults`,
+            isAvailable: areAllVillaPartsAvailable,
+            pricePerNight: room.pricePerNight
+          };
+        }
 
         if (availableRoom) {
           return {
             ...room,
-            isAvailable: true,
-            pricePerNight: availableRoom.pricePerNight 
+            guests: `${guestCount} Adults`,
+            isAvailable: availableRoom.isAvailable === true || availableRoom.isAvailable === 'true' || availableRoom.isAvailable === undefined,
+            pricePerNight: availableRoom.pricePerNight
           };
         }
+
         return {
           ...room,
+          guests: `${guestCount} Adults`,
           isAvailable: false
         };
       });
 
       setSearchResults(updatedResults);
-
-
 
       setTimeout(() => {
         const roomsSection = document.getElementById('rooms');
@@ -74,9 +103,12 @@ function App() {
         }
       }, 100);
     } catch (error) {
-
-      const updatedResults = allRooms.map(room => ({ ...room, isAvailable: false }));
-      setSearchResults(updatedResults);
+      const fallbackResults = allRooms.map(room => ({
+        ...room,
+        guests: `${guestCount} Adults`,
+        isAvailable: true
+      }));
+      setSearchResults(fallbackResults);
     } finally {
       setIsLoading(false);
     }
@@ -87,11 +119,17 @@ function App() {
     performSearch(checkIn, checkOut);
   };
 
-  const handleBookStay = async () => {
+  const handleBookStay = (discountValue = 0) => {
+    if (typeof discountValue === 'number') {
+      setDiscount(discountValue);
+    }
+
+    const roomsSection = document.getElementById('rooms');
+    if (roomsSection) {
+      roomsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+
     if (!selectedDates.checkIn || !selectedDates.checkOut) {
-
-
-
       setIsModalOpen(true);
       return;
     }
@@ -102,9 +140,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-
         <Header onBookNow={toggleModal} />
-
         <Routes>
           <Route path="/" element={
             <Home
@@ -115,11 +151,13 @@ function App() {
               searchResults={searchResults}
               isLoading={isLoading}
               hasSearched={hasSearched}
+              guestCount={guestCount}
+              setGuestCount={setGuestCount}
+              discount={discount}
             />
           } />
           <Route path="/food" element={<FoodOrder />} />
         </Routes>
-
         <Footer />
         <AvailabilityModal
           isOpen={isModalOpen}
@@ -131,7 +169,5 @@ function App() {
     </Router>
   );
 }
-
-
 
 export default App;

@@ -17,14 +17,17 @@ const Home = ({
     checkOut,
     searchResults,
     isLoading,
-    hasSearched
+    hasSearched,
+    guestCount,
+    setGuestCount,
+    discount
 }) => {
     const contentRef = useRef(null);
 
     useLayoutEffect(() => {
         const ctx = gsap.context(() => {
-            
-            
+
+
             const sections = gsap.utils.toArray(".page-section");
 
             sections.forEach(section => {
@@ -37,7 +40,7 @@ const Home = ({
                         ease: "power3.out",
                         scrollTrigger: {
                             trigger: section,
-                            start: "top 85%", 
+                            start: "top 85%",
                             toggleActions: "play none none reverse"
                         }
                     }
@@ -55,9 +58,11 @@ const Home = ({
                 onOpenCalendar={onOpenCalendar}
                 checkIn={checkIn}
                 checkOut={checkOut}
+                guestCount={guestCount}
+                setGuestCount={setGuestCount}
             />
 
-            
+
             <div ref={contentRef} style={{ overflow: 'hidden' }}>
                 <div className="page-section">
                     <StorySection />
@@ -67,7 +72,11 @@ const Home = ({
                         rooms={searchResults}
                         isLoading={isLoading}
                         hasSearched={hasSearched}
-                        onSearch={onSearch} 
+                        onSearch={onSearch}
+                        onOpenCalendar={onOpenCalendar}
+                        checkIn={checkIn}
+                        checkOut={checkOut}
+                        discount={discount}
                     />
                 </div>
                 <div className="page-section">
