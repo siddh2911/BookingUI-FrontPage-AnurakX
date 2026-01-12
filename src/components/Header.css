@@ -115,7 +115,10 @@
 
 @media (max-width: 768px) {
     .header-wrapper {
-        position: absolute;
+        position: relative;
+        /* Fix overlapping by restoring flow */
+        width: 100%;
+        z-index: 1000;
     }
 
     .standard-header {
