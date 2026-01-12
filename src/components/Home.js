@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Hero from './Hero';
 import RoomList from './RoomList';
 import Amenities from './Amenities';
+import VaranasiGuide from './VaranasiGuide';
 import Dashboard from './Dashboard';
 import StorySection from './StorySection';
 import CustomerExperiences from './CustomerExperiences';
@@ -81,6 +82,9 @@ const Home = ({
                 </div>
                 <div className="page-section">
                     <Amenities />
+                </div>
+                <div className="page-section">
+                    <VaranasiGuide />
                 </div>
                 <div className="page-section">
                     <CustomerExperiences />

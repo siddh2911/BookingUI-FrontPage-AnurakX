@@ -69,20 +69,23 @@
 .room-card {
     flex: 0 0 310px;
     background: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    /* Slightly clearer border */
     display: flex;
     flex-direction: column;
     transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
     position: relative;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
+    /* More visible "lifted" shadow */
     border-radius: 24px;
     overflow: hidden;
 }
 
 .room-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
-    border-color: rgba(212, 175, 55, 0.2);
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.15);
+    /* Deep, noticeable hover shadow */
+    border-color: rgba(0, 0, 0, 0.12);
 }
 
 .room-image {

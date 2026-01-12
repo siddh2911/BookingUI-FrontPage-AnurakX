@@ -32,7 +32,7 @@
     font-weight: 300;
     line-height: 1.1;
     font-family: 'Playfair Display', serif;
-    
+
 }
 
 .exp-divider {
@@ -64,20 +64,20 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     padding-bottom: 2rem;
-    
+
     padding-left: 0;
-    
+
     padding-right: 0.5rem;
     width: 100%;
 
-    
+
     -ms-overflow-style: none;
-    
+
     scrollbar-width: none;
-    
+
     scroll-behavior: smooth;
     justify-content: flex-start;
-    
+
 }
 
 .experiences-slider::-webkit-scrollbar {
@@ -91,7 +91,7 @@
     border: none;
     background: #ffffff;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
-    
+
     color: #1a1a1a;
     font-size: 1.5rem;
     display: flex;
@@ -132,12 +132,12 @@
     .experiences-slider {
         gap: 1rem;
         padding-left: 1rem;
-        
+
     }
 
     .experience-card {
         flex: 0 0 80vw;
-        
+
         max-width: none;
     }
 }
@@ -145,35 +145,37 @@
 
 .experience-card {
     flex: 0 0 310px;
-    
+
     scroll-snap-align: start;
-    
+
     background: #ffffff;
-    border-radius: 16px;
+    border-radius: 24px;
     overflow: hidden;
-    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
-    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-    border: 1px solid rgba(0, 0, 0, 0.04);
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
+    /* Softer initial shadow */
+    transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    border: 1px solid rgba(0, 0, 0, 0.03);
     display: flex;
     flex-direction: column;
 
-    
-    
-    
-    
+
+
+
+
     opacity: 1;
 }
 
 .experience-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.1);
+    /* Cinematic hover shadow */
 }
 
 
 .card-image-wrapper {
     position: relative;
     height: 300px;
-    
+
     overflow: hidden;
 }
 
@@ -186,7 +188,7 @@
 
 .experience-card:hover .card-image {
     transform: scale(1.08);
-    
+
 }
 
 .card-overlay {
@@ -224,7 +226,7 @@
     color: #d4a373;
     margin-bottom: 1.2rem;
     fill: rgba(212, 163, 115, 0.2);
-    
+
 }
 
 .card-quote {
@@ -235,15 +237,15 @@
     margin-bottom: 2rem;
     font-weight: 400;
     font-family: 'Georgia', serif;
-    
-    
+
+
     display: -webkit-box;
     -webkit-line-clamp: 4;
-    
+
     -webkit-box-orient: vertical;
     overflow: hidden;
     height: 7.6rem;
-    
+
     text-overflow: ellipsis;
 }
 
@@ -275,7 +277,7 @@
 .card-rating {
     display: flex;
     color: #d4a373;
-    
+
 }
 
 .star-icon {
@@ -291,12 +293,12 @@
     .experiences-slider {
         gap: 1rem;
         padding-left: 1rem;
-        
+
     }
 
     .experience-card {
         flex: 0 0 85vw;
-        
+
         max-width: none;
     }
 }
