@@ -1,6 +1,33 @@
 [
   {
+    "id": "dom-0",
+    "name": "Ashwini",
+    "location": "Delhi, India",
+    "image": "https://a0.muscache.com/im/pictures/user/User/original/47297ffa-c2ad-49ea-90c6-21ec2c39adef.jpeg?im_w=240",
+    "quote": "Had a great stay! The host was very responsive, helpful, and made check-in and check-out super smooth. The place was clean, comfortable, and exactly as described. Would definitely recommend and stay again.",
+    "rating": 5,
+    "type": "Guest Review"
+  },
+  {
     "id": "dom-3",
+    "name": "Siddhant",
+    "location": "Airhe, India",
+    "image": "https://a0.muscache.com/im/pictures/user/User/original/8538429f-e3d4-4cde-a440-16685b7bb752.jpeg?im_w=240",
+    "quote": "My stay at Karuna Villa was absolutely wonderful , one of the best parts was that all the major visiting sites were nearby, making it super easy to explore . I highly recommend staying here , you’ll feel welcomed, relaxed, and well taken care of. Thank you Preeti, for being such an amazing host. Looking forward to coming back soon!",
+    "rating": 5,
+    "type": "Guest Review"
+  },
+  {
+    "id": "dom-5",
+    "name": "Rupraj",
+    "location": "India",
+    "image": "https://a0.muscache.com/im/pictures/user/c9167fbf-7dc8-4d39-91ab-b8b5d529ac7b.jpg?im_w=240",
+    "quote": "We had a pleasant stay at this place. The caretaker was very active in solving any issues. The bathroom was clean.\nDeendayal Hasthkala Sankul is nearby, walking distance. The stay was well lit by sunlight. Will definitely visit and stay again when I visit Varanasi. Thank you for making our stay memorable.",
+    "rating": 5,
+    "type": "Guest Review"
+  },
+  {
+    "id": "dom-6",
     "name": "Vinit",
     "location": "Raipur, India",
     "image": "https://a0.muscache.com/im/pictures/user/User/original/7ffdc928-fca1-4a2e-ac40-7c87e6ab97f2.jpeg?im_w=240",
@@ -9,25 +36,7 @@
     "type": "Guest Review"
   },
   {
-    "id": 2,
-    "name": "Siddhant",
-    "location": "India",
-    "image": "https://a0.muscache.com/im/pictures/user/User/original/8538429f-e3d4-4cde-a440-16685b7bb752.jpeg?aki_policy=profile_x_medium",
-    "quote": "My stay at Karuna Villa was absolutely wonderful , one of the best parts was that all the major visiting sites were nearby, making it super easy to explore . I highly recommend staying here , you’ll feel welcomed, relaxed, and well taken care of. Thank you Preeti, for being such an amazing host. Looking forward to coming back soon!",
-    "rating": 5,
-    "type": "Guest Review"
-  },
-  {
-    "id": 3,
-    "name": "Rupraj",
-    "location": "Airbnb",
-    "image": "https://a0.muscache.com/im/pictures/user/c9167fbf-7dc8-4d39-91ab-b8b5d529ac7b.jpg?aki_policy=profile_x_medium",
-    "quote": "We had a pleasant stay at this place. The caretaker was very active in solving any issues. The bathroom was clean. \nDeendayal Hasthkala Sankul is nearby, walking distance. The stay was well lit by sunlight. Will definitely visit and stay again when I visit Varanasi. Thank you for making our stay memorable.",
-    "rating": 5,
-    "type": "Guest Review"
-  },
-  {
-    "id": "dom-4",
+    "id": "dom-7",
     "name": "Pooja",
     "location": "Bengaluru, India",
     "image": "https://a0.muscache.com/im/pictures/user/User/original/b8c6c9ae-b4fb-4664-a1de-4edc7682a787.jpeg?im_w=240",
@@ -36,7 +45,7 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-5",
+    "id": "dom-8",
     "name": "Anshika",
     "location": "India",
     "image": "https://a0.muscache.com/im/pictures/user/User/original/accb3877-98b3-409b-a69c-ed5c786df352.jpeg?im_w=240",
@@ -45,7 +54,7 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-6",
+    "id": "dom-9",
     "name": "Girish",
     "location": "India",
     "image": "https://a0.muscache.com/im/pictures/user/User/original/20f727da-9095-41c9-a586-51dcb79f3d11.jpeg?im_w=240",
@@ -54,7 +63,7 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-7",
+    "id": "dom-10",
     "name": "Nitish",
     "location": "India",
     "image": "https://a0.muscache.com/im/pictures/user/User/original/fb769bdc-59b1-4b58-9ebd-207be4f1d881.jpeg?im_w=240",
@@ -63,7 +72,7 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-8",
+    "id": "dom-11",
     "name": "Akanksha",
     "location": "India",
     "image": "https://a0.muscache.com/im/pictures/user/User/original/52c81974-8fb3-4b6a-b8b6-c622ed0a308f.jpeg?im_w=240",
@@ -72,7 +81,7 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-9",
+    "id": "dom-12",
     "name": "Pankaj",
     "location": "Angul, India",
     "image": "https://a0.muscache.com/im/pictures/user/User/original/9a6bd288-7e05-4bbd-a8db-cf5f465fd03f.jpeg?im_w=240",
@@ -81,7 +90,7 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-10",
+    "id": "dom-13",
     "name": "Ankit",
     "location": "Pune, India",
     "image": "https://a0.muscache.com/im/pictures/user/User/original/790e3d1c-7ed6-4077-a719-e0453087ff6d.jpeg?im_w=240",
@@ -90,7 +99,7 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-11",
+    "id": "dom-14",
     "name": "Aditya",
     "location": "India",
     "image": "https://a0.muscache.com/im/pictures/user/User/original/4b22666b-6062-4e57-89b6-589f614d7623.jpeg?im_w=240",
@@ -99,7 +108,7 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-12",
+    "id": "dom-15",
     "name": "Vaibhav",
     "location": "India",
     "image": "https://a0.muscache.com/im/pictures/user/User/original/7d68f96b-d110-4072-bd48-52d37f563c44.jpeg?im_w=240",
@@ -108,7 +117,7 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-14",
+    "id": "dom-17",
     "name": "Shankar",
     "location": "Rourkela, India",
     "image": "https://a0.muscache.com/im/pictures/user/User/original/ca483d36-f1be-49eb-8545-de4a9b650e09.jpeg?im_w=240",
@@ -117,7 +126,7 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-18",
+    "id": "dom-21",
     "name": "Lopamudra",
     "location": "Pune, India",
     "image": "https://a0.muscache.com/im/pictures/user/3f3c0721-5bbc-49b8-8411-18fd1ea9970a.jpg?im_w=240",
@@ -126,7 +135,7 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-20",
+    "id": "dom-23",
     "name": "Vansh",
     "location": "India",
     "image": "https://a0.muscache.com/im/pictures/user/User/original/46b0e999-ecd6-4abf-aece-a5e326ba5fe8.jpeg?im_w=240",
@@ -135,7 +144,7 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-21",
+    "id": "dom-24",
     "name": "Prakhar Anand",
     "location": "Varanasi, India",
     "image": "https://a0.muscache.com/im/pictures/user/User/original/73d764bd-97d0-4301-a411-c22840b5beda.jpeg?im_w=240",
@@ -144,7 +153,7 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-23",
+    "id": "dom-26",
     "name": "Adarsh",
     "location": "Patna, India",
     "image": "https://a0.muscache.com/im/pictures/user/User/original/f04c2733-b1e8-44af-9458-3c933eb1cc85.jpeg?im_w=240",
@@ -153,7 +162,7 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-24",
+    "id": "dom-27",
     "name": "Rishu",
     "location": "India",
     "image": "https://a0.muscache.com/im/pictures/user/User/original/fea9cc35-13b0-4e67-adb8-b7ce06783816.jpeg?im_w=240",
@@ -162,7 +171,7 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-25",
+    "id": "dom-28",
     "name": "Dr Satyendra",
     "location": "Sagar, India",
     "image": "https://a0.muscache.com/im/pictures/user/User/original/0c4fee16-8f8c-4e1c-8896-821492d8129d.jpeg?im_w=240",
@@ -171,7 +180,7 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-27",
+    "id": "dom-30",
     "name": "Mohit",
     "location": "India",
     "image": "https://a0.muscache.com/im/pictures/user/User-571620788/original/dc2878a4-4448-4c98-b7d4-4b193a2c005b.jpeg?im_w=240",
@@ -180,7 +189,7 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-28",
+    "id": "dom-31",
     "name": "Keshav",
     "location": "Kurukshetra, India",
     "image": "https://a0.muscache.com/im/pictures/user/User-469730436/original/fc233ccc-14ad-41af-a351-5fd3c7839e89.jpeg?im_w=240",
@@ -189,7 +198,7 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-29",
+    "id": "dom-32",
     "name": "Bhargav",
     "location": "India",
     "image": "https://a0.muscache.com/im/pictures/user/User-587870536/original/c8dc841b-c8ed-4693-9dec-fc48e30f7da3.jpeg?im_w=240",
@@ -198,7 +207,7 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-31",
+    "id": "dom-34",
     "name": "Rajat",
     "location": "India",
     "image": "https://a0.muscache.com/im/pictures/user/990f7fc4-6400-47ca-993c-a915f5261681.jpg?im_w=240",
@@ -207,7 +216,7 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-32",
+    "id": "dom-35",
     "name": "Pradarsh",
     "location": "India",
     "image": "https://a0.muscache.com/im/pictures/user/0b285bdf-42a5-42a2-a682-4b9144eb085b.jpg?im_w=240",
@@ -216,7 +225,7 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-33",
+    "id": "dom-36",
     "name": "Phungshokngam",
     "location": "India",
     "image": "https://a0.muscache.com/im/pictures/user/User-585067365/original/6fa31ba4-277e-484f-bcfa-2af64c65a4b7.jpeg?im_w=240",
@@ -225,7 +234,7 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-34",
+    "id": "dom-37",
     "name": "Arpit",
     "location": "India",
     "image": "https://a0.muscache.com/im/pictures/user/d8d18fb3-b666-4a23-8c11-9f4cc2267321.jpg?im_w=240",
@@ -234,7 +243,7 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-35",
+    "id": "dom-38",
     "name": "Rajat",
     "location": "India",
     "image": "https://a0.muscache.com/im/pictures/user/User-492022762/original/fd7a0a3b-b5b7-4260-9d21-35cb8d3593c6.jpeg?im_w=240",
@@ -243,7 +252,7 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-36",
+    "id": "dom-39",
     "name": "Ankita",
     "location": "India",
     "image": "https://a0.muscache.com/im/pictures/user/6c80a309-1b5f-4cc5-a4d8-002d73a2d999.jpg?im_w=240",
