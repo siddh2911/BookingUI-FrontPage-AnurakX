@@ -16,14 +16,6 @@ const rooms = [
         guests: "2 Adults"
     },
     {
-        id: 2,
-        roomName: "Garden Family Room",
-        pricePerNight: "680",
-        image: "/images/villa-1.png",
-        size: "2000 sqm",
-        guests: "4 Adults"
-    },
-    {
         id: 3,
         roomName: "Karuna Villa Elite",
         pricePerNight: "15,000",

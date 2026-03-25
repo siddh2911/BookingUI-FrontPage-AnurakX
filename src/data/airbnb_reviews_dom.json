@@ -1,6 +1,62 @@
 [
   {
     "id": "scraped-0",
+    "quote": "Host is soo good....We had a wonderful stay at Karuna Villa. The property is clean, peaceful, and beautifully maintained, making it a perfect place to relax. The host was very welcoming and attentive, ensuring we had everything we needed. The location is convenient yet quiet, which added to the overall experience. Highly recommended for anyone looking for a comfortable and pleasant stay!",
+    "rating": 5,
+    "image": "https://a0.muscache.com/im/pictures/user/User/original/4b366413-b54e-4660-849d-245540a25b03.jpeg?im_w=240",
+    "name": "Abhigyan",
+    "location": "India"
+  },
+  {
+    "id": "scraped-1",
+    "quote": "Very Decent Property....recommended to others",
+    "rating": 5,
+    "image": "https://a0.muscache.com/im/pictures/user/User/original/714b9a80-afd7-4d16-8afd-3183e162e43f.jpeg?im_w=240",
+    "name": "Alok",
+    "location": "India"
+  },
+  {
+    "id": "scraped-2",
+    "quote": "place was good and beautiful, \n only thing i feel it lacked is not having ac in 1 room. if that has been there then its a perfect place. but rest was good also caretaker was there 24/7 for any issues",
+    "rating": 4,
+    "image": "https://a0.muscache.com/im/Portrait/Avatars/messaging/b3e03835-ade9-4eb7-a0bb-2466ab9a534d.jpg?im_t=R&im_w=240&im_f=airbnb-cereal-medium.ttf&im_c=ffffff",
+    "name": "Rohit",
+    "location": "India"
+  },
+  {
+    "id": "scraped-3",
+    "quote": "This is in residential place and almost 10km from railway station junction and same from Kashi Vishwanath temple . There is no nearby restorant etc for break fast etc . Only Swiggy and zomato service available . Stay is safe and clean",
+    "rating": 5,
+    "image": "https://a0.muscache.com/im/pictures/user/User/original/d8d320cc-a3a6-437a-a5ab-a3d1327caacd.jpeg?im_w=240",
+    "name": "Narendra",
+    "location": "India"
+  },
+  {
+    "id": "scraped-4",
+    "quote": "Karuna villa was one of the best Airbnb’s I have stayed in. The place was clean and hygienic and also aesthetically pleasing. The staff is very helpful and chandrika ji also helped us quite a lot along with Mr Mangal Ji. Preeti Ji was quite helpful and responsive.\n10/10 stay would recommend",
+    "rating": 5,
+    "image": "https://a0.muscache.com/im/pictures/user/User/original/36aa3dc1-ee97-4e10-91f4-ffe6ab054a3e.jpeg?im_w=240",
+    "name": "Pankaj",
+    "location": "Thane, India"
+  },
+  {
+    "id": "scraped-5",
+    "quote": "Everything was great no complaint at all",
+    "rating": 5,
+    "image": "https://a0.muscache.com/im/pictures/user/User/original/1ac8adcb-1e85-4367-94ae-b990eb706ab2.jpeg?im_w=240",
+    "name": "Ashutosh",
+    "location": "India"
+  },
+  {
+    "id": "scraped-6",
+    "quote": "The place was clean , the host did respond whenever we reached out before check-in after the check-in the caretaker was really kind and helpful through out ! The place was clean and beautiful ! But the kitchen could have been a little better with better utensils. \n\nThe place is 8km from the main city as an outsider coming from other city we didn’t think it would be much of a distance , but if the host communicated properly we might have reconsidered our choice , as considering banaras and it’s traffic it easily took us 45min at least each time to reach the city . \n\nApart from this the place was good and we liked everything ! \n\nIf distance and time is not an issue then it’s a great , well maintained choice ! \n\nThe caretaker Mangal is really kind and generous .",
+    "rating": 4,
+    "image": "https://a0.muscache.com/im/Portrait/Avatars/messaging/b3e03835-ade9-4eb7-a0bb-2466ab9a534d.jpg?im_t=D&im_w=240&im_f=airbnb-cereal-medium.ttf&im_c=ffffff",
+    "name": "Deepak",
+    "location": "India"
+  },
+  {
+    "id": "scraped-7",
     "quote": "Had a great stay! The host was very responsive, helpful, and made check-in and check-out super smooth. The place was clean, comfortable, and exactly as described. Would definitely recommend and stay again.",
     "rating": 5,
     "image": "https://a0.muscache.com/im/pictures/user/User/original/47297ffa-c2ad-49ea-90c6-21ec2c39adef.jpeg?im_w=240",
@@ -8,7 +64,7 @@
     "location": "Delhi, India"
   },
   {
-    "id": "scraped-1",
+    "id": "scraped-8",
     "quote": "Care taker was very bad. No one even there for dusting and cleaning before checkout he took 550 rupee for cleaning. And he came inside the room between our stay. and he was very Illmannered with each of us very desapointing.",
     "rating": 3,
     "image": "https://a0.muscache.com/im/pictures/user/User/original/88cf21ac-0057-4c15-9a3c-266b89226de1.jpeg?im_w=240",
@@ -16,7 +72,7 @@
     "location": "India"
   },
   {
-    "id": "scraped-2",
+    "id": "scraped-9",
     "quote": "Well decorated flat . Caretaker tried to give his best but we didn’t get drinking water properly so we had to buy water bottles. They provide one washroom for three of us but shown us two washroom. Far away from main city . Clogging water in washroom most of the time . In kitchen nothing was there regarding nominal necessities. Overall not comfortable.",
     "rating": 4,
     "image": "https://a0.muscache.com/im/Portrait/Avatars/messaging/b3e03835-ade9-4eb7-a0bb-2466ab9a534d.jpg?im_t=I&im_w=240&im_f=airbnb-cereal-medium.ttf&im_c=ffffff",
@@ -24,15 +80,7 @@
     "location": "India"
   },
   {
-    "id": "scraped-3",
-    "quote": "My stay at Karuna Villa was absolutely wonderful , one of the best parts was that all the major visiting sites were nearby, making it super easy to explore . I highly recommend staying here , you’ll feel welcomed, relaxed, and well taken care of. Thank you Preeti, for being such an amazing host. Looking forward to coming back soon!",
-    "rating": 5,
-    "image": "https://a0.muscache.com/im/pictures/user/User/original/8538429f-e3d4-4cde-a440-16685b7bb752.jpeg?im_w=240",
-    "name": "Siddhant",
-    "location": "Airhe, India"
-  },
-  {
-    "id": "scraped-4",
+    "id": "scraped-10",
     "quote": "Preeti's place was v nice, meticulous , clean, peaceful, surrounded by greenery. Caretaker Mangal was v helpful even at odd hrs like 3am. Owner Ms Preeti was just a call away. It was v near to d conference venue Deendayal hastkala sankul and so was v convenient though far from Vishwanath temple and old city. Overall stay was good.",
     "rating": 4,
     "image": "https://a0.muscache.com/im/pictures/user/User/original/77b6a953-f233-4dda-8df9-4f65deb13dbe.jpeg?im_w=240",
@@ -40,15 +88,15 @@
     "location": "Mumbai, India"
   },
   {
-    "id": "scraped-5",
-    "quote": "We had a pleasant stay at this place. The caretaker was very active in solving any issues. The bathroom was clean.\nDeendayal Hasthkala Sankul is nearby, walking distance. The stay was well lit by sunlight. Will definitely visit and stay again when I visit Varanasi. Thank you for making our stay memorable.",
+    "id": "scraped-11",
+    "quote": "We had a pleasant stay at this place. The caretaker was very active in solving any issues. The bathroom was clean. \nDeendayal Hasthkala Sankul is nearby, walking distance. The stay was well lit by sunlight. Will definitely visit and stay again when I visit Varanasi. Thank you for making our stay memorable.",
     "rating": 5,
     "image": "https://a0.muscache.com/im/pictures/user/c9167fbf-7dc8-4d39-91ab-b8b5d529ac7b.jpg?im_w=240",
     "name": "Rupraj",
     "location": "India"
   },
   {
-    "id": "scraped-6",
+    "id": "scraped-12",
     "quote": "We had a great stay at this property. The host was very kind and responded quickly to all our queries, and the caretaker was also very nice and helpful. The place was clean, comfortable, and well maintained. The only thing to note is that it’s a bit far from the ghats, but apart from that, everything was excellent. Highly recommended!",
     "rating": 5,
     "image": "https://a0.muscache.com/im/pictures/user/User/original/7ffdc928-fca1-4a2e-ac40-7c87e6ab97f2.jpeg?im_w=240",
@@ -56,15 +104,15 @@
     "location": "Raipur, India"
   },
   {
-    "id": "scraped-7",
-    "quote": "Had a great stay! The place was clean and comfortable, and the host was friendly and responsive. Location was peaceful and convenient, would definitely recommend!”",
+    "id": "scraped-13",
+    "quote": "Had a great stay! The place was clean and comfortable, and the host was  friendly and responsive. Location was peaceful and convenient, would definitely recommend!”",
     "rating": 5,
     "image": "https://a0.muscache.com/im/pictures/user/User/original/b8c6c9ae-b4fb-4664-a1de-4edc7682a787.jpeg?im_w=240",
     "name": "Pooja",
     "location": "Bengaluru, India"
   },
   {
-    "id": "scraped-8",
+    "id": "scraped-14",
     "quote": "It was lovely staying at Karuna villa it was actually more beautiful from the picture now Karuna villa is our go to place every time we visit Kashi Thank you for the wonderful stay Preeti mam Saurabh Sir and Mangal bhaiya 🌸",
     "rating": 5,
     "image": "https://a0.muscache.com/im/pictures/user/User/original/accb3877-98b3-409b-a69c-ed5c786df352.jpeg?im_w=240",
@@ -72,15 +120,15 @@
     "location": "India"
   },
   {
-    "id": "scraped-9",
+    "id": "scraped-15",
     "quote": "Absolutely loved my stay! ✨ The place was even more beautiful than the pictures (no filter needed , spotlessly clean and wonderfully cozy. Host Preeti and caretaker Mangal Bhaiya were super sweet and made sure everything was perfect — they even checked if I reached home safely!\n\nHighly recommend this place and will definitely stay here again whenever I’m in Varanasi. 💯",
     "rating": 5,
-    "image": "https://a0.muscache.com/im/pictures/user/User/original/20f727da-9095-41c9-a586-51dcb79f3d11.jpeg?im_w=240",
+    "image": "https://a0.muscache.com/im/pictures/user/User/original/5f99ebc7-6b45-4a25-b287-b5f2767f1f8f.jpeg?im_w=240",
     "name": "Girish",
     "location": "India"
   },
   {
-    "id": "scraped-10",
+    "id": "scraped-16",
     "quote": "It’s safe,Secure and clean",
     "rating": 5,
     "image": "https://a0.muscache.com/im/pictures/user/User/original/fb769bdc-59b1-4b58-9ebd-207be4f1d881.jpeg?im_w=240",
@@ -88,7 +136,7 @@
     "location": "India"
   },
   {
-    "id": "scraped-11",
+    "id": "scraped-17",
     "quote": "Truly one of the best airbnb experiences that I’ve ever had. The place was clean, exactly matched the pictures (infact even more beautiful, ngl). The food was amazing and the host was truly welcoming and supportive. Felt like home.",
     "rating": 5,
     "image": "https://a0.muscache.com/im/pictures/user/User/original/52c81974-8fb3-4b6a-b8b6-c622ed0a308f.jpeg?im_w=240",
@@ -96,7 +144,7 @@
     "location": "India"
   },
   {
-    "id": "scraped-12",
+    "id": "scraped-18",
     "quote": "\"Our stay was truly fantastic! The homestay is surrounded by beautiful greenery, creating a peaceful and refreshing environment. The house interior is well-designed, clean, and very comfortable. We had a wonderful experience and would highly recommend it to others.\"",
     "rating": 5,
     "image": "https://a0.muscache.com/im/pictures/user/User/original/9a6bd288-7e05-4bbd-a8db-cf5f465fd03f.jpeg?im_w=240",
@@ -104,7 +152,7 @@
     "location": "Angul, India"
   },
   {
-    "id": "scraped-13",
+    "id": "scraped-19",
     "quote": "Every detail is exactly how it is only the Air conditioning is not very fast and adequate for the room",
     "rating": 5,
     "image": "https://a0.muscache.com/im/pictures/user/User/original/790e3d1c-7ed6-4077-a719-e0453087ff6d.jpeg?im_w=240",
@@ -112,7 +160,7 @@
     "location": "Pune, India"
   },
   {
-    "id": "scraped-14",
+    "id": "scraped-20",
     "quote": "My mom and brother had a great stay here! The 2-BHK place was exactly as described in the listing—clean, well-maintained, and fully equipped. The neighborhood was peaceful, and essential services like Zomato and Uber were easily available. The host was excellent with communication and made everything smooth and hassle-free.\n\nHappy to recommend this place to others!",
     "rating": 5,
     "image": "https://a0.muscache.com/im/pictures/user/User/original/4b22666b-6062-4e57-89b6-589f614d7623.jpeg?im_w=240",
@@ -120,7 +168,7 @@
     "location": "India"
   },
   {
-    "id": "scraped-15",
+    "id": "scraped-21",
     "quote": "Absolutely Loved the Stay!\nThe property is exactly as described—clean, beautiful, and very well-maintained. The ambiance was amazing, and the fragrance inside the rooms was a standout touch that made the experience even more pleasant.\n\nThe caretaker was extremely supportive and ensured everything went smoothly. Check-in was quick and hassle-free. This is exactly how an Airbnb property should be maintained—kudos to the host!\n\nAlso, if you're into clicking pictures or planning to change your display picture, this place offers some fantastic backdrops. Highly recommended!",
     "rating": 5,
     "image": "https://a0.muscache.com/im/pictures/user/User/original/7d68f96b-d110-4072-bd48-52d37f563c44.jpeg?im_w=240",
@@ -128,7 +176,7 @@
     "location": "India"
   },
   {
-    "id": "scraped-16",
+    "id": "scraped-22",
     "quote": "villa was super amazing, so quite and peaceful location.",
     "rating": 4,
     "image": "https://a0.muscache.com/im/pictures/user/User/original/3188833f-aa80-427b-b7de-03071ab0ddbf.jpeg?im_w=240",
@@ -136,7 +184,7 @@
     "location": "Siliguri, India"
   },
   {
-    "id": "scraped-17",
+    "id": "scraped-23",
     "quote": "Preeti was responsive to my queries. The caretaker Mangal was also quite co-operative. Overall a nice stay.",
     "rating": 5,
     "image": "https://a0.muscache.com/im/pictures/user/User/original/ca483d36-f1be-49eb-8545-de4a9b650e09.jpeg?im_w=240",
@@ -144,7 +192,7 @@
     "location": "Rourkela, India"
   },
   {
-    "id": "scraped-18",
+    "id": "scraped-24",
     "quote": "Ambience was good. Preeti as a host was very cooperative. Nice interior. Property was same as posted in pictures. Kitchen had all basic amenities from RO to induction to kettle. Mangal as a caretaker was very helpful , he also brought medicines for me as I requested and provided with whatever we wanted. Must book this property if you want a lavish and peaceful stay in Banaras. Kashi Vishvanath temple is also near to this property like 6-7 kms.Blinkit comes here easily.",
     "rating": 4,
     "image": "https://a0.muscache.com/im/pictures/user/User/original/3055635e-a452-429a-a40c-a2742de089d7.jpeg?im_w=240",
@@ -152,7 +200,7 @@
     "location": "India"
   },
   {
-    "id": "scraped-19",
+    "id": "scraped-25",
     "quote": "Care taker is good but plz maintenance kitchen just",
     "rating": 4,
     "image": "https://a0.muscache.com/im/pictures/user/User/original/eaab6f75-7144-4fba-9507-8a40d8d95c91.jpeg?im_w=240",
@@ -160,7 +208,7 @@
     "location": "Rajkot, India"
   },
   {
-    "id": "scraped-20",
+    "id": "scraped-26",
     "quote": "In pictures stove was shown but later manager told us that its paid which was not mentioned anywhere..\n\nCare taker also was not helpful and late services provided.\nDidn’t liked at all. Would never visit again.\n\nAtleast mention which amenities are paid before so that guests plan accordingly.",
     "rating": 4,
     "image": "https://a0.muscache.com/im/pictures/user/User-457379998/original/b6ff2042-159c-4e3c-86e9-ddf2d940b015.jpeg?im_w=240",
@@ -168,7 +216,7 @@
     "location": "Gurugram, India"
   },
   {
-    "id": "scraped-21",
+    "id": "scraped-27",
     "quote": "The host, manager and the caretaker all of them were very responsive and took care of all our requests, they also let us check out late given that there next guests were checking in late, in short quite accommodating and responsive! The location is a bit far from the main temples and tourist attractions, 45-60 mins of ride one way to the ghats!!",
     "rating": 5,
     "image": "https://a0.muscache.com/im/pictures/user/3f3c0721-5bbc-49b8-8411-18fd1ea9970a.jpg?im_w=240",
@@ -176,7 +224,7 @@
     "location": "Pune, India"
   },
   {
-    "id": "scraped-22",
+    "id": "scraped-28",
     "quote": "it needs a lot of maintainance",
     "rating": 2,
     "image": "https://a0.muscache.com/im/pictures/user/User/original/65d7fb71-ae84-4e19-a60a-f5ddc2b20d92.jpeg?im_w=240",
@@ -184,7 +232,7 @@
     "location": "India"
   },
   {
-    "id": "scraped-23",
+    "id": "scraped-29",
     "quote": "It was really a great experience staying there & felt like home, I stayed there with my family and the place was very homely and full of good vibes the surrounding was so good and peaceful especially the balcony ,Vishal and Mangal bhaiya was very helpful already missing this place but will definitely go back there super soon ! Thanks again for everything we totally loved it.",
     "rating": 5,
     "image": "https://a0.muscache.com/im/pictures/user/User/original/46b0e999-ecd6-4abf-aece-a5e326ba5fe8.jpeg?im_w=240",
@@ -192,7 +240,7 @@
     "location": "India"
   },
   {
-    "id": "scraped-24",
+    "id": "scraped-30",
     "quote": "I had a great stay in Preeti's Airbnb. The location was perfect: close to main attractions yet in a quiet, peaceful area, making the place good for exploring as well as relaxing. Her house was clean and so well maintained; it contained everything I needed for my comfortable stay. The kitchen was fully equipped, the bed very comfortable, and there were even some nice touches like snacks and coffee that made me feel right at home. Preeti was a fantastic host-super responsive, always available to answer any questions, and made sure everything was perfect throughout my stay. It's clear she puts a lot of care into her place, and it really shows in every little detail. Hands down, this has been one of the best Airbnb experiences. If you're thinking about staying here, don't think twice-you won't regret it! I'm already looking forward to booking this place again next time I'm in the area. Highly recommended!",
     "rating": 5,
     "image": "https://a0.muscache.com/im/pictures/user/User/original/73d764bd-97d0-4301-a411-c22840b5beda.jpeg?im_w=240",
@@ -200,15 +248,15 @@
     "location": "Varanasi, India"
   },
   {
-    "id": "scraped-25",
-    "quote": "A great value for money. The host was responsive and contacted us before the stay. The place is as described in the pictures and the description.\nPerfect for a group of 4 with 2 large bedrooms.\nOne thing to note is that its far from the city (as rightly mentioned in the location) so significant (45mins each side) travelling is needed to get to major places.\nAlso, cleanliness can be improved. The sheets shared were not cleaned before use and we had to request to get it changed. Also, washrooms had major black fungus and were unclean.\nBut overall, 4/5 for the value for money",
+    "id": "scraped-31",
+    "quote": "A great value for money. The host was responsive and contacted us before the stay. The place is as described in the pictures and the description. \nPerfect for a group of 4 with 2 large bedrooms.\nOne thing to note is that its far from the city (as rightly mentioned in the location) so significant (45mins each side) travelling is needed to get to major places. \nAlso, cleanliness can be improved. The sheets shared were not cleaned before use and we had to request to get it changed. Also, washrooms had major black fungus and were unclean.\nBut overall, 4/5 for the value for money",
     "rating": 4,
     "image": "https://a0.muscache.com/im/pictures/user/2e57e123-c22b-40aa-a684-73772c9f3074.jpg?im_w=240",
     "name": "Harshit",
     "location": "New Delhi, India"
   },
   {
-    "id": "scraped-26",
+    "id": "scraped-32",
     "quote": "This was my first trip to Banaras (Varanasi), and this property has been the best accommodation I've experienced so far. The check-in and check-out process was seamless. The ambiance was amazing, and I particularly enjoyed having access to the terrace.\n\nFor meals, they provide a menu with various food options you can order from. All major cultural and religious sites, including the Kashi Vishwanath Temple, are within a 10-12 km radius. Pro tip: Instead of booking cabs, use shared autos from the main road - they're much more economical.\n\nSpecial mention to Mangal Bhaiya, who takes care of the property. He's among the most humble and helpful people I've ever met.\n\nI highly recommend this property for anyone visiting Banaras!",
     "rating": 5,
     "image": "https://a0.muscache.com/im/pictures/user/User/original/f04c2733-b1e8-44af-9458-3c933eb1cc85.jpeg?im_w=240",
@@ -216,23 +264,23 @@
     "location": "Patna, India"
   },
   {
-    "id": "scraped-27",
-    "quote": "excellent place\nexcellent behavior\n5 star rating",
+    "id": "scraped-33",
+    "quote": "excellent place \nexcellent behavior \n5 star rating",
     "rating": 5,
     "image": "https://a0.muscache.com/im/pictures/user/User/original/fea9cc35-13b0-4e67-adb8-b7ce06783816.jpeg?im_w=240",
     "name": "Rishu",
     "location": "India"
   },
   {
-    "id": "scraped-28",
-    "quote": "This property is beautiful decorated and well maintained by the Host.The surrounding are very peaceful.\nsituated conveniently near the Varanasi ring road.\nour family of 4 spent three days at this property which accurately matched the images provided .it features 2 bedroom\n(AC in one bedroom), a kitchen and one big bathroom with geyser.\nThe co- host is also very accommodating.\nThe caretaker is available to assist and provide any necessary support. This property is ideal for 3 to 4 individuals. parking available.\npros Excellent and reasonable Price\nCons it is located approximately 12- 13 from Kashi temple and Ghats.",
+    "id": "scraped-34",
+    "quote": "This property is beautiful decorated and well maintained by the Host.The surrounding are very peaceful.\nsituated conveniently near the Varanasi ring road.\nour family of 4 spent three days at this property which accurately matched the images provided .it features 2 bedroom \n(AC in one bedroom), a kitchen and one big  bathroom with geyser. \nThe co- host is also very accommodating.\nThe caretaker is available to assist and provide any necessary support. This property is ideal for 3 to 4 individuals.  parking available.\npros   Excellent and reasonable Price\nCons   it is located approximately 12- 13  from Kashi temple and Ghats.",
     "rating": 5,
     "image": "https://a0.muscache.com/im/pictures/user/User/original/0c4fee16-8f8c-4e1c-8896-821492d8129d.jpeg?im_w=240",
     "name": "Dr Satyendra",
     "location": "Sagar, India"
   },
   {
-    "id": "scraped-29",
+    "id": "scraped-35",
     "quote": "Very good place to stay. Very neatly kept and felt very comfortable. Food provided was not tasty. Kitchen and bathroom were neatly maintained. Amenities kept at the bathroom were leftovers by other users. Washing soap and washing sink were not neatly kept.",
     "rating": 4,
     "image": "https://a0.muscache.com/im/pictures/user/User/original/15faed3e-8781-4cdf-ab95-b39af910004c.jpeg?im_w=240",
@@ -240,7 +288,7 @@
     "location": "Aluva, India"
   },
   {
-    "id": "scraped-30",
+    "id": "scraped-36",
     "quote": "It was a very beautiful 2 BHK flat with a large hall with very beautiful furniture. The cleanliness and service were also good. Overall a peaceful and beautiful place to stay during your visits.",
     "rating": 5,
     "image": "https://a0.muscache.com/im/pictures/user/User-571620788/original/dc2878a4-4448-4c98-b7d4-4b193a2c005b.jpeg?im_w=240",
@@ -248,15 +296,15 @@
     "location": "India"
   },
   {
-    "id": "scraped-31",
-    "quote": "Home away from 🏡 home\nReally I mean it when I say this\nAll the things from exterior to interior ,service,responsiveness of the host were great.\nThe host Mrs. Preeti specially was always active and ready to help whenever needed.\nThe staff and caretaker are also ready to help.\nI don't think i could get such treatment at any of the hotel.\nMe along with my family had a great stay here 🙂\nWill surely stay whenever I come to varanasi again.",
+    "id": "scraped-37",
+    "quote": "Home away from 🏡 home \nReally I mean it when I say this\nAll the things from exterior to interior ,service,responsiveness of the host were great.\nThe host Mrs. Preeti specially was always active and ready to help whenever needed.\nThe staff and caretaker are also ready to help.\nI don't think i could get such  treatment at any of the hotel.\nMe along with my family had a great stay here 🙂\nWill surely stay whenever I come to varanasi again.",
     "rating": 5,
     "image": "https://a0.muscache.com/im/pictures/user/User-469730436/original/fc233ccc-14ad-41af-a351-5fd3c7839e89.jpeg?im_w=240",
     "name": "Keshav",
     "location": "Kurukshetra, India"
   },
   {
-    "id": "scraped-32",
+    "id": "scraped-38",
     "quote": "Great stay, Nice ambience, Quick check in, feels like home away from home.",
     "rating": 5,
     "image": "https://a0.muscache.com/im/pictures/user/User-587870536/original/c8dc841b-c8ed-4693-9dec-fc48e30f7da3.jpeg?im_w=240",
@@ -264,7 +312,7 @@
     "location": "India"
   },
   {
-    "id": "scraped-33",
+    "id": "scraped-39",
     "quote": "The host Ms Preeti was very responsive and helpful throughout . She arranged pick up from airport and allowed for late checkout as per our request. The flat is quite spacious, private and generally clean with most amenities provided. It is very close to the main road. It is a peaceful area surrounded by plants and trees. The property manager Mr Vishal was very helpful with everything we needed.",
     "rating": 4,
     "image": "https://a0.muscache.com/im/pictures/user/a5d91001-be95-4a49-96ec-43ccf2e3da33.jpg?im_w=240",
@@ -272,7 +320,7 @@
     "location": "Sheffield, United Kingdom"
   },
   {
-    "id": "scraped-34",
+    "id": "scraped-40",
     "quote": "Place was good and easy reachable. Its around 18km from airport and it's a spacious 2bhk flat at 1st floor. Overall a nice stay.. Host was helpful and responsive.",
     "rating": 5,
     "image": "https://a0.muscache.com/im/pictures/user/990f7fc4-6400-47ca-993c-a915f5261681.jpg?im_w=240",
@@ -280,23 +328,23 @@
     "location": "India"
   },
   {
-    "id": "scraped-35",
+    "id": "scraped-41",
     "quote": "My stay at Karuna Villa was absolutely wonderful! The location is perfect, nestled in a quiet neighborhood yet close to all the major attractions. The house was spotlessly clean and beautifully decorated, making it feel like a home away from home. The amenities were top-notch, especially the fully equipped kitchen and cozy living area. The host was incredibly responsive and provided excellent recommendations for local dining and activities. I would highly recommend this property to anyone looking for a comfortable and enjoyable stay. I can't wait to return!",
     "rating": 5,
     "image": "https://a0.muscache.com/im/pictures/user/0b285bdf-42a5-42a2-a682-4b9144eb085b.jpg?im_w=240",
     "name": "Pradarsh",
-    "location": "India"
+    "location": "Varanasi, India"
   },
   {
-    "id": "scraped-36",
-    "quote": "We had the best stay,the host ,the manager everyone was so helpful.I would still come and stay here again if I’m ever given the chance to visit this beautiful city in the near future..Thank you #karunavilla",
+    "id": "scraped-42",
+    "quote": "We had the best stay,the host ,the manager everyone was so helpful.I would  still come and stay  here  again if I’m ever given the chance to visit this beautiful city in the near future..Thank you #karunavilla",
     "rating": 5,
     "image": "https://a0.muscache.com/im/pictures/user/User-585067365/original/6fa31ba4-277e-484f-bcfa-2af64c65a4b7.jpeg?im_w=240",
     "name": "Phungshokngam",
     "location": "India"
   },
   {
-    "id": "scraped-37",
+    "id": "scraped-43",
     "quote": "The property is located at a peaceful locality. It's a pretty place to stay in. The rooms were spacious and neatly maintained. The staff was responsive and flexible with the timings. Further the owner was really sweet and helped us get things which we needed in no time. overall an amazing stay.",
     "rating": 5,
     "image": "https://a0.muscache.com/im/pictures/user/d8d18fb3-b666-4a23-8c11-9f4cc2267321.jpg?im_w=240",
@@ -304,7 +352,7 @@
     "location": "India"
   },
   {
-    "id": "scraped-38",
+    "id": "scraped-44",
     "quote": "The place is located slightly away from the city hustle and provides a homely vibe. At the same time, the location of the property has connectivity from the National Highway and few kms away from Kashi Vishwanath temple and the main city, thereby adding an advantage to reach the property location without worrying about the city traffic.\n\nOur host, Preeti was very helpful and made sure of our comfortable stay. Alll our request was addressed by her and even the caretaker and the helper assigned by Preeti made sure that no stones were unturn in addressing any of our requests.\n\nThe stay was amazing and comfortable. I would highly recommend anyone planning to travel to Banaras to give Preeti and her staff to host your stay and enjoy your trip hassle-free.",
     "rating": 5,
     "image": "https://a0.muscache.com/im/pictures/user/User-492022762/original/fd7a0a3b-b5b7-4260-9d21-35cb8d3593c6.jpeg?im_w=240",
@@ -312,7 +360,7 @@
     "location": "India"
   },
   {
-    "id": "scraped-39",
+    "id": "scraped-45",
     "quote": "the stay was awesome host was very very helpful enjoyed a lot",
     "rating": 5,
     "image": "https://a0.muscache.com/im/pictures/user/6c80a309-1b5f-4cc5-a4d8-002d73a2d999.jpg?im_w=240",

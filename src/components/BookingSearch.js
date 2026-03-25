@@ -19,20 +19,12 @@ const BookingSearch = ({ onSearch, onOpenCalendar, checkIn, checkOut, guestCount
     const handleSearchClick = () => {
         const code = coupon.trim().toUpperCase();
         if (code) {
-            if (code === 'JAN10') {
+            if (code === 'SUMMER10') {
                 if (!checkIn || !checkOut) {
                     setCouponMessage('Please select dates first');
                 } else {
-                    const diffTime = Math.abs(checkOut - checkIn);
-                    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-
-                    if (diffDays < 5) {
-                        setCouponMessage('Code valid for 5+ nights only');
-                        onSearch(0);
-                    } else {
-                        setCouponMessage('Code applied successfully!');
-                        onSearch(10);
-                    }
+                    setCouponMessage('Code applied successfully!');
+                    onSearch(10);
                 }
             } else if (code === 'LUCKY 10') {
                 setCouponMessage('This code was valid for the first 10 users');

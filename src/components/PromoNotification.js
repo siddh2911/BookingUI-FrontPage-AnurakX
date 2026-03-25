@@ -20,9 +20,9 @@ const PromoNotification = () => {
                 <Gift size={isMobile ? 14 : 16} className="promo-icon" />
                 <span className="promo-text">
                     {isMobile ? (
-                        <>Get 10% Off (5+ Nights) • Code: <span className="promo-code">JAN10</span></>
+                        <>Get 10% Off • Code: <span className="promo-code">SUMMER10</span></>
                     ) : (
-                        <>Special Offer: Use code <span className="promo-code">JAN10</span> for 10% off (Min. 5 nights)!</>
+                        <>Special Offer: Use code <span className="promo-code">SUMMER10</span> for 10% off!</>
                     )}
                 </span>
             </div>

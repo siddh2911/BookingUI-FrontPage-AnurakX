@@ -1,6 +1,51 @@
 [
   {
     "id": "dom-0",
+    "name": "Abhigyan",
+    "location": "India",
+    "image": "https://a0.muscache.com/im/pictures/user/User/original/4b366413-b54e-4660-849d-245540a25b03.jpeg?im_w=240",
+    "quote": "Host is soo good....We had a wonderful stay at Karuna Villa. The property is clean, peaceful, and beautifully maintained, making it a perfect place to relax. The host was very welcoming and attentive, ensuring we had everything we needed. The location is convenient yet quiet, which added to the overall experience. Highly recommended for anyone looking for a comfortable and pleasant stay!",
+    "rating": 5,
+    "type": "Guest Review"
+  },
+  {
+    "id": "dom-1",
+    "name": "Alok",
+    "location": "India",
+    "image": "https://a0.muscache.com/im/pictures/user/User/original/714b9a80-afd7-4d16-8afd-3183e162e43f.jpeg?im_w=240",
+    "quote": "Very Decent Property....recommended to others",
+    "rating": 5,
+    "type": "Guest Review"
+  },
+  {
+    "id": "dom-3",
+    "name": "Narendra",
+    "location": "India",
+    "image": "https://a0.muscache.com/im/pictures/user/User/original/d8d320cc-a3a6-437a-a5ab-a3d1327caacd.jpeg?im_w=240",
+    "quote": "This is in residential place and almost 10km from railway station junction and same from Kashi Vishwanath temple . There is no nearby restorant etc for break fast etc . Only Swiggy and zomato service available . Stay is safe and clean",
+    "rating": 5,
+    "type": "Guest Review"
+  },
+  {
+    "id": "dom-4",
+    "name": "Pankaj",
+    "location": "Thane, India",
+    "image": "https://a0.muscache.com/im/pictures/user/User/original/36aa3dc1-ee97-4e10-91f4-ffe6ab054a3e.jpeg?im_w=240",
+    "quote": "Karuna villa was one of the best Airbnb’s I have stayed in. The place was clean and hygienic and also aesthetically pleasing. The staff is very helpful and chandrika ji also helped us quite a lot along with Mr Mangal Ji. Preeti Ji was quite helpful and responsive.\n10/10 stay would recommend",
+    "rating": 5,
+    "type": "Guest Review"
+  },
+  {
+    "id": "dom-5",
+    "name": "Ashutosh",
+    "location": "India",
+    "image": "https://a0.muscache.com/im/pictures/user/User/original/1ac8adcb-1e85-4367-94ae-b990eb706ab2.jpeg?im_w=240",
+    "quote": "Everything was great no complaint at all",
+    "rating": 5,
+    "type": "Guest Review"
+  },
+  {
+    "id": "dom-7",
     "name": "Ashwini",
     "location": "Delhi, India",
     "image": "https://a0.muscache.com/im/pictures/user/User/original/47297ffa-c2ad-49ea-90c6-21ec2c39adef.jpeg?im_w=240",
@@ -9,25 +54,16 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-3",
-    "name": "Siddhant",
-    "location": "Airhe, India",
-    "image": "https://a0.muscache.com/im/pictures/user/User/original/8538429f-e3d4-4cde-a440-16685b7bb752.jpeg?im_w=240",
-    "quote": "My stay at Karuna Villa was absolutely wonderful , one of the best parts was that all the major visiting sites were nearby, making it super easy to explore . I highly recommend staying here , you’ll feel welcomed, relaxed, and well taken care of. Thank you Preeti, for being such an amazing host. Looking forward to coming back soon!",
-    "rating": 5,
-    "type": "Guest Review"
-  },
-  {
-    "id": "dom-5",
+    "id": "dom-11",
     "name": "Rupraj",
     "location": "India",
     "image": "https://a0.muscache.com/im/pictures/user/c9167fbf-7dc8-4d39-91ab-b8b5d529ac7b.jpg?im_w=240",
-    "quote": "We had a pleasant stay at this place. The caretaker was very active in solving any issues. The bathroom was clean.\nDeendayal Hasthkala Sankul is nearby, walking distance. The stay was well lit by sunlight. Will definitely visit and stay again when I visit Varanasi. Thank you for making our stay memorable.",
+    "quote": "We had a pleasant stay at this place. The caretaker was very active in solving any issues. The bathroom was clean. \nDeendayal Hasthkala Sankul is nearby, walking distance. The stay was well lit by sunlight. Will definitely visit and stay again when I visit Varanasi. Thank you for making our stay memorable.",
     "rating": 5,
     "type": "Guest Review"
   },
   {
-    "id": "dom-6",
+    "id": "dom-12",
     "name": "Vinit",
     "location": "Raipur, India",
     "image": "https://a0.muscache.com/im/pictures/user/User/original/7ffdc928-fca1-4a2e-ac40-7c87e6ab97f2.jpeg?im_w=240",
@@ -36,16 +72,16 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-7",
+    "id": "dom-13",
     "name": "Pooja",
     "location": "Bengaluru, India",
     "image": "https://a0.muscache.com/im/pictures/user/User/original/b8c6c9ae-b4fb-4664-a1de-4edc7682a787.jpeg?im_w=240",
-    "quote": "Had a great stay! The place was clean and comfortable, and the host was friendly and responsive. Location was peaceful and convenient, would definitely recommend!”",
+    "quote": "Had a great stay! The place was clean and comfortable, and the host was  friendly and responsive. Location was peaceful and convenient, would definitely recommend!”",
     "rating": 5,
     "type": "Guest Review"
   },
   {
-    "id": "dom-8",
+    "id": "dom-14",
     "name": "Anshika",
     "location": "India",
     "image": "https://a0.muscache.com/im/pictures/user/User/original/accb3877-98b3-409b-a69c-ed5c786df352.jpeg?im_w=240",
@@ -54,16 +90,16 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-9",
+    "id": "dom-15",
     "name": "Girish",
     "location": "India",
-    "image": "https://a0.muscache.com/im/pictures/user/User/original/20f727da-9095-41c9-a586-51dcb79f3d11.jpeg?im_w=240",
+    "image": "https://a0.muscache.com/im/pictures/user/User/original/5f99ebc7-6b45-4a25-b287-b5f2767f1f8f.jpeg?im_w=240",
     "quote": "Absolutely loved my stay! ✨ The place was even more beautiful than the pictures (no filter needed , spotlessly clean and wonderfully cozy. Host Preeti and caretaker Mangal Bhaiya were super sweet and made sure everything was perfect — they even checked if I reached home safely!\n\nHighly recommend this place and will definitely stay here again whenever I’m in Varanasi. 💯",
     "rating": 5,
     "type": "Guest Review"
   },
   {
-    "id": "dom-10",
+    "id": "dom-16",
     "name": "Nitish",
     "location": "India",
     "image": "https://a0.muscache.com/im/pictures/user/User/original/fb769bdc-59b1-4b58-9ebd-207be4f1d881.jpeg?im_w=240",
@@ -72,7 +108,7 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-11",
+    "id": "dom-17",
     "name": "Akanksha",
     "location": "India",
     "image": "https://a0.muscache.com/im/pictures/user/User/original/52c81974-8fb3-4b6a-b8b6-c622ed0a308f.jpeg?im_w=240",
@@ -81,7 +117,7 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-12",
+    "id": "dom-18",
     "name": "Pankaj",
     "location": "Angul, India",
     "image": "https://a0.muscache.com/im/pictures/user/User/original/9a6bd288-7e05-4bbd-a8db-cf5f465fd03f.jpeg?im_w=240",
@@ -90,7 +126,7 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-13",
+    "id": "dom-19",
     "name": "Ankit",
     "location": "Pune, India",
     "image": "https://a0.muscache.com/im/pictures/user/User/original/790e3d1c-7ed6-4077-a719-e0453087ff6d.jpeg?im_w=240",
@@ -99,7 +135,7 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-14",
+    "id": "dom-20",
     "name": "Aditya",
     "location": "India",
     "image": "https://a0.muscache.com/im/pictures/user/User/original/4b22666b-6062-4e57-89b6-589f614d7623.jpeg?im_w=240",
@@ -108,7 +144,7 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-15",
+    "id": "dom-21",
     "name": "Vaibhav",
     "location": "India",
     "image": "https://a0.muscache.com/im/pictures/user/User/original/7d68f96b-d110-4072-bd48-52d37f563c44.jpeg?im_w=240",
@@ -117,7 +153,7 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-17",
+    "id": "dom-23",
     "name": "Shankar",
     "location": "Rourkela, India",
     "image": "https://a0.muscache.com/im/pictures/user/User/original/ca483d36-f1be-49eb-8545-de4a9b650e09.jpeg?im_w=240",
@@ -126,7 +162,7 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-21",
+    "id": "dom-27",
     "name": "Lopamudra",
     "location": "Pune, India",
     "image": "https://a0.muscache.com/im/pictures/user/3f3c0721-5bbc-49b8-8411-18fd1ea9970a.jpg?im_w=240",
@@ -135,7 +171,7 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-23",
+    "id": "dom-29",
     "name": "Vansh",
     "location": "India",
     "image": "https://a0.muscache.com/im/pictures/user/User/original/46b0e999-ecd6-4abf-aece-a5e326ba5fe8.jpeg?im_w=240",
@@ -144,7 +180,7 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-24",
+    "id": "dom-30",
     "name": "Prakhar Anand",
     "location": "Varanasi, India",
     "image": "https://a0.muscache.com/im/pictures/user/User/original/73d764bd-97d0-4301-a411-c22840b5beda.jpeg?im_w=240",
@@ -153,7 +189,7 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-26",
+    "id": "dom-32",
     "name": "Adarsh",
     "location": "Patna, India",
     "image": "https://a0.muscache.com/im/pictures/user/User/original/f04c2733-b1e8-44af-9458-3c933eb1cc85.jpeg?im_w=240",
@@ -162,25 +198,25 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-27",
+    "id": "dom-33",
     "name": "Rishu",
     "location": "India",
     "image": "https://a0.muscache.com/im/pictures/user/User/original/fea9cc35-13b0-4e67-adb8-b7ce06783816.jpeg?im_w=240",
-    "quote": "excellent place\nexcellent behavior\n5 star rating",
+    "quote": "excellent place \nexcellent behavior \n5 star rating",
     "rating": 5,
     "type": "Guest Review"
   },
   {
-    "id": "dom-28",
+    "id": "dom-34",
     "name": "Dr Satyendra",
     "location": "Sagar, India",
     "image": "https://a0.muscache.com/im/pictures/user/User/original/0c4fee16-8f8c-4e1c-8896-821492d8129d.jpeg?im_w=240",
-    "quote": "This property is beautiful decorated and well maintained by the Host.The surrounding are very peaceful.\nsituated conveniently near the Varanasi ring road.\nour family of 4 spent three days at this property which accurately matched the images provided .it features 2 bedroom\n(AC in one bedroom), a kitchen and one big bathroom with geyser.\nThe co- host is also very accommodating.\nThe caretaker is available to assist and provide any necessary support. This property is ideal for 3 to 4 individuals. parking available.\npros Excellent and reasonable Price\nCons it is located approximately 12- 13 from Kashi temple and Ghats.",
+    "quote": "This property is beautiful decorated and well maintained by the Host.The surrounding are very peaceful.\nsituated conveniently near the Varanasi ring road.\nour family of 4 spent three days at this property which accurately matched the images provided .it features 2 bedroom \n(AC in one bedroom), a kitchen and one big  bathroom with geyser. \nThe co- host is also very accommodating.\nThe caretaker is available to assist and provide any necessary support. This property is ideal for 3 to 4 individuals.  parking available.\npros   Excellent and reasonable Price\nCons   it is located approximately 12- 13  from Kashi temple and Ghats.",
     "rating": 5,
     "type": "Guest Review"
   },
   {
-    "id": "dom-30",
+    "id": "dom-36",
     "name": "Mohit",
     "location": "India",
     "image": "https://a0.muscache.com/im/pictures/user/User-571620788/original/dc2878a4-4448-4c98-b7d4-4b193a2c005b.jpeg?im_w=240",
@@ -189,16 +225,16 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-31",
+    "id": "dom-37",
     "name": "Keshav",
     "location": "Kurukshetra, India",
     "image": "https://a0.muscache.com/im/pictures/user/User-469730436/original/fc233ccc-14ad-41af-a351-5fd3c7839e89.jpeg?im_w=240",
-    "quote": "Home away from 🏡 home\nReally I mean it when I say this\nAll the things from exterior to interior ,service,responsiveness of the host were great.\nThe host Mrs. Preeti specially was always active and ready to help whenever needed.\nThe staff and caretaker are also ready to help.\nI don't think i could get such treatment at any of the hotel.\nMe along with my family had a great stay here 🙂\nWill surely stay whenever I come to varanasi again.",
+    "quote": "Home away from 🏡 home \nReally I mean it when I say this\nAll the things from exterior to interior ,service,responsiveness of the host were great.\nThe host Mrs. Preeti specially was always active and ready to help whenever needed.\nThe staff and caretaker are also ready to help.\nI don't think i could get such  treatment at any of the hotel.\nMe along with my family had a great stay here 🙂\nWill surely stay whenever I come to varanasi again.",
     "rating": 5,
     "type": "Guest Review"
   },
   {
-    "id": "dom-32",
+    "id": "dom-38",
     "name": "Bhargav",
     "location": "India",
     "image": "https://a0.muscache.com/im/pictures/user/User-587870536/original/c8dc841b-c8ed-4693-9dec-fc48e30f7da3.jpeg?im_w=240",
@@ -207,7 +243,7 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-34",
+    "id": "dom-40",
     "name": "Rajat",
     "location": "India",
     "image": "https://a0.muscache.com/im/pictures/user/990f7fc4-6400-47ca-993c-a915f5261681.jpg?im_w=240",
@@ -216,25 +252,25 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-35",
+    "id": "dom-41",
     "name": "Pradarsh",
-    "location": "India",
+    "location": "Varanasi, India",
     "image": "https://a0.muscache.com/im/pictures/user/0b285bdf-42a5-42a2-a682-4b9144eb085b.jpg?im_w=240",
     "quote": "My stay at Karuna Villa was absolutely wonderful! The location is perfect, nestled in a quiet neighborhood yet close to all the major attractions. The house was spotlessly clean and beautifully decorated, making it feel like a home away from home. The amenities were top-notch, especially the fully equipped kitchen and cozy living area. The host was incredibly responsive and provided excellent recommendations for local dining and activities. I would highly recommend this property to anyone looking for a comfortable and enjoyable stay. I can't wait to return!",
     "rating": 5,
     "type": "Guest Review"
   },
   {
-    "id": "dom-36",
+    "id": "dom-42",
     "name": "Phungshokngam",
     "location": "India",
     "image": "https://a0.muscache.com/im/pictures/user/User-585067365/original/6fa31ba4-277e-484f-bcfa-2af64c65a4b7.jpeg?im_w=240",
-    "quote": "We had the best stay,the host ,the manager everyone was so helpful.I would still come and stay here again if I’m ever given the chance to visit this beautiful city in the near future..Thank you #karunavilla",
+    "quote": "We had the best stay,the host ,the manager everyone was so helpful.I would  still come and stay  here  again if I’m ever given the chance to visit this beautiful city in the near future..Thank you #karunavilla",
     "rating": 5,
     "type": "Guest Review"
   },
   {
-    "id": "dom-37",
+    "id": "dom-43",
     "name": "Arpit",
     "location": "India",
     "image": "https://a0.muscache.com/im/pictures/user/d8d18fb3-b666-4a23-8c11-9f4cc2267321.jpg?im_w=240",
@@ -243,7 +279,7 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-38",
+    "id": "dom-44",
     "name": "Rajat",
     "location": "India",
     "image": "https://a0.muscache.com/im/pictures/user/User-492022762/original/fd7a0a3b-b5b7-4260-9d21-35cb8d3593c6.jpeg?im_w=240",
@@ -252,7 +288,7 @@
     "type": "Guest Review"
   },
   {
-    "id": "dom-39",
+    "id": "dom-45",
     "name": "Ankita",
     "location": "India",
     "image": "https://a0.muscache.com/im/pictures/user/6c80a309-1b5f-4cc5-a4d8-002d73a2d999.jpg?im_w=240",
